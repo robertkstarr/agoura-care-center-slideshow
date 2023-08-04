@@ -1,6 +1,7 @@
 {
   "name": "agoura-shelter-slideshow",
   "version": "0.1.0",
+  "homepage": "https://www.robertkstarr.com/agoura-care-center-slideshow/",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
