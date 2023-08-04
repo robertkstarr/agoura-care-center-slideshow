@@ -1,11 +1,7 @@
-export const getAnimalImageURL = () => {
-    const petURLs = [
-        "https://api.lacounty.gov/data/acc/animal_images/A5546628.jpg",
-        "https://api.lacounty.gov/data/acc/animal_images/A5441277.jpg",
-        "https://api.lacounty.gov/data/acc/animal_images/A5569284.jpg",
-        "https://api.lacounty.gov/data/acc/animal_images/A5564976.jpg",
-        "https://api.lacounty.gov/data/acc/animal_images/A5566159.jpg",
-        "https://api.lacounty.gov/data/acc/animal_images/A5566447.jpg"
-    ]
-    return petURLs[Math.floor(Math.random() * petURLs.length)];
+export const getAnimalImageURL = (animalId) => {
+    const BASE_URL = "https://api.lacounty.gov/data/acc/animal_images/"
+    const FILE_EXTENSION = ".jpg"
+    const petURL = BASE_URL + animalId + FILE_EXTENSION;
+
+    return petURL;
 }
