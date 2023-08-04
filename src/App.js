@@ -1,10 +1,9 @@
 import './App.css';
 import React, {useEffect, useState} from 'react';
-import {getAnimalImageURL} from "./getAnimalImageURL/getAnimalImageURL";
+import {getAnimalImageURL} from "./GetPetInfo/GetAnimalImageURL/GetAnimalImageURL";
 
 function App() {
     const TIME_FOR_EACH_PET_IN_SECONDS = 5;
-    const animalImageURL = getAnimalImageURL();
 
     const [petImage, setPetImage] = useState(() => {
         return getAnimalImageURL
@@ -22,6 +21,7 @@ function App() {
         <div className="App">
             <header className="App-header">
                 <img src={petImage} className="App-logo" alt="Pet"/>
+                {petImage}
             </header>
         </div>
     );

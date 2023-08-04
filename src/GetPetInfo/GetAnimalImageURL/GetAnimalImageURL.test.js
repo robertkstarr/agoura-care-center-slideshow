@@ -1,4 +1,4 @@
-import {getAnimalImageURL} from "./getAnimalImageURL";
+import {getAnimalImageURL} from "./GetAnimalImageURL";
 
 test('retrieves pet image', () => {
     const petUrl = getAnimalImageURL();
