@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.073c9b0a.css",
-    "main.js": "/static/js/main.d9b6d7ec.js",
-    "static/js/787.a8ea0740.chunk.js": "/static/js/787.a8ea0740.chunk.js",
-    "static/media/logo.svg": "/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
-    "index.html": "/index.html",
-    "main.073c9b0a.css.map": "/static/css/main.073c9b0a.css.map",
-    "main.d9b6d7ec.js.map": "/static/js/main.d9b6d7ec.js.map",
-    "787.a8ea0740.chunk.js.map": "/static/js/787.a8ea0740.chunk.js.map"
+    "main.css": "/agoura-care-center-slideshow/static/css/main.073c9b0a.css",
+    "main.js": "/agoura-care-center-slideshow/static/js/main.3277d059.js",
+    "static/js/787.a8ea0740.chunk.js": "/agoura-care-center-slideshow/static/js/787.a8ea0740.chunk.js",
+    "static/media/logo.svg": "/agoura-care-center-slideshow/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/agoura-care-center-slideshow/index.html",
+    "main.073c9b0a.css.map": "/agoura-care-center-slideshow/static/css/main.073c9b0a.css.map",
+    "main.3277d059.js.map": "/agoura-care-center-slideshow/static/js/main.3277d059.js.map",
+    "787.a8ea0740.chunk.js.map": "/agoura-care-center-slideshow/static/js/787.a8ea0740.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.073c9b0a.css",
-    "static/js/main.d9b6d7ec.js"
+    "static/js/main.3277d059.js"
   ]
 }
