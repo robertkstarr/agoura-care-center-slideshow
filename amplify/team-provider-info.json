@@ -9,17 +9,26 @@
       "UnauthRoleName": "amplify-amplifyb4d5328894d84-staging-231733-unauthRole",
       "StackName": "amplify-amplifyb4d5328894d84-staging-231733",
       "StackId": "arn:aws:cloudformation:us-east-2:727763141802:stack/amplify-amplifyb4d5328894d84-staging-231733/42198f10-33e6-11ee-a852-06077dd4d6b5",
-      "AmplifyAppId": "d2m0pwq89z2cky"
+      "AmplifyAppId": "d2m0pwq89z2cky",
+      "APIGatewayAuthURL": "https://s3.amazonaws.com/amplify-amplifyb4d5328894d84-staging-231733-deployment/amplify-cfn-templates/api/APIGatewayAuthStack.json"
     },
     "categories": {
       "function": {
         "agouracarecenterslid0dd90930": {
           "deploymentBucketName": "amplify-amplifyb4d5328894d84-staging-231733-deployment",
           "s3Key": "amplify-builds/agouracarecenterslid0dd90930-4134436148547431645a-build.zip"
+        },
+        "animalsLambda": {
+          "deploymentBucketName": "amplify-amplifyb4d5328894d84-staging-231733-deployment",
+          "s3Key": "amplify-builds/animalsLambda-49554d634f4151474a74-build.zip"
         }
       },
       "api": {
-        "api9813d66c": {}
+        "api9813d66c": {},
+        "animals": {}
+      },
+      "auth": {
+        "agouracarecenterslid": {}
       }
     }
   }

@@ -1,5 +1,19 @@
 {
   "api": {
+    "animals": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "animalsLambda"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
+    },
     "api9813d66c": {
       "dependsOn": [
         {
@@ -15,8 +29,39 @@
       "service": "API Gateway"
     }
   },
+  "auth": {
+    "agouracarecenterslid": {
+      "dependsOn": [],
+      "frontendAuthConfig": {
+        "mfaConfiguration": "OFF",
+        "mfaTypes": [
+          "SMS"
+        ],
+        "passwordProtectionSettings": {
+          "passwordPolicyCharacters": [],
+          "passwordPolicyMinLength": 8
+        },
+        "signupAttributes": [
+          "EMAIL"
+        ],
+        "socialProviders": [],
+        "usernameAttributes": [],
+        "verificationMechanisms": [
+          "EMAIL"
+        ]
+      },
+      "providerPlugin": "awscloudformation",
+      "service": "Cognito",
+      "serviceType": "managed"
+    }
+  },
   "function": {
     "agouracarecenterslid0dd90930": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "animalsLambda": {
       "build": true,
       "providerPlugin": "awscloudformation",
       "service": "Lambda"
@@ -36,6 +81,22 @@
         {
           "category": "function",
           "resourceName": "agouracarecenterslid0dd90930"
+        }
+      ]
+    },
+    "AMPLIFY_function_animalsLambda_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "animalsLambda"
+        }
+      ]
+    },
+    "AMPLIFY_function_animalsLambda_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "animalsLambda"
         }
       ]
     }
