@@ -6,6 +6,18 @@ import reportWebVitals from './reportWebVitals';
 import {Amplify} from 'aws-amplify';
 import awsconfig from './aws-exports';
 
+awsconfig["API"] = {
+    endpoints: [
+        {
+            name: "animals",
+            endpoint: "https://oky3rnoobi.execute-api.us-east-2.amazonaws.com/main"
+        }
+    ]
+}
+
+console.log(awsconfig);
+
+
 Amplify.configure(awsconfig);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
