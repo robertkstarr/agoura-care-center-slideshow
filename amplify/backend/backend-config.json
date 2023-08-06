@@ -1,0 +1,43 @@
+{
+  "api": {
+    "api9813d66c": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "agouracarecenterslid0dd90930"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
+    }
+  },
+  "function": {
+    "agouracarecenterslid0dd90930": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_function_agouracarecenterslid0dd90930_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "agouracarecenterslid0dd90930"
+        }
+      ]
+    },
+    "AMPLIFY_function_agouracarecenterslid0dd90930_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "agouracarecenterslid0dd90930"
+        }
+      ]
+    }
+  }
+}
