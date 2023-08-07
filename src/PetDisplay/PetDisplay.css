@@ -2,4 +2,11 @@
     height: 60vh;
     color: white;
     font-size: 3rem;
+    width: 50vh;
+}
+
+.PetInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }

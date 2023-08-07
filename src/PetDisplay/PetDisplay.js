@@ -3,6 +3,7 @@ import PetImage from "../PetImage/PetImage";
 import PetInfo from "./PetInfo";
 import {getAnimalImageURL} from "../GetPetInfo/GetAnimalImageURL/GetAnimalImageURL";
 import "./PetDisplay.css"
+import {capitalizeEveryWordOfString} from "./DisplayTools";
 
 const PetDisplay = ({currentPet}) => {
     if (currentPet) {
@@ -10,7 +11,7 @@ const PetDisplay = ({currentPet}) => {
 
         return (
             <div className={"PetDisplay"}>
-                <div className={"Pet Name"}> {currentPet.ANIMAL_NAME}</div>
+                <div className={"Pet Name"}> {capitalizeEveryWordOfString(currentPet.ANIMAL_NAME)}</div>
                 <PetImage imageURL={currentPetImageURL}/>
                 <PetInfo pet={currentPet}/>
             </div>)
