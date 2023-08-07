@@ -2,6 +2,7 @@ import './App.css';
 import React, {useCallback, useEffect, useState} from 'react';
 import {GetPetInfo} from "./GetPetInfo/GetPetInfo";
 import PetDisplay from "./PetInfo/PetDisplay";
+import animalCareCenter from "./Resources/animalCareCenter.png";
 
 function App() {
     const TIME_FOR_EACH_PET_IN_SECONDS = 10;
@@ -38,8 +39,11 @@ function App() {
     return (
         <div className="App">
             <header className="App-header">
-                <PetDisplay currentPet={currentPetInfo}/>
+                <img alt={"Animal Care Center Logo"} src={animalCareCenter}/>
             </header>
+            <body>
+            <PetDisplay currentPet={currentPetInfo}/>
+            </body>
         </div>
     );
 }
