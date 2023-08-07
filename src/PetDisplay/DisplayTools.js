@@ -6,3 +6,29 @@ export const capitalizeEveryWordOfString = (unprocessedString) => {
 
     return capitalArray.join(" ");
 }
+
+const yearsDisplay = (years) => {
+    if (years === "0") {
+        return "";
+    }
+    if (years === "1") {
+        return "1 year ";
+    }
+    return years + " years ";
+}
+
+const monthsDisplay = (months) => {
+    const monthsInteger = months.split(".")[0];
+    if (monthsInteger === "0") {
+        return ""
+    }
+
+    if (monthsInteger === "1") {
+        return "1 month"
+    }
+
+    return monthsInteger + " months"
+}
+export const ageDisplay = (years, months) => {
+    return yearsDisplay(years) + monthsDisplay(months);
+}

@@ -11,7 +11,7 @@ const PetDisplay = ({currentPet}) => {
 
         return (
             <div className={"PetDisplay"}>
-                <div className={"Pet Name"}> {capitalizeEveryWordOfString(currentPet.ANIMAL_NAME)}</div>
+                <div className={"PetName"}> {capitalizeEveryWordOfString(currentPet.ANIMAL_NAME)}</div>
                 <PetImage imageURL={currentPetImageURL}/>
                 <PetInfo pet={currentPet}/>
             </div>)
