@@ -4,62 +4,6 @@
     "endRecord": "500",
     "animals": [
       {
-        "ANIMAL_ID": "A5474726",
-        "ANIMAL_NAME": "ALEX",
-        "SEX": "Male",
-        "YEARS_OLD": "1",
-        "MONTHS_OLD": "4.00",
-        "BREED": "LIONHEAD",
-        "LOCATION": "Agoura ACC",
-        "KENNEL_STAT": "RTGH",
-        "RESCUE_ONLY": null,
-        "MEDICAL_STAT": "NO KNOWN",
-        "WEIGHT": "3.80",
-        "OUTCOME_TYPE": null
-      },
-      {
-        "ANIMAL_ID": "A5571050",
-        "ANIMAL_NAME": "A5571050",
-        "SEX": "Male",
-        "YEARS_OLD": "1",
-        "MONTHS_OLD": "0.00",
-        "BREED": "SIBERIAN HUSKY",
-        "LOCATION": "Agoura ACC",
-        "KENNEL_STAT": "STRAY WAIT",
-        "RESCUE_ONLY": null,
-        "MEDICAL_STAT": "MINOR MEDICAL",
-        "WEIGHT": "0.00",
-        "OUTCOME_TYPE": null
-      },
-      {
-        "ANIMAL_ID": "A5441276",
-        "ANIMAL_NAME": "MOOKIE",
-        "SEX": "Female",
-        "YEARS_OLD": "6",
-        "MONTHS_OLD": "10.00",
-        "BREED": "FRENCH BULLDOG",
-        "LOCATION": "Agoura ACC",
-        "KENNEL_STAT": "RTGH",
-        "RESCUE_ONLY": null,
-        "MEDICAL_STAT": null,
-        "WEIGHT": "27.50",
-        "OUTCOME_TYPE": null
-      },
-      {
-        "ANIMAL_ID": "A5441277",
-        "ANIMAL_NAME": "LOLA",
-        "SEX": "Female",
-        "YEARS_OLD": "10",
-        "MONTHS_OLD": "10.00",
-        "BREED": "BOSTON TERRIER",
-        "LOCATION": "Agoura ACC",
-        "KENNEL_STAT": "RTGH",
-        "RESCUE_ONLY": null,
-        "MEDICAL_STAT": null,
-        "WEIGHT": "19.52",
-        "OUTCOME_TYPE": null
-      },
-      {
         "ANIMAL_ID": "A5546628",
         "ANIMAL_NAME": "LEO",
         "SEX": "Male",
@@ -74,31 +18,17 @@
         "OUTCOME_TYPE": null
       },
       {
-        "ANIMAL_ID": "A5570394",
-        "ANIMAL_NAME": "STRAWBERRY",
+        "ANIMAL_ID": "A5561532",
+        "ANIMAL_NAME": "URSULA",
         "SEX": "Female",
-        "YEARS_OLD": "0",
-        "MONTHS_OLD": "2.00",
-        "BREED": "DOMESTIC LH",
+        "YEARS_OLD": "1",
+        "MONTHS_OLD": "1.00",
+        "BREED": "ARMENIAN GAMPR",
         "LOCATION": "Agoura ACC",
-        "KENNEL_STAT": "STRAY WAIT",
-        "RESCUE_ONLY": null,
-        "MEDICAL_STAT": null,
-        "WEIGHT": null,
-        "OUTCOME_TYPE": null
-      },
-      {
-        "ANIMAL_ID": "A5570401",
-        "ANIMAL_NAME": "A5570401",
-        "SEX": "Female",
-        "YEARS_OLD": "0",
-        "MONTHS_OLD": "4.00",
-        "BREED": "DOMESTIC SH",
-        "LOCATION": "Agoura ACC",
-        "KENNEL_STAT": "STRAY WAIT",
-        "RESCUE_ONLY": null,
-        "MEDICAL_STAT": "MAJOR MEDICAL",
-        "WEIGHT": "0.00",
+        "KENNEL_STAT": "RTGH",
+        "RESCUE_ONLY": "NO",
+        "MEDICAL_STAT": "NO KNOWN",
+        "WEIGHT": "74.20",
         "OUTCOME_TYPE": null
       },
       {
@@ -113,20 +43,6 @@
         "RESCUE_ONLY": "NO",
         "MEDICAL_STAT": "MINOR MEDICAL",
         "WEIGHT": "16.10",
-        "OUTCOME_TYPE": null
-      },
-      {
-        "ANIMAL_ID": "A5561532",
-        "ANIMAL_NAME": "URSULA",
-        "SEX": "Female",
-        "YEARS_OLD": "1",
-        "MONTHS_OLD": "1.00",
-        "BREED": "ARMENIAN GAMPR",
-        "LOCATION": "Agoura ACC",
-        "KENNEL_STAT": "RTGH",
-        "RESCUE_ONLY": "NO",
-        "MEDICAL_STAT": "NO KNOWN",
-        "WEIGHT": "74.20",
         "OUTCOME_TYPE": null
       },
       {
@@ -158,17 +74,17 @@
         "OUTCOME_TYPE": null
       },
       {
-        "ANIMAL_ID": "A5513139",
-        "ANIMAL_NAME": "GIDGET",
-        "SEX": "Female",
-        "YEARS_OLD": "2",
-        "MONTHS_OLD": "9.00",
+        "ANIMAL_ID": "A5223906",
+        "ANIMAL_NAME": "ALVIN",
+        "SEX": "Male",
+        "YEARS_OLD": "6",
+        "MONTHS_OLD": "1.00",
         "BREED": "DOMESTIC SH",
         "LOCATION": "Agoura ACC",
         "KENNEL_STAT": "RTGH",
-        "RESCUE_ONLY": "NO",
-        "MEDICAL_STAT": "NO KNOWN",
-        "WEIGHT": "7.90",
+        "RESCUE_ONLY": null,
+        "MEDICAL_STAT": null,
+        "WEIGHT": "13.10",
         "OUTCOME_TYPE": null
       },
       {
@@ -186,73 +102,17 @@
         "OUTCOME_TYPE": null
       },
       {
-        "ANIMAL_ID": "A5559141",
-        "ANIMAL_NAME": "MOLLY",
+        "ANIMAL_ID": "A5513139",
+        "ANIMAL_NAME": "GIDGET",
         "SEX": "Female",
-        "YEARS_OLD": "1",
-        "MONTHS_OLD": "1.00",
+        "YEARS_OLD": "2",
+        "MONTHS_OLD": "9.00",
         "BREED": "DOMESTIC SH",
         "LOCATION": "Agoura ACC",
         "KENNEL_STAT": "RTGH",
-        "RESCUE_ONLY": null,
-        "MEDICAL_STAT": null,
-        "WEIGHT": "9.36",
-        "OUTCOME_TYPE": null
-      },
-      {
-        "ANIMAL_ID": "A5223906",
-        "ANIMAL_NAME": "ALVIN",
-        "SEX": "Male",
-        "YEARS_OLD": "6",
-        "MONTHS_OLD": "1.00",
-        "BREED": "DOMESTIC SH",
-        "LOCATION": "Agoura ACC",
-        "KENNEL_STAT": "RTGH",
-        "RESCUE_ONLY": null,
-        "MEDICAL_STAT": null,
-        "WEIGHT": "13.10",
-        "OUTCOME_TYPE": null
-      },
-      {
-        "ANIMAL_ID": "A5564541",
-        "ANIMAL_NAME": "OLAF",
-        "SEX": "Male",
-        "YEARS_OLD": "6",
-        "MONTHS_OLD": "1.00",
-        "BREED": "DOMESTIC MH",
-        "LOCATION": "Agoura ACC",
-        "KENNEL_STAT": "RTGH",
-        "RESCUE_ONLY": null,
-        "MEDICAL_STAT": "MAJOR MEDICAL",
-        "WEIGHT": "8.80",
-        "OUTCOME_TYPE": null
-      },
-      {
-        "ANIMAL_ID": "A5564976",
-        "ANIMAL_NAME": "WATSON",
-        "SEX": "Male",
-        "YEARS_OLD": "3",
-        "MONTHS_OLD": "1.00",
-        "BREED": "PORT WATER DOG",
-        "LOCATION": "Agoura ACC",
-        "KENNEL_STAT": "RTGH",
         "RESCUE_ONLY": "NO",
-        "MEDICAL_STAT": "MINOR MEDICAL",
-        "WEIGHT": "0.00",
-        "OUTCOME_TYPE": null
-      },
-      {
-        "ANIMAL_ID": "A5566159",
-        "ANIMAL_NAME": "SASSY",
-        "SEX": "Female",
-        "YEARS_OLD": "3",
-        "MONTHS_OLD": "0.00",
-        "BREED": "RAT TERRIER",
-        "LOCATION": "Agoura ACC",
-        "KENNEL_STAT": "RTGH",
-        "RESCUE_ONLY": "NO",
-        "MEDICAL_STAT": "MINOR MEDICAL",
-        "WEIGHT": "0.00",
+        "MEDICAL_STAT": "NO KNOWN",
+        "WEIGHT": "7.90",
         "OUTCOME_TYPE": null
       },
       {
@@ -270,31 +130,17 @@
         "OUTCOME_TYPE": null
       },
       {
-        "ANIMAL_ID": "A5566447",
-        "ANIMAL_NAME": "SADIE",
-        "SEX": "Female",
-        "YEARS_OLD": "1",
-        "MONTHS_OLD": "0.00",
-        "BREED": "AUST KELPIE",
+        "ANIMAL_ID": "A5564976",
+        "ANIMAL_NAME": "WATSON",
+        "SEX": "Male",
+        "YEARS_OLD": "3",
+        "MONTHS_OLD": "1.00",
+        "BREED": "PORT WATER DOG",
         "LOCATION": "Agoura ACC",
         "KENNEL_STAT": "RTGH",
         "RESCUE_ONLY": "NO",
         "MEDICAL_STAT": "MINOR MEDICAL",
         "WEIGHT": "0.00",
-        "OUTCOME_TYPE": null
-      },
-      {
-        "ANIMAL_ID": "A5568043",
-        "ANIMAL_NAME": "PRECIOUS",
-        "SEX": "Female",
-        "YEARS_OLD": "4",
-        "MONTHS_OLD": "0.00",
-        "BREED": "SIBERIAN HUSKY",
-        "LOCATION": "Agoura ACC",
-        "KENNEL_STAT": "RTGH",
-        "RESCUE_ONLY": null,
-        "MEDICAL_STAT": null,
-        "WEIGHT": "47.50",
         "OUTCOME_TYPE": null
       },
       {
@@ -312,6 +158,34 @@
         "OUTCOME_TYPE": null
       },
       {
+        "ANIMAL_ID": "A5568043",
+        "ANIMAL_NAME": "PRECIOUS",
+        "SEX": "Female",
+        "YEARS_OLD": "4",
+        "MONTHS_OLD": "0.00",
+        "BREED": "SIBERIAN HUSKY",
+        "LOCATION": "Agoura ACC",
+        "KENNEL_STAT": "RTGH",
+        "RESCUE_ONLY": null,
+        "MEDICAL_STAT": null,
+        "WEIGHT": "47.50",
+        "OUTCOME_TYPE": null
+      },
+      {
+        "ANIMAL_ID": "A4702168",
+        "ANIMAL_NAME": "DALLAS",
+        "SEX": "Male",
+        "YEARS_OLD": "10",
+        "MONTHS_OLD": "2.00",
+        "BREED": "AMERICAN STAFF",
+        "LOCATION": "Agoura ACC",
+        "KENNEL_STAT": "RTGH",
+        "RESCUE_ONLY": "NO",
+        "MEDICAL_STAT": null,
+        "WEIGHT": "55.80",
+        "OUTCOME_TYPE": null
+      },
+      {
         "ANIMAL_ID": "A5006119",
         "ANIMAL_NAME": "LEOPOLD",
         "SEX": "Male",
@@ -323,20 +197,6 @@
         "RESCUE_ONLY": null,
         "MEDICAL_STAT": "MINOR MEDICAL",
         "WEIGHT": "10.25",
-        "OUTCOME_TYPE": null
-      },
-      {
-        "ANIMAL_ID": "A4702168",
-        "ANIMAL_NAME": "DALLAS",
-        "SEX": "Male",
-        "YEARS_OLD": "10",
-        "MONTHS_OLD": "2.00",
-        "BREED": "PIT BULL",
-        "LOCATION": "Agoura ACC",
-        "KENNEL_STAT": "RTGH",
-        "RESCUE_ONLY": "NO",
-        "MEDICAL_STAT": null,
-        "WEIGHT": "55.80",
         "OUTCOME_TYPE": null
       },
       {
@@ -354,20 +214,6 @@
         "OUTCOME_TYPE": null
       },
       {
-        "ANIMAL_ID": "A5566158",
-        "ANIMAL_NAME": "ROSCOE",
-        "SEX": "Male",
-        "YEARS_OLD": "7",
-        "MONTHS_OLD": "0.00",
-        "BREED": "PUG",
-        "LOCATION": "Agoura ACC",
-        "KENNEL_STAT": "RTGH",
-        "RESCUE_ONLY": null,
-        "MEDICAL_STAT": "MINOR MEDICAL",
-        "WEIGHT": "0.00",
-        "OUTCOME_TYPE": null
-      },
-      {
         "ANIMAL_ID": "A5560418",
         "ANIMAL_NAME": "APOLLO",
         "SEX": "Male",
@@ -379,20 +225,6 @@
         "RESCUE_ONLY": "NO",
         "MEDICAL_STAT": "MINOR MEDICAL",
         "WEIGHT": "0.00",
-        "OUTCOME_TYPE": null
-      },
-      {
-        "ANIMAL_ID": "A5566010",
-        "ANIMAL_NAME": "YODI",
-        "SEX": "Male",
-        "YEARS_OLD": "8",
-        "MONTHS_OLD": "0.00",
-        "BREED": "CHIHUAHUA SH",
-        "LOCATION": "Agoura ACC",
-        "KENNEL_STAT": "RTGH",
-        "RESCUE_ONLY": "NO",
-        "MEDICAL_STAT": "MINOR MEDICAL",
-        "WEIGHT": "14.72",
         "OUTCOME_TYPE": null
       },
       {
@@ -410,20 +242,6 @@
         "OUTCOME_TYPE": null
       },
       {
-        "ANIMAL_ID": "A5564746",
-        "ANIMAL_NAME": "DOUG",
-        "SEX": "Male",
-        "YEARS_OLD": "4",
-        "MONTHS_OLD": "0.00",
-        "BREED": "GREAT PYRENEES",
-        "LOCATION": "Agoura ACC",
-        "KENNEL_STAT": "RTGH",
-        "RESCUE_ONLY": "NO",
-        "MEDICAL_STAT": null,
-        "WEIGHT": "131.00",
-        "OUTCOME_TYPE": null
-      },
-      {
         "ANIMAL_ID": "A5556646",
         "ANIMAL_NAME": "LUNA",
         "SEX": "Female",
@@ -435,20 +253,6 @@
         "RESCUE_ONLY": "NO",
         "MEDICAL_STAT": "NO KNOWN",
         "WEIGHT": "70.00",
-        "OUTCOME_TYPE": null
-      },
-      {
-        "ANIMAL_ID": "A5563539",
-        "ANIMAL_NAME": "PEANUT",
-        "SEX": "Female",
-        "YEARS_OLD": "4",
-        "MONTHS_OLD": "1.00",
-        "BREED": "POODLE MIN",
-        "LOCATION": "Agoura ACC",
-        "KENNEL_STAT": "RTGH",
-        "RESCUE_ONLY": "NO",
-        "MEDICAL_STAT": "MINOR MEDICAL",
-        "WEIGHT": "12.78",
         "OUTCOME_TYPE": null
       },
       {
@@ -480,20 +284,6 @@
         "OUTCOME_TYPE": null
       },
       {
-        "ANIMAL_ID": "A5497249",
-        "ANIMAL_NAME": "BASHFUL",
-        "SEX": "Male",
-        "YEARS_OLD": "1",
-        "MONTHS_OLD": "2.00",
-        "BREED": "PIT BULL",
-        "LOCATION": "Agoura ACC",
-        "KENNEL_STAT": "RTGH",
-        "RESCUE_ONLY": "NO",
-        "MEDICAL_STAT": "MINOR MEDICAL",
-        "WEIGHT": "0.00",
-        "OUTCOME_TYPE": null
-      },
-      {
         "ANIMAL_ID": "A5551704",
         "ANIMAL_NAME": "ANDOR",
         "SEX": "Male",
@@ -505,6 +295,20 @@
         "RESCUE_ONLY": "NO",
         "MEDICAL_STAT": "MAJOR MEDICAL",
         "WEIGHT": "45.50",
+        "OUTCOME_TYPE": null
+      },
+      {
+        "ANIMAL_ID": "A5551944",
+        "ANIMAL_NAME": "LADY",
+        "SEX": "Female",
+        "YEARS_OLD": "5",
+        "MONTHS_OLD": "3.00",
+        "BREED": "LABRADOR RETR",
+        "LOCATION": "Agoura ACC",
+        "KENNEL_STAT": "RTGH",
+        "RESCUE_ONLY": null,
+        "MEDICAL_STAT": "MINOR MEDICAL",
+        "WEIGHT": "0.00",
         "OUTCOME_TYPE": null
       },
       {
@@ -522,20 +326,6 @@
         "OUTCOME_TYPE": null
       },
       {
-        "ANIMAL_ID": "A5551944",
-        "ANIMAL_NAME": "LADY",
-        "SEX": "Female",
-        "YEARS_OLD": "5",
-        "MONTHS_OLD": "2.00",
-        "BREED": "LABRADOR RETR",
-        "LOCATION": "Agoura ACC",
-        "KENNEL_STAT": "RTGH",
-        "RESCUE_ONLY": null,
-        "MEDICAL_STAT": "MINOR MEDICAL",
-        "WEIGHT": "0.00",
-        "OUTCOME_TYPE": null
-      },
-      {
         "ANIMAL_ID": "A5555642",
         "ANIMAL_NAME": "WONTON",
         "SEX": "Male",
@@ -546,7 +336,7 @@
         "KENNEL_STAT": "RTGH",
         "RESCUE_ONLY": "NO",
         "MEDICAL_STAT": null,
-        "WEIGHT": "15.12",
+        "WEIGHT": "16.50",
         "OUTCOME_TYPE": null
       },
       {
@@ -568,7 +358,7 @@
         "ANIMAL_NAME": "LUNA",
         "SEX": "Female",
         "YEARS_OLD": "4",
-        "MONTHS_OLD": "1.00",
+        "MONTHS_OLD": "2.00",
         "BREED": "SIBERIAN HUSKY",
         "LOCATION": "Agoura ACC",
         "KENNEL_STAT": "RTGH",
@@ -592,20 +382,6 @@
         "OUTCOME_TYPE": "FOSTER"
       },
       {
-        "ANIMAL_ID": "A5550954",
-        "ANIMAL_NAME": "PAL",
-        "SEX": "Male",
-        "YEARS_OLD": "1",
-        "MONTHS_OLD": "2.00",
-        "BREED": "AUST CATTLE DOG",
-        "LOCATION": "Agoura ACC",
-        "KENNEL_STAT": "RTGH",
-        "RESCUE_ONLY": "NO",
-        "MEDICAL_STAT": "NO KNOWN",
-        "WEIGHT": "42.00",
-        "OUTCOME_TYPE": null
-      },
-      {
         "ANIMAL_ID": "A5546991",
         "ANIMAL_NAME": "DIAMOND",
         "SEX": "Female",
@@ -617,6 +393,20 @@
         "RESCUE_ONLY": "NO",
         "MEDICAL_STAT": "MINOR MEDICAL",
         "WEIGHT": "70.40",
+        "OUTCOME_TYPE": null
+      },
+      {
+        "ANIMAL_ID": "A5550954",
+        "ANIMAL_NAME": "PAL",
+        "SEX": "Male",
+        "YEARS_OLD": "1",
+        "MONTHS_OLD": "2.00",
+        "BREED": "AUST CATTLE DOG",
+        "LOCATION": "Agoura ACC",
+        "KENNEL_STAT": "RTGH",
+        "RESCUE_ONLY": "NO",
+        "MEDICAL_STAT": "NO KNOWN",
+        "WEIGHT": "42.00",
         "OUTCOME_TYPE": null
       },
       {
@@ -634,34 +424,6 @@
         "OUTCOME_TYPE": null
       },
       {
-        "ANIMAL_ID": "A5547026",
-        "ANIMAL_NAME": "CAVIAR",
-        "SEX": "Male",
-        "YEARS_OLD": "4",
-        "MONTHS_OLD": "3.00",
-        "BREED": "SIBERIAN HUSKY",
-        "LOCATION": "Agoura ACC",
-        "KENNEL_STAT": "RTGH",
-        "RESCUE_ONLY": "NO",
-        "MEDICAL_STAT": null,
-        "WEIGHT": "50.00",
-        "OUTCOME_TYPE": null
-      },
-      {
-        "ANIMAL_ID": "A5553066",
-        "ANIMAL_NAME": "MISSY",
-        "SEX": "Female",
-        "YEARS_OLD": "12",
-        "MONTHS_OLD": "2.00",
-        "BREED": "CHIHUAHUA SH",
-        "LOCATION": "Agoura ACC",
-        "KENNEL_STAT": "RESC ONLY",
-        "RESCUE_ONLY": "YES",
-        "MEDICAL_STAT": null,
-        "WEIGHT": "11.00",
-        "OUTCOME_TYPE": "FOSTER"
-      },
-      {
         "ANIMAL_ID": "A5543864",
         "ANIMAL_NAME": "BUFFY",
         "SEX": "Female",
@@ -673,6 +435,20 @@
         "RESCUE_ONLY": "NO",
         "MEDICAL_STAT": "MINOR MEDICAL",
         "WEIGHT": "56.50",
+        "OUTCOME_TYPE": null
+      },
+      {
+        "ANIMAL_ID": "A5547026",
+        "ANIMAL_NAME": "CAVIAR",
+        "SEX": "Male",
+        "YEARS_OLD": "4",
+        "MONTHS_OLD": "3.00",
+        "BREED": "SIBERIAN HUSKY",
+        "LOCATION": "Agoura ACC",
+        "KENNEL_STAT": "RTGH",
+        "RESCUE_ONLY": "NO",
+        "MEDICAL_STAT": null,
+        "WEIGHT": "50.00",
         "OUTCOME_TYPE": null
       },
       {
@@ -710,20 +486,6 @@
         "YEARS_OLD": "5",
         "MONTHS_OLD": "8.00",
         "BREED": "WEIMARANER",
-        "LOCATION": "Agoura ACC",
-        "KENNEL_STAT": "RTGH",
-        "RESCUE_ONLY": "NO",
-        "MEDICAL_STAT": "MINOR MEDICAL",
-        "WEIGHT": "0.00",
-        "OUTCOME_TYPE": null
-      },
-      {
-        "ANIMAL_ID": "A5102053",
-        "ANIMAL_NAME": "ELIAS",
-        "SEX": "Male",
-        "YEARS_OLD": "6",
-        "MONTHS_OLD": "5.00",
-        "BREED": "PIT BULL",
         "LOCATION": "Agoura ACC",
         "KENNEL_STAT": "RTGH",
         "RESCUE_ONLY": "NO",
@@ -804,6 +566,6 @@
     ],
     "startRecord": "1",
     "totalPages": "1",
-    "totalRecords": "57"
+    "totalRecords": "40"
   }
 ]
