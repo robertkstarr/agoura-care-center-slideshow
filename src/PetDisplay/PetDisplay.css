@@ -5,6 +5,10 @@
     width: 50vh;
 }
 
+.PetDisplay img {
+    height: 35vh;
+}
+
 .PetName {
     font-size: 3rem;
 }
