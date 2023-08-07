@@ -1,7 +1,7 @@
 import './App.css';
 import React, {useCallback, useEffect, useState} from 'react';
 import {GetPetInfo} from "./GetPetInfo/GetPetInfo";
-import PetDisplay from "./PetInfo/PetDisplay";
+import PetDisplay from "./PetDisplay/PetDisplay";
 import animalCareCenter from "./Resources/animalCareCenter.png";
 
 function App() {
@@ -41,9 +41,7 @@ function App() {
             <header className="App-header">
                 <img alt={"Animal Care Center Logo"} src={animalCareCenter}/>
             </header>
-            <body>
             <PetDisplay currentPet={currentPetInfo}/>
-            </body>
         </div>
     );
 }
