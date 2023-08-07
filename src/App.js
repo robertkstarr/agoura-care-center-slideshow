@@ -5,6 +5,7 @@ import PetDisplay from "./PetInfo/PetDisplay";
 
 function App() {
     const TIME_FOR_EACH_PET_IN_SECONDS = 10;
+    const SECONDS_IN_A_DAY = 3600 * 24;
     const allPets = GetPetInfo();
     const [currentPetInfo, setCurrentPetInfo] = useState(null);
 
@@ -24,8 +25,15 @@ function App() {
             pickNewPet()
         }, TIME_FOR_EACH_PET_IN_SECONDS * 1000);
 
-        return () => clearInterval(interval);
-    }, [pickNewPet]);
+        const refreshInterval = setInterval(() => {
+            window.location.reload();
+        }, SECONDS_IN_A_DAY * 1000);
+
+        return () => {
+            clearInterval(interval);
+            clearInterval(refreshInterval);
+        }
+    }, [pickNewPet, SECONDS_IN_A_DAY]);
 
     return (
         <div className="App">
