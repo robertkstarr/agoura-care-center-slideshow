@@ -15,7 +15,7 @@
       "function": {
         "laCountyProxy": {
           "deploymentBucketName": "amplify-agourashelterslidesh-dev-212520-deployment",
-          "s3Key": "amplify-builds/laCountyProxy-4a4d3264385272564556-build.zip"
+          "s3Key": "amplify-builds/laCountyProxy-41537955345253454345-build.zip"
         }
       },
       "api": {
