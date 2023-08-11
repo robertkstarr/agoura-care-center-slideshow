@@ -1,5 +1,9 @@
+import {API} from 'aws-amplify';
+
 export const GetPetInfo = () => {
     const returnPetObject = require("../Resources/testResponse.json");
+
+    API.get('backendAPI', '/animals').then((e) => console.log(e))
 
     return returnPetObject;
     //
