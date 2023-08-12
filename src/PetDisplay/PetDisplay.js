@@ -44,12 +44,10 @@ const PetDisplay = () => {
     }, [pickNewPet, timeSinceLastSwitch, SECONDS_IN_A_DAY]);
 
     if (currentPet) {
-        const currentPetImageURL = getAnimalImageURL(currentPet.ANIMAL_ID);
-
         return (
             <div className={"PetDisplay"}>
                 <div className={"PetName"}>{capitalizeEveryWordOfString(currentPet.ANIMAL_NAME)}</div>
-                <PetImage onClick={pickNewPet} imageURL={currentPetImageURL}/>
+                <PetImage onClick={pickNewPet} imageURL={getAnimalImageURL(currentPet.ANIMAL_ID)}/>
                 <PetInfo pet={currentPet}/>
             </div>);
     } else {
