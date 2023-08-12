@@ -41,11 +41,13 @@ test("shows correct name", () => {
 
 test("shows new pet after 10 seconds", async () => {
     render(<PetDisplay/>);
+    const mathSpy =
+        jest.spyOn(global.Math, "random").mockReturnValue(.99999);
     const petName = screen.getByText("Kyle");
     expect(petName).toBeInTheDocument();
-    jest.spyOn(global.Math, "random").mockReturnValue(.999999);
-
+    expect(mathSpy).toHaveBeenCalledTimes(1);
     await advanceTimersByNSeconds(11);
+    expect(mathSpy).toHaveBeenCalledTimes(3);
     const newPetName = screen.getByText("Charleston");
     expect(newPetName).toBeInTheDocument();
 });

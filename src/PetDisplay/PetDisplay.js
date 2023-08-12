@@ -16,9 +16,9 @@ const PetDisplay = () => {
     const petListLength = allPets[0].animals.length;
 
     const pickNewPet = useCallback(() => {
+        setTimeSinceLastSwitch(0);
         const newPet = allPets[0].animals[(Math.floor(Math.random() * petListLength))];
         setCurrentPet(newPet);
-        setTimeSinceLastSwitch(0);
     }, [petListLength, allPets]);
 
     if (!currentPet) {
@@ -26,9 +26,10 @@ const PetDisplay = () => {
     }
     useEffect(() => {
         const interval = setInterval(() => {
-            setTimeSinceLastSwitch(timeSinceLastSwitch + 1);
             if (timeSinceLastSwitch >= TIME_FOR_EACH_PET_IN_SECONDS) {
                 pickNewPet();
+            } else {
+                setTimeSinceLastSwitch(timeSinceLastSwitch + 1);
             }
         }, 1000);
 
@@ -47,7 +48,6 @@ const PetDisplay = () => {
 
         return (
             <div className={"PetDisplay"}>
-                {timeSinceLastSwitch}
                 <div className={"PetName"}>{capitalizeEveryWordOfString(currentPet.ANIMAL_NAME)}</div>
                 <PetImage onClick={pickNewPet} imageURL={currentPetImageURL}/>
                 <PetInfo pet={currentPet}/>
