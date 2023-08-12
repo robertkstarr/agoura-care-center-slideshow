@@ -47,7 +47,8 @@ const PetDisplay = () => {
 
         return (
             <div className={"PetDisplay"}>
-                <div className={"PetName"}> {capitalizeEveryWordOfString(currentPet.ANIMAL_NAME)}</div>
+                {timeSinceLastSwitch}
+                <div className={"PetName"}>{capitalizeEveryWordOfString(currentPet.ANIMAL_NAME)}</div>
                 <PetImage onClick={pickNewPet} imageURL={currentPetImageURL}/>
                 <PetInfo pet={currentPet}/>
             </div>);
