@@ -1,0 +1,44 @@
+{
+  "api": {
+    "backendAPI": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "laCountyProxy"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
+    }
+  },
+  "function": {
+    "laCountyProxy": {
+      "build": true,
+      "dependsOn": [],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_function_laCountyProxy_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "laCountyProxy"
+        }
+      ]
+    },
+    "AMPLIFY_function_laCountyProxy_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "laCountyProxy"
+        }
+      ]
+    }
+  }
+}
