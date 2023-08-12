@@ -21,6 +21,7 @@ beforeEach(() => {
         return returnPetObject;
     });
     jest.spyOn(global.Math, "random").mockReturnValue(0);
+    render(<PetDisplay/>);
 });
 
 afterEach(() => {
@@ -28,19 +29,16 @@ afterEach(() => {
 });
 
 test("shows image", () => {
-    render(<PetDisplay/>);
     const petImage = screen.getByAltText("Pet");
     expect(petImage).toBeInTheDocument();
 });
 
 test("shows correct name", () => {
-    render(<PetDisplay/>);
     const petName = screen.getByText("Kyle");
     expect(petName).toBeInTheDocument();
 });
 
 test("shows new pet after 10 seconds", async () => {
-    render(<PetDisplay/>);
     const mathSpy =
         jest.spyOn(global.Math, "random").mockReturnValue(.99999);
     const petName = screen.getByText("Kyle");
@@ -53,7 +51,6 @@ test("shows new pet after 10 seconds", async () => {
 });
 
 test("shows new pet on click", () => {
-    render(<PetDisplay/>);
     const mathSpy =
         jest.spyOn(global.Math, "random").mockReturnValue(.99999);
     const petName = screen.getByText("Kyle");
@@ -64,4 +61,40 @@ test("shows new pet on click", () => {
     expect(mathSpy).toHaveBeenCalledTimes(2);
     const newPetName = screen.getByText("Charleston");
     expect(newPetName).toBeInTheDocument();
+});
+
+test("resets timer after click", async () => {
+    const mathSpy =
+        jest.spyOn(global.Math, "random").mockReturnValue(.99999);
+    const petName = screen.getByText("Kyle");
+    expect(petName).toBeInTheDocument();
+    expect(mathSpy).toHaveBeenCalledTimes(1);
+    const petImage = screen.getByTestId("Pet Image");
+    fireEvent.click(petImage);
+    await advanceTimersByNSeconds(8);
+    expect(mathSpy).toHaveBeenCalledTimes(2);
+    const newPetName = screen.getByText("Charleston");
+    expect(newPetName).toBeInTheDocument();
+});
+
+test("advances pet 10 seconds after click", async () => {
+    const mathSpy =
+        jest.spyOn(global.Math, "random").mockReturnValue(.99999);
+    const petName = screen.getByText("Kyle");
+    expect(petName).toBeInTheDocument();
+    expect(mathSpy).toHaveBeenCalledTimes(1);
+
+    const petImage = screen.getByTestId("Pet Image");
+    fireEvent.click(petImage);
+    await advanceTimersByNSeconds(8);
+
+    expect(mathSpy).toHaveBeenCalledTimes(2);
+    const newPetName = screen.getByText("Charleston");
+    expect(newPetName).toBeInTheDocument();
+
+    jest.spyOn(global.Math, "random").mockReturnValue(0);
+    await advanceTimersByNSeconds(3);
+    const originalPetName = screen.getByText("Kyle");
+    expect(originalPetName).toBeInTheDocument();
+    expect(mathSpy).toHaveBeenCalledTimes(3);
 });
