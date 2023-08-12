@@ -1,5 +1,5 @@
 import PetDisplay from "./PetDisplay";
-import {render, screen} from "@testing-library/react";
+import {fireEvent, render, screen} from "@testing-library/react";
 import {GetPetInfo} from "../GetPetInfo/GetPetInfo";
 import testResponse from "../Resources/testResponse.json";
 import {act} from "react-dom/test-utils";
@@ -48,6 +48,20 @@ test("shows new pet after 10 seconds", async () => {
     expect(mathSpy).toHaveBeenCalledTimes(1);
     await advanceTimersByNSeconds(11);
     expect(mathSpy).toHaveBeenCalledTimes(3);
+    const newPetName = screen.getByText("Charleston");
+    expect(newPetName).toBeInTheDocument();
+});
+
+test("shows new pet on click", () => {
+    render(<PetDisplay/>);
+    const mathSpy =
+        jest.spyOn(global.Math, "random").mockReturnValue(.99999);
+    const petName = screen.getByText("Kyle");
+    expect(petName).toBeInTheDocument();
+    expect(mathSpy).toHaveBeenCalledTimes(1);
+    const petImage = screen.getByTestId("Pet Image");
+    fireEvent.click(petImage);
+    expect(mathSpy).toHaveBeenCalledTimes(2);
     const newPetName = screen.getByText("Charleston");
     expect(newPetName).toBeInTheDocument();
 });
