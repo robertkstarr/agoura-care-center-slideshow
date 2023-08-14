@@ -1,7 +1,9 @@
-export const GetPetInfo = () => {
+import {API} from "aws-amplify";
+
+export const GetPetInfo = async () => {
     const returnPetObject = require("../Resources/staticResponse.json");
 
-    // API.get("backendAPI", "/animals").then((e) => console.log(e));
+    API.get("backendAPI", "/animals").then((e) => console.log(e));
 
     return returnPetObject;
     //
