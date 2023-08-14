@@ -124,3 +124,9 @@ test("reloads page every 24 hours", async () => {
     Object.defineProperty(window, "location", {configurable: true, value: original});
 
 });
+
+test("getpetinfo should only be called once", async () => {
+    render(<PetDisplay/>);
+    await advanceTimersByNSeconds(40);
+    expect(GetPetInfo).toHaveBeenCalledTimes(1);
+});
