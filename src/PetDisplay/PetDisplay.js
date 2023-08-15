@@ -9,21 +9,31 @@ import {GetPetInfo} from "../GetPetInfo/GetPetInfo";
 const PetDisplay = () => {
     const TIME_FOR_EACH_PET_IN_SECONDS = 10;
     const SECONDS_IN_A_DAY = 3600 * 24;
-    const allPets = GetPetInfo();
+    const [allPets, setAllPets] = useState([]);
     const [currentPet, setCurrentPet] = useState(null);
     const [timeSinceLastSwitch, setTimeSinceLastSwitch] = useState(0);
 
-    const petListLength = allPets[0].animals.length;
-
     const pickNewPet = useCallback(() => {
         setTimeSinceLastSwitch(0);
-        const newPet = allPets[0].animals[(Math.floor(Math.random() * petListLength))];
-        setCurrentPet(newPet);
-    }, [petListLength, allPets]);
 
-    if (!currentPet) {
+        if (allPets.length > 0) {
+            const petListLength = allPets[0].animals.length;
+            const newPet = allPets[0].animals[(Math.floor(Math.random() * petListLength))];
+            setCurrentPet(newPet);
+        }
+    }, [allPets]);
+
+    useEffect(() => {
+        GetPetInfo().then((pets) => {
+                setAllPets(pets);
+            }
+        );
+    }, []);
+
+    useEffect(() => {
         pickNewPet();
-    }
+    }, [pickNewPet, allPets]);
+
     useEffect(() => {
         const interval = setInterval(() => {
             if (timeSinceLastSwitch >= TIME_FOR_EACH_PET_IN_SECONDS) {
@@ -51,7 +61,7 @@ const PetDisplay = () => {
                 <PetInfo pet={currentPet}/>
             </div>);
     } else {
-        return (<div>Loading</div>);
+        return (<div>Loading...</div>);
     }
 };
 
