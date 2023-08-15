@@ -4,40 +4,12 @@
     "endRecord": "500",
     "animals": [
       {
-        "ANIMAL_ID": "A5561695",
-        "ANIMAL_NAME": "LOCA",
-        "SEX": "Female",
-        "YEARS_OLD": "0",
-        "MONTHS_OLD": "2.00",
-        "BREED": "DOMESTIC SH",
-        "LOCATION": "Agoura ACC",
-        "KENNEL_STAT": "RTGH",
-        "RESCUE_ONLY": null,
-        "MEDICAL_STAT": null,
-        "WEIGHT": "0.96",
-        "OUTCOME_TYPE": null
-      },
-      {
         "ANIMAL_ID": "A5566683",
         "ANIMAL_NAME": "ARIE",
         "SEX": "Female",
         "YEARS_OLD": "0",
         "MONTHS_OLD": "2.00",
         "BREED": "AMER SH",
-        "LOCATION": "Agoura ACC",
-        "KENNEL_STAT": "RTGH",
-        "RESCUE_ONLY": null,
-        "MEDICAL_STAT": null,
-        "WEIGHT": null,
-        "OUTCOME_TYPE": null
-      },
-      {
-        "ANIMAL_ID": "A5556293",
-        "ANIMAL_NAME": "PIGLET",
-        "SEX": "Female",
-        "YEARS_OLD": "0",
-        "MONTHS_OLD": "3.00",
-        "BREED": "DOMESTIC SH",
         "LOCATION": "Agoura ACC",
         "KENNEL_STAT": "RTGH",
         "RESCUE_ONLY": null,
@@ -60,48 +32,6 @@
         "OUTCOME_TYPE": null
       },
       {
-        "ANIMAL_ID": "A5561696",
-        "ANIMAL_NAME": "LADY",
-        "SEX": "Female",
-        "YEARS_OLD": "0",
-        "MONTHS_OLD": "2.00",
-        "BREED": "DOMESTIC SH",
-        "LOCATION": "Agoura ACC",
-        "KENNEL_STAT": "RTGH",
-        "RESCUE_ONLY": null,
-        "MEDICAL_STAT": null,
-        "WEIGHT": "1.20",
-        "OUTCOME_TYPE": null
-      },
-      {
-        "ANIMAL_ID": "A5572814",
-        "ANIMAL_NAME": "ANNIE",
-        "SEX": "Female",
-        "YEARS_OLD": "1",
-        "MONTHS_OLD": "0.00",
-        "BREED": "DOMESTIC SH",
-        "LOCATION": "Agoura ACC",
-        "KENNEL_STAT": "RTGH",
-        "RESCUE_ONLY": null,
-        "MEDICAL_STAT": null,
-        "WEIGHT": "8.81",
-        "OUTCOME_TYPE": null
-      },
-      {
-        "ANIMAL_ID": "A5566682",
-        "ANIMAL_NAME": "JANE",
-        "SEX": "Female",
-        "YEARS_OLD": "0",
-        "MONTHS_OLD": "2.00",
-        "BREED": "AMER SH",
-        "LOCATION": "Agoura ACC",
-        "KENNEL_STAT": "RTGH",
-        "RESCUE_ONLY": null,
-        "MEDICAL_STAT": null,
-        "WEIGHT": null,
-        "OUTCOME_TYPE": null
-      },
-      {
         "ANIMAL_ID": "A5562051",
         "ANIMAL_NAME": "DISCO",
         "SEX": "Female",
@@ -113,34 +43,6 @@
         "RESCUE_ONLY": null,
         "MEDICAL_STAT": "MINOR MEDICAL",
         "WEIGHT": "1.30",
-        "OUTCOME_TYPE": null
-      },
-      {
-        "ANIMAL_ID": "A5556294",
-        "ANIMAL_NAME": "TIGGER",
-        "SEX": "Male",
-        "YEARS_OLD": "0",
-        "MONTHS_OLD": "3.00",
-        "BREED": "DOMESTIC SH",
-        "LOCATION": "Agoura ACC",
-        "KENNEL_STAT": "RTGH",
-        "RESCUE_ONLY": null,
-        "MEDICAL_STAT": null,
-        "WEIGHT": null,
-        "OUTCOME_TYPE": null
-      },
-      {
-        "ANIMAL_ID": "A5572744",
-        "ANIMAL_NAME": "OSWALD",
-        "SEX": "Male",
-        "YEARS_OLD": "0",
-        "MONTHS_OLD": "2.00",
-        "BREED": "DOMESTIC SH",
-        "LOCATION": "Agoura ACC",
-        "KENNEL_STAT": "RTGH",
-        "RESCUE_ONLY": null,
-        "MEDICAL_STAT": null,
-        "WEIGHT": null,
         "OUTCOME_TYPE": null
       },
       {
@@ -158,73 +60,17 @@
         "OUTCOME_TYPE": null
       },
       {
-        "ANIMAL_ID": "A5570402",
-        "ANIMAL_NAME": "KOU",
+        "ANIMAL_ID": "A5567836",
+        "ANIMAL_NAME": "CHARLESTON",
         "SEX": "Male",
-        "YEARS_OLD": "2",
+        "YEARS_OLD": "7",
         "MONTHS_OLD": "0.00",
-        "BREED": "JACK RUSS TERR",
-        "LOCATION": "Agoura ACC",
-        "KENNEL_STAT": "RTGH",
-        "RESCUE_ONLY": "NO",
-        "MEDICAL_STAT": null,
-        "WEIGHT": "19.20",
-        "OUTCOME_TYPE": null
-      },
-      {
-        "ANIMAL_ID": "A5571767",
-        "ANIMAL_NAME": "SCRAPPY",
-        "SEX": "Male",
-        "YEARS_OLD": "0",
-        "MONTHS_OLD": "2.00",
-        "BREED": "CHIHUAHUA SH",
+        "BREED": "TERRIER",
         "LOCATION": "Agoura ACC",
         "KENNEL_STAT": "RTGH",
         "RESCUE_ONLY": "NO",
         "MEDICAL_STAT": "MINOR MEDICAL",
-        "WEIGHT": "7.70",
-        "OUTCOME_TYPE": null
-      },
-      {
-        "ANIMAL_ID": "A5571409",
-        "ANIMAL_NAME": "HENRY",
-        "SEX": "Male",
-        "YEARS_OLD": "0",
-        "MONTHS_OLD": "3.00",
-        "BREED": "CHIHUAHUA SH",
-        "LOCATION": "Agoura ACC",
-        "KENNEL_STAT": "RTGH",
-        "RESCUE_ONLY": "NO",
-        "MEDICAL_STAT": null,
-        "WEIGHT": "6.00",
-        "OUTCOME_TYPE": null
-      },
-      {
-        "ANIMAL_ID": "A5568505",
-        "ANIMAL_NAME": "JAKE",
-        "SEX": "Male",
-        "YEARS_OLD": "0",
-        "MONTHS_OLD": "7.00",
-        "BREED": "GERM SHEPHERD",
-        "LOCATION": "Agoura ACC",
-        "KENNEL_STAT": "RTGH",
-        "RESCUE_ONLY": "NO",
-        "MEDICAL_STAT": null,
-        "WEIGHT": "42.50",
-        "OUTCOME_TYPE": null
-      },
-      {
-        "ANIMAL_ID": "A5569109",
-        "ANIMAL_NAME": "GEORGE",
-        "SEX": "Male",
-        "YEARS_OLD": "3",
-        "MONTHS_OLD": "0.00",
-        "BREED": "CHIHUAHUA SH",
-        "LOCATION": "Agoura ACC",
-        "KENNEL_STAT": "RTGH",
-        "RESCUE_ONLY": "NO",
-        "MEDICAL_STAT": null,
-        "WEIGHT": "9.00",
+        "WEIGHT": "10.40",
         "OUTCOME_TYPE": null
       },
       {
@@ -242,31 +88,17 @@
         "OUTCOME_TYPE": null
       },
       {
-        "ANIMAL_ID": "A5567836",
-        "ANIMAL_NAME": "CHARLESTON",
-        "SEX": "Male",
-        "YEARS_OLD": "7",
-        "MONTHS_OLD": "0.00",
-        "BREED": "TERRIER",
-        "LOCATION": "Agoura ACC",
-        "KENNEL_STAT": "RTGH",
-        "RESCUE_ONLY": "NO",
-        "MEDICAL_STAT": "MINOR MEDICAL",
-        "WEIGHT": "10.40",
-        "OUTCOME_TYPE": null
-      },
-      {
-        "ANIMAL_ID": "A5571737",
-        "ANIMAL_NAME": "KYLE",
+        "ANIMAL_ID": "A5569109",
+        "ANIMAL_NAME": "GEORGE",
         "SEX": "Male",
         "YEARS_OLD": "3",
         "MONTHS_OLD": "0.00",
-        "BREED": "TERRIER",
+        "BREED": "CHIHUAHUA SH",
         "LOCATION": "Agoura ACC",
         "KENNEL_STAT": "RTGH",
         "RESCUE_ONLY": "NO",
-        "MEDICAL_STAT": "NO KNOWN",
-        "WEIGHT": "19.70",
+        "MEDICAL_STAT": null,
+        "WEIGHT": "9.00",
         "OUTCOME_TYPE": null
       },
       {
@@ -281,6 +113,34 @@
         "RESCUE_ONLY": "NO",
         "MEDICAL_STAT": "MINOR MEDICAL",
         "WEIGHT": "23.00",
+        "OUTCOME_TYPE": null
+      },
+      {
+        "ANIMAL_ID": "A5568505",
+        "ANIMAL_NAME": "JAKE",
+        "SEX": "Male",
+        "YEARS_OLD": "0",
+        "MONTHS_OLD": "7.00",
+        "BREED": "GERM SHEPHERD",
+        "LOCATION": "Agoura ACC",
+        "KENNEL_STAT": "RTGH",
+        "RESCUE_ONLY": "NO",
+        "MEDICAL_STAT": null,
+        "WEIGHT": "42.50",
+        "OUTCOME_TYPE": null
+      },
+      {
+        "ANIMAL_ID": "A5570402",
+        "ANIMAL_NAME": "KOU",
+        "SEX": "Male",
+        "YEARS_OLD": "2",
+        "MONTHS_OLD": "0.00",
+        "BREED": "JACK RUSS TERR",
+        "LOCATION": "Agoura ACC",
+        "KENNEL_STAT": "RTGH",
+        "RESCUE_ONLY": "NO",
+        "MEDICAL_STAT": null,
+        "WEIGHT": "19.20",
         "OUTCOME_TYPE": null
       },
       {
@@ -312,20 +172,6 @@
         "OUTCOME_TYPE": null
       },
       {
-        "ANIMAL_ID": "A5559141",
-        "ANIMAL_NAME": "MOLLY",
-        "SEX": "Female",
-        "YEARS_OLD": "1",
-        "MONTHS_OLD": "2.00",
-        "BREED": "DOMESTIC SH",
-        "LOCATION": "Agoura ACC",
-        "KENNEL_STAT": "RTGH",
-        "RESCUE_ONLY": null,
-        "MEDICAL_STAT": null,
-        "WEIGHT": "9.00",
-        "OUTCOME_TYPE": null
-      },
-      {
         "ANIMAL_ID": "A5570415",
         "ANIMAL_NAME": "ESTRELLA",
         "SEX": "Female",
@@ -337,20 +183,6 @@
         "RESCUE_ONLY": "NO",
         "MEDICAL_STAT": null,
         "WEIGHT": "53.00",
-        "OUTCOME_TYPE": null
-      },
-      {
-        "ANIMAL_ID": "A5570416",
-        "ANIMAL_NAME": "LOBA",
-        "SEX": "Female",
-        "YEARS_OLD": "0",
-        "MONTHS_OLD": "9.00",
-        "BREED": "GERM SHEPHERD",
-        "LOCATION": "Agoura ACC",
-        "KENNEL_STAT": "RTGH",
-        "RESCUE_ONLY": "NO",
-        "MEDICAL_STAT": null,
-        "WEIGHT": "45.00",
         "OUTCOME_TYPE": null
       },
       {
@@ -368,20 +200,6 @@
         "OUTCOME_TYPE": null
       },
       {
-        "ANIMAL_ID": "A5565142",
-        "ANIMAL_NAME": "KAL",
-        "SEX": "Male",
-        "YEARS_OLD": "1",
-        "MONTHS_OLD": "1.00",
-        "BREED": "GERM SHEPHERD",
-        "LOCATION": "Agoura ACC",
-        "KENNEL_STAT": "RTGH",
-        "RESCUE_ONLY": null,
-        "MEDICAL_STAT": null,
-        "WEIGHT": "34.00",
-        "OUTCOME_TYPE": null
-      },
-      {
         "ANIMAL_ID": "A5569037",
         "ANIMAL_NAME": "PIP",
         "SEX": "Male",
@@ -393,6 +211,34 @@
         "RESCUE_ONLY": null,
         "MEDICAL_STAT": "MINOR MEDICAL",
         "WEIGHT": "0.00",
+        "OUTCOME_TYPE": null
+      },
+      {
+        "ANIMAL_ID": "A5559141",
+        "ANIMAL_NAME": "MOLLY",
+        "SEX": "Female",
+        "YEARS_OLD": "1",
+        "MONTHS_OLD": "2.00",
+        "BREED": "DOMESTIC SH",
+        "LOCATION": "Agoura ACC",
+        "KENNEL_STAT": "RTGH",
+        "RESCUE_ONLY": null,
+        "MEDICAL_STAT": null,
+        "WEIGHT": "9.00",
+        "OUTCOME_TYPE": null
+      },
+      {
+        "ANIMAL_ID": "A5570416",
+        "ANIMAL_NAME": "LOBA",
+        "SEX": "Female",
+        "YEARS_OLD": "0",
+        "MONTHS_OLD": "9.00",
+        "BREED": "GERM SHEPHERD",
+        "LOCATION": "Agoura ACC",
+        "KENNEL_STAT": "RTGH",
+        "RESCUE_ONLY": "NO",
+        "MEDICAL_STAT": null,
+        "WEIGHT": "45.00",
         "OUTCOME_TYPE": null
       },
       {
@@ -424,20 +270,6 @@
         "OUTCOME_TYPE": null
       },
       {
-        "ANIMAL_ID": "A5513158",
-        "ANIMAL_NAME": "LEXI",
-        "SEX": "Female",
-        "YEARS_OLD": "3",
-        "MONTHS_OLD": "9.00",
-        "BREED": "DOMESTIC SH",
-        "LOCATION": "Agoura ACC",
-        "KENNEL_STAT": "RTGH",
-        "RESCUE_ONLY": "NO",
-        "MEDICAL_STAT": "MINOR MEDICAL",
-        "WEIGHT": "0.00",
-        "OUTCOME_TYPE": null
-      },
-      {
         "ANIMAL_ID": "A5513148",
         "ANIMAL_NAME": "RANDELL",
         "SEX": "Male",
@@ -447,6 +279,20 @@
         "LOCATION": "Agoura ACC",
         "KENNEL_STAT": "RTGH",
         "RESCUE_ONLY": null,
+        "MEDICAL_STAT": "MINOR MEDICAL",
+        "WEIGHT": "0.00",
+        "OUTCOME_TYPE": null
+      },
+      {
+        "ANIMAL_ID": "A5513158",
+        "ANIMAL_NAME": "LEXI",
+        "SEX": "Female",
+        "YEARS_OLD": "3",
+        "MONTHS_OLD": "9.00",
+        "BREED": "DOMESTIC SH",
+        "LOCATION": "Agoura ACC",
+        "KENNEL_STAT": "RTGH",
+        "RESCUE_ONLY": "NO",
         "MEDICAL_STAT": "MINOR MEDICAL",
         "WEIGHT": "0.00",
         "OUTCOME_TYPE": null
@@ -547,20 +393,6 @@
         "RESCUE_ONLY": null,
         "MEDICAL_STAT": "NO KNOWN",
         "WEIGHT": "14.56",
-        "OUTCOME_TYPE": null
-      },
-      {
-        "ANIMAL_ID": "A5560418",
-        "ANIMAL_NAME": "APOLLO",
-        "SEX": "Male",
-        "YEARS_OLD": "0",
-        "MONTHS_OLD": "11.00",
-        "BREED": "MASTIFF",
-        "LOCATION": "Agoura ACC",
-        "KENNEL_STAT": "RTGH",
-        "RESCUE_ONLY": "NO",
-        "MEDICAL_STAT": "MINOR MEDICAL",
-        "WEIGHT": "0.00",
         "OUTCOME_TYPE": null
       },
       {
@@ -704,20 +536,6 @@
         "OUTCOME_TYPE": null
       },
       {
-        "ANIMAL_ID": "A5556874",
-        "ANIMAL_NAME": "JUNIPER",
-        "SEX": "Female",
-        "YEARS_OLD": "0",
-        "MONTHS_OLD": "11.00",
-        "BREED": "FORMOSAN MTN",
-        "LOCATION": "Agoura ACC",
-        "KENNEL_STAT": "RTGH",
-        "RESCUE_ONLY": "NO",
-        "MEDICAL_STAT": null,
-        "WEIGHT": "32.50",
-        "OUTCOME_TYPE": "FOSTER"
-      },
-      {
         "ANIMAL_ID": "A5550954",
         "ANIMAL_NAME": "PAL",
         "SEX": "Male",
@@ -830,20 +648,6 @@
         "OUTCOME_TYPE": null
       },
       {
-        "ANIMAL_ID": "A5514089",
-        "ANIMAL_NAME": "BRADLEY",
-        "SEX": "Male",
-        "YEARS_OLD": "1",
-        "MONTHS_OLD": "6.00",
-        "BREED": "GERM SHEPHERD",
-        "LOCATION": "Agoura ACC",
-        "KENNEL_STAT": "RTGH",
-        "RESCUE_ONLY": "NO",
-        "MEDICAL_STAT": "MINOR MEDICAL",
-        "WEIGHT": "73.10",
-        "OUTCOME_TYPE": null
-      },
-      {
         "ANIMAL_ID": "A5513177",
         "ANIMAL_NAME": "GABI",
         "SEX": "Female",
@@ -860,6 +664,6 @@
     ],
     "startRecord": "1",
     "totalPages": "1",
-    "totalRecords": "61"
+    "totalRecords": "47"
   }
 ]
