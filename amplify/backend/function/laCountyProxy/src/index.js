@@ -9,9 +9,6 @@ exports.handler = async (event) => {
         return response;
     });
 
-    console.log("response received");
-    console.log(response);
-    console.log(response.data);
     return {
         statusCode: 200,
         body: JSON.stringify(response.data),
