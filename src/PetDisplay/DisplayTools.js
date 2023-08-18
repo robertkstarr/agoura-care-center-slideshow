@@ -34,5 +34,10 @@ export const ageDisplay = (years, months) => {
 };
 
 export const weightDisplay = (weight) => {
-    return weight + " lbs";
+
+    if (weight == null) return "";
+    if (isNaN(weight)) return "";
+    if (parseFloat(weight) == 0) return "";
+
+    return parseFloat(weight) + " lbs";
 };

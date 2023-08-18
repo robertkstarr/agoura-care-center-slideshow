@@ -37,5 +37,5 @@ test("shows breed", async () => {
 test("shows weight", async () => {
     render(<PetInfo pet={defaultPet}/>);
     const petWeight = await screen.findByTestId("Weight Display");
-    expect(petWeight).toHaveTextContent("WEIGHT: 3.20 lbs");
+    expect(petWeight).toHaveTextContent("WEIGHT: 3.2 lbs");
 });

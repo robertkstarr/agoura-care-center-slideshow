@@ -33,4 +33,16 @@ describe("weight tests", () => {
     test("parses typical weight response correctly", () => {
         expect(weightDisplay("7.62")).toEqual("7.62 lbs");
     });
+
+    test("parses null weight correctly", () => {
+        expect(weightDisplay(null)).toEqual("");
+    });
+
+    test("parses non-number weight correctly", () => {
+        expect(weightDisplay("hello")).toEqual("");
+    });
+
+    test("parses zero weight correctly", () => {
+        expect(weightDisplay("0.00")).toEqual("");
+    });
 });
