@@ -33,11 +33,12 @@ export const ageDisplay = (years, months) => {
     return yearsDisplay(years) + monthsDisplay(months);
 };
 
+export const shouldDisplayWeight = (weight) => {
+    return (weight != null) && (!isNaN(weight)) && (parseFloat(weight) > 0);
+};
 export const weightDisplay = (weight) => {
-
-    if (weight == null) return "";
-    if (isNaN(weight)) return "";
-    if (parseFloat(weight) == 0) return "";
-
-    return parseFloat(weight) + " lbs";
+    if (shouldDisplayWeight(weight)) {
+        return parseFloat(weight) + " lbs";
+    }
+    return "";
 };
