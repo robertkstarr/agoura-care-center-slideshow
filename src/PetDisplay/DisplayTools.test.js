@@ -8,24 +8,30 @@ test("capitalizes sentences correctly", () => {
 });
 
 describe("age tests", () => {
+    const createPetWithAge = (years, months) => {
+        return {
+            YEARS_OLD: years,
+            MONTHS_OLD: months
+        };
+    };
     test("parses age correctly", () => {
-        expect(ageDisplay("2", "7.00")).toEqual("2 years 7 months");
+        expect(ageDisplay(createPetWithAge("2", "7.00"))).toEqual("2 years 7 months");
     });
 
     test("parses age correctly less than 1 year", () => {
-        expect(ageDisplay("0", "7.00")).toEqual("7 months");
+        expect(ageDisplay(createPetWithAge("0", "7.00"))).toEqual("7 months");
     });
 
     test("parses age correctly for 1 year", () => {
-        expect(ageDisplay("1", "7.00")).toEqual("1 year 7 months");
+        expect(ageDisplay(createPetWithAge("1", "7.00"))).toEqual("1 year 7 months");
     });
 
     test("parses age correctly for 1 month", () => {
-        expect(ageDisplay("2", "1.00")).toEqual("2 years 1 month");
+        expect(ageDisplay(createPetWithAge("2", "1.00"))).toEqual("2 years 1 month");
     });
 
     test("parses age correctly for 0 months", () => {
-        expect(ageDisplay("3", "0.00")).toEqual("3 years ");
+        expect(ageDisplay(createPetWithAge("3", "0.00"))).toEqual("3 years ");
     });
 });
 

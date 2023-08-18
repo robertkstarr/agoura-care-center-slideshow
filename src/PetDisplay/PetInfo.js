@@ -1,14 +1,23 @@
 import React from "react";
-import {ageDisplay, capitalizeEveryWordOfString, weightDisplay} from "./DisplayTools";
+import {
+    ageDisplay,
+    capitalizeEveryWordOfString,
+    shouldDisplayAge,
+    shouldDisplayWeight,
+    weightDisplay
+} from "./DisplayTools";
 
 const PetInfo = ({pet}) => {
     return (
         <div className={"PetInfo"}>
             <div data-testid={"ID Display"}>ID: {pet.ANIMAL_ID}</div>
-            <div data-testid={"Sex Display"}>SEX: {pet.SEX}</div>
-            <div data-testid={"Age Display"}>AGE: {ageDisplay(pet.YEARS_OLD, pet.MONTHS_OLD)}</div>
+            {pet.SEX != "N/A" && <div data-testid={"Sex Display"}>SEX: {pet.SEX}</div>}
+            {shouldDisplayAge(pet) &&
+                <div data-testid={"Age Display"}>AGE: {ageDisplay(pet)}</div>}
             <div data-testid={"Breed Display"}>BREED: {capitalizeEveryWordOfString(pet.BREED)}</div>
-            <div data-testid={"Weight Display"}>WEIGHT: {weightDisplay(pet.WEIGHT)}</div>
+            {shouldDisplayWeight(pet.WEIGHT) &&
+                <div data-testid={"Weight Display"}>WEIGHT: {weightDisplay(pet.WEIGHT)}</div>
+            }
         </div>
     );
 };
