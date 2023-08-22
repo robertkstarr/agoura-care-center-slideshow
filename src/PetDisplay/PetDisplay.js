@@ -2,7 +2,8 @@ import React, {useCallback, useEffect, useState} from "react";
 import {GetPetInfo} from "../GetPetInfo/GetPetInfo";
 import LandscapeView from "./LandscapeView/LandscapeView";
 import {PortraitView} from "./PortraitView/PortraitView";
-
+import {capitalizeEveryWordOfString} from "./DisplayTools";
+import "./PetDisplay.css";
 
 const PetDisplay = () => {
     const TIME_FOR_EACH_PET_IN_SECONDS = 10;
@@ -55,6 +56,7 @@ const PetDisplay = () => {
     if (currentPet) {
         return (
             <div className={"PetDisplay"}>
+                <div className={"PetName"}>{capitalizeEveryWordOfString(currentPet.ANIMAL_NAME)}</div>
                 {!isPortrait && <LandscapeView currentPet={currentPet} pickNewPet={pickNewPet}/>}
                 {isPortrait && <PortraitView currentPet={currentPet} pickNewPet={pickNewPet}/>}
             </div>);

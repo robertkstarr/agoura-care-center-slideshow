@@ -11,7 +11,7 @@
 .LandscapeView .LeftSide {
     width: 50vw;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-end;
     display: flex;
     flex-direction: column;
 }
@@ -25,14 +25,10 @@
 }
 
 .LandscapeView img {
-    height: 60vh;
-    max-width: 90vw;
+    height: 65vh;
+    max-width: 40vw;
     align-self: center;
     margin-top: 1rem;
-}
-
-.PetName {
-    font-size: 6vh;
 }
 
 .PetInfo {
