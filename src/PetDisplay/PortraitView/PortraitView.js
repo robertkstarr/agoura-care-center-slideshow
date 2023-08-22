@@ -4,6 +4,7 @@ import PetInfo from "../PetInfo";
 import Footer from "../../Footer/Footer";
 import React from "react";
 import "./PortraitView.css";
+import Logo from "../../Header/Logo";
 
 export const PortraitView = ({currentPet, pickNewPet}) => {
     return (
@@ -11,6 +12,7 @@ export const PortraitView = ({currentPet, pickNewPet}) => {
             <PetImage onClick={pickNewPet} imageURL={getAnimalImageURL(currentPet.ANIMAL_ID)}/>
             <PetInfo pet={currentPet}/>
             <Footer/>
+            <Logo/>
         </div>
     );
 };

@@ -1,12 +1,12 @@
 import animalCareCenter from "../Resources/animalCareCenter.png";
 import React from "react";
 
-const Header = () => {
+const Logo = () => {
     return (
-        <header className="App-header">
+        <div className="logo">
             <img alt={"Animal Care Center Logo"} src={animalCareCenter}/>
-        </header>
+        </div>
     );
 };
 
-export default Header;  
+export default Logo;

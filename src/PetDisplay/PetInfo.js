@@ -11,7 +11,7 @@ const PetInfo = ({pet}) => {
     return (
         <div className={"PetInfo"}>
             <div data-testid={"ID Display"}>ID: {pet.ANIMAL_ID}</div>
-            {pet.SEX != "N/A" && <div data-testid={"Sex Display"}>Sex: {pet.SEX}</div>}
+            {pet.SEX !== "N/A" && <div data-testid={"Sex Display"}>Sex: {pet.SEX}</div>}
             {shouldDisplayAge(pet) &&
                 <div data-testid={"Age Display"}>Age: {ageDisplay(pet)}</div>}
             <div data-testid={"Breed Display"}>Breed: {capitalizeEveryWordOfString(pet.BREED)}</div>
