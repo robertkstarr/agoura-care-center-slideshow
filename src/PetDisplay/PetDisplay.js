@@ -1,10 +1,8 @@
 import React, {useCallback, useEffect, useState} from "react";
-import PetImage from "../PetImage/PetImage";
-import PetInfo from "./PetInfo";
-import {getAnimalImageURL} from "../GetPetInfo/GetAnimalImageURL/GetAnimalImageURL";
-import "./PetDisplay.css";
-import {capitalizeEveryWordOfString} from "./DisplayTools";
 import {GetPetInfo} from "../GetPetInfo/GetPetInfo";
+import LandscapeView from "./LandscapeView/LandscapeView";
+import {PortraitView} from "./PortraitView/PortraitView";
+
 
 const PetDisplay = () => {
     const TIME_FOR_EACH_PET_IN_SECONDS = 10;
@@ -12,6 +10,7 @@ const PetDisplay = () => {
     const [allPets, setAllPets] = useState([]);
     const [currentPet, setCurrentPet] = useState(null);
     const [timeSinceLastSwitch, setTimeSinceLastSwitch] = useState(0);
+    const isPortrait = window.innerHeight > window.innerWidth;
 
     const pickNewPet = useCallback(() => {
         setTimeSinceLastSwitch(0);
@@ -56,9 +55,8 @@ const PetDisplay = () => {
     if (currentPet) {
         return (
             <div className={"PetDisplay"}>
-                <div className={"PetName"}>{capitalizeEveryWordOfString(currentPet.ANIMAL_NAME)}</div>
-                <PetImage onClick={pickNewPet} imageURL={getAnimalImageURL(currentPet.ANIMAL_ID)}/>
-                <PetInfo pet={currentPet}/>
+                {!isPortrait && <LandscapeView currentPet={currentPet} pickNewPet={pickNewPet}/>}
+                {isPortrait && <PortraitView currentPet={currentPet} pickNewPet={pickNewPet}/>}
             </div>);
     } else {
         return (<div>Loading...</div>);
