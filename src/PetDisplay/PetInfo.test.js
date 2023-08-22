@@ -21,25 +21,25 @@ describe("shows info when there", () => {
     test("shows sex", async () => {
         render(<PetInfo pet={defaultPet}/>);
         const petWeight = await screen.findByTestId("Sex Display");
-        expect(petWeight).toHaveTextContent("SEX: Female");
+        expect(petWeight).toHaveTextContent("Sex: Female");
     });
 
     test("shows age", async () => {
         render(<PetInfo pet={defaultPet}/>);
         const petWeight = await screen.findByTestId("Age Display");
-        expect(petWeight).toHaveTextContent("AGE: 10 years 3 months");
+        expect(petWeight).toHaveTextContent("Age: 10 years 3 months");
     });
 
     test("shows breed", async () => {
         render(<PetInfo pet={defaultPet}/>);
         const petWeight = await screen.findByTestId("Breed Display");
-        expect(petWeight).toHaveTextContent("BREED: Pet Breed");
+        expect(petWeight).toHaveTextContent("Breed: Pet Breed");
     });
 
     test("shows weight", async () => {
         render(<PetInfo pet={defaultPet}/>);
         const petWeight = await screen.findByTestId("Weight Display");
-        expect(petWeight).toHaveTextContent("WEIGHT: 3.2 lbs");
+        expect(petWeight).toHaveTextContent("Weight: 3.2 lbs");
     });
 });
 
@@ -70,6 +70,4 @@ describe("does not show info if not there", () => {
         const petWeight = screen.queryByTestId("Weight Display");
         expect(petWeight).not.toBeInTheDocument();
     });
-
-
 });
