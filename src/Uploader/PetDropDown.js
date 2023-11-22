@@ -33,7 +33,7 @@ const PetDropDown = ({setSelectedPet}) => {
                 <Autocomplete
                     renderInput={
                         (params) => <TextField {...params} label="Selected Animal"/>}
-                    options={shelterPets}
+                    options={shelterPets.sort((a, b) => a.ANIMAL_NAME.localeCompare(b.ANIMAL_NAME))}
                     getOptionLabel={(option) => createAnimalLabel(option)}
                     onChange={(event, newValue, reason) => {
                         if (reason === "clear") {
