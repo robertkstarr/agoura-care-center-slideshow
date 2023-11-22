@@ -58,8 +58,14 @@ const UploaderComponent = () => {
         <div className={"UploaderComponent"}>
             <FileUploader handleChange={handleChange} name="file" types={fileTypes} label={"Upload your pictures"}
                           multiple={true}/>
-            {files.map((file, index) => <div key={index}>{index} - {file.name}</div>)}
-            <button onClick={handleUpload}>Submit Files</button>
+            <div>
+                <h3>Files to upload:</h3>
+                {files.map((file, index) => <div key={index}>{index} - {file.name}</div>)}
+            </div>
+            <div className={"buttons"}>
+                <button onClick={handleUpload}>Submit Files</button>
+                <button onClick={() => setFiles([])}>Clear files</button>
+            </div>
             <p>{percent}% done</p>
         </div>
     );
