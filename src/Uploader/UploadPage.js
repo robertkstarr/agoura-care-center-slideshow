@@ -3,11 +3,11 @@ import UploaderComponent from "./UploaderComponent";
 import PetDropDown from "./PetDropDown";
 
 const UploadPage = () => {
-    const [selectedPet, setSelectedPet] = useState("");
+    const [selectedPet, setSelectedPet] = useState();
 
     return (
         <div>
-            Selected Pet is {selectedPet}
+            {selectedPet ? `Selected Pet is ${selectedPet.ANIMAL_ID}` : ""}
             <PetDropDown
                 setSelectedPet={setSelectedPet}
             />

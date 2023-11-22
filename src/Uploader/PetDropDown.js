@@ -1,6 +1,7 @@
 import React, {useCallback, useEffect, useState} from "react";
 import {Autocomplete, TextField} from "@mui/material";
 import {GetPetInfo} from "../SlideShow/GetPetInfo/GetPetInfo";
+import "./PetDropDown.css";
 
 const PetDropDown = ({setSelectedPet}) => {
     const [shelterPets, setShelterPets] = useState([]);
@@ -12,20 +13,12 @@ const PetDropDown = ({setSelectedPet}) => {
         const cleanedAnimals = [];
 
         unmodifiedAnimalInfo[0]["animals"].forEach((animal) => {
-            cleanedAnimals.push({
-                label: createAnimalLabel(animal),
-                id: animal.ANIMAL_ID
-            });
+            cleanedAnimals.push(animal);
         });
-
         return cleanedAnimals;
     }, []);
 
     useEffect(() => {
-        setShelterPets([{label: "dog 1", id: 1}, {label: "cat 2", id: 2}, {label: "dog 2", id: 3}, {
-            label: "cat 3",
-            id: 4
-        }]);
         GetPetInfo().then((pets) => {
                 setShelterPets(cleanUpDownloadedAnimalInfo(pets));
             }
@@ -36,14 +29,18 @@ const PetDropDown = ({setSelectedPet}) => {
         return (<div>Loading...</div>);
     } else {
         return (
-            <div>
+            <div class={"PetDropDown"}>
                 <Autocomplete
                     renderInput={
                         (params) => <TextField {...params} label="Selected Animal"/>}
                     options={shelterPets}
+                    getOptionLabel={(option) => createAnimalLabel(option)}
                     onChange={(event, newValue, reason) => {
-                        reason === "clear" ? setSelectedPet("") :
-                            setSelectedPet(event.target.outerText);
+                        if (reason === "clear") {
+                            setSelectedPet(null);
+                        } else {
+                            setSelectedPet(newValue);
+                        }
                     }}/>
             </div>
         );

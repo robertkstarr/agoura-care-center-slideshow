@@ -3,7 +3,6 @@ import {getDownloadURL, ref, uploadBytesResumable} from "firebase/storage";
 import {storage} from "./FirebaseConfigFiles/FirebaseConfig";
 import {FileUploader} from "react-drag-drop-files";
 
-
 const UploaderComponent = () => {
     // State to store uploaded file
     const [files, setFiles] = useState([]);
