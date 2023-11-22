@@ -26,10 +26,10 @@ const PetDropDown = ({setSelectedPet}) => {
     }, [cleanUpDownloadedAnimalInfo]);
 
     if (shelterPets.length === 0) {
-        return (<div>Loading...</div>);
+        return (<div className={"Loading"}>Loading...</div>);
     } else {
         return (
-            <div class={"PetDropDown"}>
+            <div className={"PetDropDown"}>
                 <Autocomplete
                     renderInput={
                         (params) => <TextField {...params} label="Selected Animal"/>}

@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import {getDownloadURL, ref, uploadBytesResumable} from "firebase/storage";
 import {storage} from "./FirebaseConfigFiles/FirebaseConfig";
 import {FileUploader} from "react-drag-drop-files";
+import "./UploaderComponent.css";
 
 const UploaderComponent = () => {
     // State to store uploaded file
@@ -54,12 +55,12 @@ const UploaderComponent = () => {
     };
 
     return (
-        <div>
+        <div className={"UploaderComponent"}>
             <FileUploader handleChange={handleChange} name="file" types={fileTypes} label={"Upload your pictures"}
                           multiple={true}/>
             {files.map((file, index) => <div key={index}>{index} - {file.name}</div>)}
             <button onClick={handleUpload}>Submit Files</button>
-            <p>{percent} "% done"</p>
+            <p>{percent}% done</p>
         </div>
     );
 };
