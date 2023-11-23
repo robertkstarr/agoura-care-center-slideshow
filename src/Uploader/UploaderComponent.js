@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import {FileUploader} from "react-drag-drop-files";
 import "./UploaderComponent.css";
 import FileProgressBar from "./FileProgressBar";
@@ -21,6 +21,10 @@ const UploaderComponent = ({animalId}) => {
         setSubmit(true);
         setTimeout(() => setSubmit(false), 500);
     };
+
+    useEffect(() => {
+        setFiles([]);
+    }, [animalId]);
 
     return (
         <div className={"UploaderComponent"}>

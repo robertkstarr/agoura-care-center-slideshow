@@ -12,10 +12,17 @@ const FileProgressBar = ({file, index, animalId, submit}) => {
         }
     }, [file, percent, submit]);
 
+    const returnProgressBar = () => {
+        if (percent == 100) {
+            return <ProgressBar now={100} variant={"success"}/>;
+        } else {
+            return <ProgressBar animated now={percent} striped variant={"success"}/>;
+        }
+    };
     return (
         <div key={index} className={"ProgressBar"}>
             <div className={"FileName"}>{file.name}</div>
-            <ProgressBar animated now={percent} striped variant={"success"}/>
+            {returnProgressBar()}
         </div>
     );
 };
