@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useRef, useState} from "react";
 import {FileUploader} from "react-drag-drop-files";
 import "./UploaderComponent.css";
 import FileProgressBar from "./FileProgressBar";
@@ -6,7 +6,7 @@ import FileProgressBar from "./FileProgressBar";
 const UploaderComponent = () => {
     // State to store uploaded file
     const [files, setFiles] = useState([]);
-    const [submitting, setSubmitting] = useState(false);
+    const submitButton = useRef(null);
     const fileTypes = ["JPG", "PNG", "GIF", "JPEG"];
 
     const handleChange = (newFiles) => {
@@ -19,7 +19,7 @@ const UploaderComponent = () => {
     };
 
     const handleSubmit = () => {
-        setSubmitting(true);
+        submitButton.current = "click";
     };
 
     return (
@@ -28,7 +28,8 @@ const UploaderComponent = () => {
                           multiple={true}/>
             <div>
                 <h3>Files to upload:</h3>
-                {files.map((file, index) => <FileProgressBar file={file} index={index} submitting={submitting}/>)}
+                {files.map((file, index) => <FileProgressBar key={index} file={file} index={index}
+                                                             submitButton={submitButton}/>)}
             </div>
             <div className={"buttons"}>
                 <button onClick={handleSubmit}>Submit Files</button>
