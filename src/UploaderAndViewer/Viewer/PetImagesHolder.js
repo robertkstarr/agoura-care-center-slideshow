@@ -8,13 +8,17 @@ const PetImagesHolder = ({selectedPet}) => {
     const [images, setImages] = useState(null);
 
     useEffect(() => {
-        onValue(ref(database, selectedPet.ANIMAL_ID), (snapshot) => {
-            const value = snapshot.val();
+        setImages(null);
 
-            if (value != null && Object.keys(value).length > 0) {
-                setImages(Object.keys(value).map((image) => value[image].url));
-            }
-        });
+        if (selectedPet) {
+            onValue(ref(database, selectedPet.ANIMAL_ID), (snapshot) => {
+                const value = snapshot.val();
+
+                if (value != null && Object.keys(value).length > 0) {
+                    setImages(Object.keys(value).map((image) => value[image].url));
+                }
+            });
+        }
     }, [selectedPet]);
 
     if (selectedPet && images) {
