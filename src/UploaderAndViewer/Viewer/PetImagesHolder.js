@@ -11,7 +11,7 @@ const PetImagesHolder = ({selectedPet}) => {
         onValue(ref(database, selectedPet.ANIMAL_ID), (snapshot) => {
             const value = snapshot.val();
 
-            if (value != null && Object.keys(value).size > 0) {
+            if (value != null && Object.keys(value).length > 0) {
                 setImages(Object.keys(value).map((image) => value[image].url));
             }
         });
@@ -29,7 +29,7 @@ const PetImagesHolder = ({selectedPet}) => {
                 </div>
             </div>
         );
-    } else if (selectedPet) {
+    } else if (selectedPet && images == null) {
         return <div>No images currently available.</div>;
     } else {
         return (
