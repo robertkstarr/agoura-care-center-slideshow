@@ -2,9 +2,9 @@ import "./App.css";
 import React from "react";
 import PetDisplay from "./SlideShow/PetDisplay/PetDisplay";
 import {Route, Routes} from "react-router-dom";
-import UploadPage from "./Uploader/UploadPage";
+import UploadPage from "./UploaderAndViewer/Uploader/UploadPage";
 import "bootstrap/dist/css/bootstrap.min.css";
-import ViewerPage from "./Viewer/ViewerPage";
+import ViewerPage from "./UploaderAndViewer/Viewer/ViewerPage";
 
 function App() {
     return (

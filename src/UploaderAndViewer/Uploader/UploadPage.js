@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import PetDropDown from "./PetDropDown";
-import {getAnimalImageURL} from "../SlideShow/GetPetInfo/GetAnimalImageURL/GetAnimalImageURL";
+import {getAnimalImageURL} from "../../SlideShow/GetPetInfo/GetAnimalImageURL/GetAnimalImageURL";
 import "./UploadPage.css";
 import UploaderComponent from "./UploaderComponent";
 

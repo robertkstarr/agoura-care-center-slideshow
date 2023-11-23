@@ -1,6 +1,6 @@
 import React, {useCallback, useEffect, useState} from "react";
 import {Autocomplete, TextField} from "@mui/material";
-import {GetPetInfo} from "../SlideShow/GetPetInfo/GetPetInfo";
+import {GetPetInfo} from "../../SlideShow/GetPetInfo/GetPetInfo";
 import "./PetDropDown.css";
 
 const PetDropDown = ({setSelectedPet}) => {

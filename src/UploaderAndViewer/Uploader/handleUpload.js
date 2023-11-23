@@ -1,5 +1,6 @@
 import {getDownloadURL, ref, uploadBytesResumable} from "firebase/storage";
-import {storage} from "./FirebaseConfigFiles/FirebaseConfig";
+import {storage} from "../FirebaseConfigFiles/FirebaseConfig";
+import setDatabaseValue from "../FirebaseConfigFiles/setDatabaseValue";
 
 export const handleUpload = (file, setPercent, animalId) => {
     // progress can be paused and resumed. It also exposes progress updates.
@@ -20,6 +21,8 @@ export const handleUpload = (file, setPercent, animalId) => {
         () => {
             // download url
             getDownloadURL(uploadTask.snapshot.ref).then((url) => {
+                //TODO: Attach Username to database file
+                setDatabaseValue(`${animalId}/${file.name.split(".")[0]}`, {url});
                 console.log(url);
             });
         });
