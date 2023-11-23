@@ -23,7 +23,6 @@ export const handleUpload = (file, setPercent, animalId) => {
             getDownloadURL(uploadTask.snapshot.ref).then((url) => {
                 //TODO: Attach Username to database file
                 setDatabaseValue(`${animalId}/${file.name.split(".")[0]}`, {url});
-                console.log(url);
             });
         });
 
