@@ -1,10 +1,10 @@
 import {getDownloadURL, ref, uploadBytesResumable} from "firebase/storage";
 import {storage} from "./FirebaseConfigFiles/FirebaseConfig";
 
-export const handleUpload = (file, setPercent) => {
+export const handleUpload = (file, setPercent, animalId) => {
     // progress can be paused and resumed. It also exposes progress updates.
     // Receives the storage reference and the file to upload.]
-    const storageRef = ref(storage, `/files/${file.name}`);
+    const storageRef = ref(storage, `/${animalId}/${file.name}`);
     const uploadTask = uploadBytesResumable(storageRef, file);
     uploadTask.on(
         "state_changed",

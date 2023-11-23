@@ -14,7 +14,7 @@ const UploadPage = () => {
             />
             {selectedPet ? <img alt={`${selectedPet.ANIMAL_NAME}`}
                                 src={getAnimalImageURL(selectedPet.ANIMAL_ID)}/> : ""}
-            {selectedPet ? <UploaderComponent/> : "Please select a pet"}
+            {selectedPet ? <UploaderComponent animalId={selectedPet.ANIMAL_ID}/> : "Please select a pet"}
         </div>
     );
 };

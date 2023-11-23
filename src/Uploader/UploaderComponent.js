@@ -1,12 +1,11 @@
-import React, {useRef, useState} from "react";
+import React, {useState} from "react";
 import {FileUploader} from "react-drag-drop-files";
 import "./UploaderComponent.css";
 import FileProgressBar from "./FileProgressBar";
 
-const UploaderComponent = () => {
-    // State to store uploaded file
+const UploaderComponent = ({animalId}) => {
     const [files, setFiles] = useState([]);
-    const submitButton = useRef(null);
+    const [submit, setSubmit] = useState(false);
     const fileTypes = ["JPG", "PNG", "GIF", "JPEG"];
 
     const handleChange = (newFiles) => {
@@ -19,7 +18,8 @@ const UploaderComponent = () => {
     };
 
     const handleSubmit = () => {
-        submitButton.current = "click";
+        setSubmit(true);
+        setTimeout(() => setSubmit(false), 500);
     };
 
     return (
@@ -29,7 +29,7 @@ const UploaderComponent = () => {
             <div>
                 <h3>Files to upload:</h3>
                 {files.map((file, index) => <FileProgressBar key={index} file={file} index={index}
-                                                             submitButton={submitButton}/>)}
+                                                             submit={submit} animalId={animalId}/>)}
             </div>
             <div className={"buttons"}>
                 <button onClick={handleSubmit}>Submit Files</button>
