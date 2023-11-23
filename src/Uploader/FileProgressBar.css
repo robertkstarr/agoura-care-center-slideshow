@@ -1,0 +1,10 @@
+.ProgressBar {
+    max-width: 80vw;
+    min-width: 20vw;
+    background-color: white;
+    margin: 1rem;
+}
+
+.FileName {
+    margin: 0rem 1rem;
+}

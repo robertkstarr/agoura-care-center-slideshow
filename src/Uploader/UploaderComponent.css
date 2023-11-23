@@ -5,6 +5,10 @@
     align-items: center;
 }
 
-button {
+.UploaderComponent h3 {
+    margin: .5rem;
+}
+
+.buttons button {
     margin: .5rem;
 }

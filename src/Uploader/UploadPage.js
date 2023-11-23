@@ -12,7 +12,7 @@ const UploadPage = () => {
             <PetDropDown
                 setSelectedPet={setSelectedPet}
             />
-            {selectedPet ? <img alt={`A picture of ${selectedPet.ANIMAL_ID}`}
+            {selectedPet ? <img alt={`${selectedPet.ANIMAL_NAME}`}
                                 src={getAnimalImageURL(selectedPet.ANIMAL_ID)}/> : ""}
             {selectedPet ? <UploaderComponent/> : "Please select a pet"}
         </div>

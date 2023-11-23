@@ -3,6 +3,7 @@ import {getDownloadURL, ref, uploadBytesResumable} from "firebase/storage";
 import {storage} from "./FirebaseConfigFiles/FirebaseConfig";
 import {FileUploader} from "react-drag-drop-files";
 import "./UploaderComponent.css";
+import FileProgressBar from "./FileProgressBar";
 
 const UploaderComponent = () => {
     // State to store uploaded file
@@ -60,7 +61,7 @@ const UploaderComponent = () => {
                           multiple={true}/>
             <div>
                 <h3>Files to upload:</h3>
-                {files.map((file, index) => <div key={index}>{index} - {file.name}</div>)}
+                {files.map((file, index) => <FileProgressBar file={file} index={index}/>)}
             </div>
             <div className={"buttons"}>
                 <button onClick={handleUpload}>Submit Files</button>
