@@ -10,10 +10,10 @@ const FileProgressBar = ({file, index, animalId, submit}) => {
         if (percent === 0 && submit) {
             handleUpload(file, setPercent, animalId);
         }
-    }, [file, percent, submit]);
+    }, [file, percent, submit, animalId]);
 
     const returnProgressBar = () => {
-        if (percent == 100) {
+        if (percent === 100) {
             return <ProgressBar now={100} variant={"success"}/>;
         } else {
             return <ProgressBar animated now={percent} striped variant={"success"}/>;
