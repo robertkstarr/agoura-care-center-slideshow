@@ -1,15 +1,22 @@
-import React, {useState} from "react";
-import PetDropDown from "./PetDropDown";
+import React, {useEffect, useState} from "react";
+import PetDropDown from "../SharedTools/PetDropDown";
 import {getAnimalImageURL} from "../../SlideShow/GetPetInfo/GetAnimalImageURL/GetAnimalImageURL";
 import "./UploadPage.css";
 import UploaderComponent from "./UploaderComponent";
+import GetDropDownAnimals from "../SharedTools/GetDropDownAnimals";
 
 const UploadPage = () => {
     const [selectedPet, setSelectedPet] = useState();
+    const [shelterPets, setShelterPets] = useState([]);
+
+    useEffect(() => {
+        GetDropDownAnimals().then((animals) => setShelterPets(animals));
+    }, []);
 
     return (
         <div className={"UploadPage"}>
             <PetDropDown
+                shelterPets={shelterPets}
                 setSelectedPet={setSelectedPet}
             />
             {selectedPet ? <img alt={`${selectedPet.ANIMAL_NAME}`}
