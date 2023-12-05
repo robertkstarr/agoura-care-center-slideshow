@@ -5,18 +5,14 @@ import {signInWithGoogle} from "./SignIns";
 import "./Login.css";
 
 const Login = () => {
-    const [email, setEmail] = useState("");
     const [signedIn, setSignedIn] = useState(false);
-
 
     useEffect(() => {
         auth.onAuthStateChanged(
             () => {
                 if (auth.currentUser) {
-                    setEmail(auth.currentUser.email);
                     setSignedIn(true);
                 } else {
-                    setEmail("");
                     setSignedIn(false);
                 }
             }
@@ -26,7 +22,7 @@ const Login = () => {
     if (signedIn) {
         return (
             <div>
-                <button onClick={() => {
+                <button className={"button"} onClick={() => {
                     signOut(auth).then();
                 }}>Sign Out
                 </button>
@@ -36,7 +32,7 @@ const Login = () => {
         return (
             <div className={"LoginContainer"}>
                 <div className={"Login"}>
-                    <button onClick={signInWithGoogle}>
+                    <button className={"button"} onClick={signInWithGoogle}>
                         Sign in with Google
                     </button>
                     {/*TODO: Implement email based login as well*/}
