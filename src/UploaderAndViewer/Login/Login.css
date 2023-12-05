@@ -1,0 +1,10 @@
+.LoginContainer {
+    justify-content: center;
+    flex: 1 1 auto;
+    flex-direction: column;
+    display: flex;
+}
+
+button {
+    margin: 1rem;
+}

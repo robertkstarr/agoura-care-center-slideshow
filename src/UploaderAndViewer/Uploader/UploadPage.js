@@ -28,7 +28,7 @@ const UploadPage = () => {
     return (
         <div className={"UploadPage"}>
             <Login/>
-            {signedIn && (<div><PetDropDown
+            {signedIn && (<div className={"PetDropDownContainer"}><PetDropDown
                 shelterPets={shelterPets}
                 setSelectedPet={setSelectedPet}
             />

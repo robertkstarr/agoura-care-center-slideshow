@@ -2,6 +2,7 @@ import {signOut} from "firebase/auth";
 import {useEffect, useState} from "react";
 import {auth} from "../FirebaseConfigFiles/FirebaseConfig";
 import {signInWithGoogle} from "./SignIns";
+import "./Login.css";
 
 const Login = () => {
     const [email, setEmail] = useState("");
@@ -25,7 +26,6 @@ const Login = () => {
     if (signedIn) {
         return (
             <div>
-                <div>Email: {email}</div>
                 <button onClick={() => {
                     signOut(auth).then();
                 }}>Sign Out
@@ -34,9 +34,21 @@ const Login = () => {
         );
     } else {
         return (
-            <button onClick={signInWithGoogle}>
-                Sign in
-            </button>);
+            <div className={"LoginContainer"}>
+                <div className={"Login"}>
+                    <button onClick={signInWithGoogle}>
+                        Sign in with Google
+                    </button>
+                    {/*TODO: Implement email based login as well*/}
+                    {/*<div>Email: <input/></div>*/}
+                    {/*<div>Password: <input/></div>*/}
+                    {/*<button onClick={signInWithEmail}>*/}
+                    {/*    Sign in with Email*/}
+                    {/*</button>*/}
+                    {/*<CreateAccount/>*/}
+                </div>
+            </div>
+        );
     }
 };
 
