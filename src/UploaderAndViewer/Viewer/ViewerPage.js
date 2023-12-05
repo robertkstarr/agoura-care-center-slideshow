@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react";
 import "./ViewerPage.css";
 import PetDropDown from "../SharedTools/PetDropDown";
-import PetImagesHolder from "./PetImagesHolder";
+import PetImagesContainer from "./PetImagesContainer";
 import {FilterAnimalsWithAvailablePictures} from "./FilterAnimalsWithAvailablePictures";
 import Login from "../Login/Login";
 import {auth} from "../FirebaseConfigFiles/FirebaseConfig";
@@ -31,7 +31,7 @@ const ViewerPage = () => {
             {signedIn && (
                 <div className={"PetDropDownContainer"}>
                     <PetDropDown shelterPets={shelterPets} setSelectedPet={setSelectedPet}/>
-                    <PetImagesHolder selectedPet={selectedPet}/>
+                    <PetImagesContainer selectedPet={selectedPet}/>
                 </div>)}
         </div>);
 };
