@@ -1,5 +1,6 @@
 import {Autocomplete, TextField} from "@mui/material";
 import "./PetDropDown.css";
+import Loading from "../../Loading";
 
 const PetDropDown = ({shelterPets, setSelectedPet}) => {
 
@@ -8,7 +9,7 @@ const PetDropDown = ({shelterPets, setSelectedPet}) => {
     };
 
     if (shelterPets.length === 0) {
-        return (<div className={"Loading"}>Loading...</div>);
+        return (<Loading/>);
     } else {
         return (
             <div className={"PetDropDown"}>
