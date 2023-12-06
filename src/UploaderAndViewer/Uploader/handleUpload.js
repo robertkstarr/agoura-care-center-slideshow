@@ -8,6 +8,7 @@ export const handleUpload = (file, setPercent, animalId) => {
     // Receives the storage reference and the file to upload.]
     const storageRef = ref(storage, `/${animalId}/${file.name}`);
     const uploadTask = uploadBytesResumable(storageRef, file);
+    console.log(file);
     uploadTask.on(
         "state_changed",
         (snapshot) => {
@@ -29,7 +30,8 @@ export const handleUpload = (file, setPercent, animalId) => {
                     url,
                     uploadTime,
                     userId: uploadUserId,
-                    userName: uploadUserName
+                    userName: uploadUserName,
+                    fileName: file.name
                 });
             });
         });
