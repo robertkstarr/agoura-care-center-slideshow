@@ -7,10 +7,14 @@ import getAnimalImageURL from "./getAnimalImageURL";
 
 const PetImage = ({image}) => {
     const [url, setUrl] = useState("");
-    const [thumbnail, setThumbnail] = useState(null);
+    const [thumbnail, setThumbnail] = useState(loadingGif);
 
     useEffect(() => {
         const establishUrl = async () => {
+            getAnimalImageURL(image, true).then(
+                (thumbnailUrl) =>
+                    setThumbnail(thumbnailUrl ? thumbnailUrl : loadingGif)
+            );
             getAnimalImageURL(image).then((animalURL) => setUrl(animalURL));
         };
 
@@ -19,7 +23,7 @@ const PetImage = ({image}) => {
 
     return <div className={"PetImage"}><LazyLoadImage loading={"lazy"} src={url} alt={"animal"}
                                                       effect={"blur"}
-                                                      placeholderSrc={thumbnail ? thumbnail : loadingGif}/></div>;
+                                                      placeholderSrc={thumbnail}/></div>;
 };
 
 export default PetImage;
