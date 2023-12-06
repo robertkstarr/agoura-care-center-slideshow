@@ -36,7 +36,8 @@ export const handleUpload = (file, setPercent, animalId) => {
                     userName: uploadUserName,
                     fileName: file.name,
                     imageHeight: height,
-                    imageWidth: width
+                    imageWidth: width,
+                    animalId
                 });
             });
         });
