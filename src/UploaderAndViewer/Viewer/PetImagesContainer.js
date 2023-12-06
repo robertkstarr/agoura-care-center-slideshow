@@ -13,7 +13,7 @@ const PetImagesContainer = ({selectedPet}) => {
         if (selectedPet) {
             onValue(ref(database, selectedPet.ANIMAL_ID), (snapshot) => {
                 const value = snapshot.val();
-
+                console.log(value);
                 if (value != null && Object.keys(value).length > 0) {
                     setImages(Object.keys(value).sort((a, b) =>
                         (value[b]?.uploadTime || 0) -
