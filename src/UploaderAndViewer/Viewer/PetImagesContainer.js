@@ -13,12 +13,13 @@ const PetImagesContainer = ({selectedPet}) => {
         if (selectedPet) {
             onValue(ref(database, selectedPet.ANIMAL_ID), (snapshot) => {
                 const value = snapshot.val();
-                console.log(value);
                 if (value != null && Object.keys(value).length > 0) {
                     setImages(Object.keys(value).sort((a, b) =>
                         (value[b]?.uploadTime || 0) -
                         (value[a]?.uploadTime || 0)
-                    ).map((image) => value[image].url));
+                    ).map((image) => {
+                        return value[image];
+                    }));
                 }
             });
         }
@@ -29,8 +30,8 @@ const PetImagesContainer = ({selectedPet}) => {
             <div>
                 <div>{selectedPet.ANIMAL_NAME}</div>
                 <div className={"PetImagesContainer"}>
-                    {images.map((imageUrl, index) =>
-                        <PetImage url={imageUrl} key={index}/>
+                    {images.map((image, index) =>
+                        <PetImage image={image} key={index}/>
                     )
                     }
                 </div>
