@@ -5,7 +5,9 @@ import "./UploadPage.css";
 import UploaderComponent from "./UploaderComponent";
 import GetDropDownAnimals from "../SharedTools/GetDropDownAnimals";
 import Login from "../Login/Login";
-import {auth} from "../FirebaseConfigFiles/FirebaseConfig";
+import {auth, database} from "../FirebaseConfigFiles/FirebaseConfig";
+import {onValue, ref} from "firebase/database";
+import setDatabaseValue from "../FirebaseConfigFiles/setDatabaseValue";
 
 const UploadPage = () => {
     const [selectedPet, setSelectedPet] = useState();
@@ -25,8 +27,23 @@ const UploadPage = () => {
         );
     }, []);
 
+    const copyToPrivate = () => {
+        onValue(ref(database), (snapshot) => {
+            Object.entries(snapshot.val()).forEach((entry, index) => {
+                if (entry[0] !== "Public") {
+                    setDatabaseValue(`Public/${entry[0]}`, entry[1]);
+                    console.log(`${entry[0]}: ${entry[1]}`);
+                    console.log(entry[1]);
+                }
+            });
+        });
+    };
+
     return (
         <div className={"UploadPage"}>
+
+            <button onClick={() => copyToPrivate()}>DELETE ME</button>
+
             <Login/>
             {signedIn && (<div className={"PetDropDownContainer"}><PetDropDown
                 shelterPets={shelterPets}

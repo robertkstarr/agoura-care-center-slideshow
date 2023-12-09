@@ -3,7 +3,8 @@ import {database} from "../FirebaseConfigFiles/FirebaseConfig";
 import GetDropDownAnimals from "../SharedTools/GetDropDownAnimals";
 
 const IDAvailable = async (animalID) => {
-    const snapshot = await get(ref(database, animalID));
+    const snapshot = await get(ref(database, `Public/${animalID}`));
+    console.log(animalID);
     if (snapshot.val() != null) {
         return true;
     } else {
