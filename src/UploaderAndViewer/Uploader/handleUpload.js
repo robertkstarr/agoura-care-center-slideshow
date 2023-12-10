@@ -4,8 +4,6 @@ import setDatabaseValue from "../FirebaseConfigFiles/setDatabaseValue";
 import {Timestamp} from "firebase/firestore";
 
 export const handleUpload = (file, setPercent, animalId) => {
-    // progress can be paused and resumed. It also exposes progress updates.
-    // Receives the storage reference and the file to upload.]
     const storageRef = ref(storage, `/${animalId}/${file.name}`);
     const uploadTask = uploadBytesResumable(storageRef, file);
 
@@ -29,7 +27,7 @@ export const handleUpload = (file, setPercent, animalId) => {
                 const imageBitmap = await createImageBitmap(file);
                 const {width, height} = imageBitmap;
 
-                setDatabaseValue(`${animalId}/${file.name.split(".")[0]}`, {
+                setDatabaseValue(`Public/${animalId}/${file.name.split(".")[0]}`, {
                     url,
                     uploadTime,
                     userId: uploadUserId,
