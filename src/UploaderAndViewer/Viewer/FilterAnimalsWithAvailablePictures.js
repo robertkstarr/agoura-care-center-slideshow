@@ -1,19 +1,7 @@
-import {get, ref} from "firebase/database";
-import {database} from "../FirebaseConfigFiles/FirebaseConfig";
 import GetDropDownAnimals from "../SharedTools/GetDropDownAnimals";
+import IDAvailable from "./IDAvailable";
 
-const IDAvailable = async (animalID) => {
-    const snapshot = await get(ref(database, `Public/${animalID}`));
-    console.log(animalID);
-    if (snapshot.val() != null) {
-        return true;
-    } else {
-        return false;
-    }
-
-};
-
-export const FilterAnimalsWithAvailablePictures = async () => {
+const FilterAnimalsWithAvailablePictures = async () => {
     const animals = await GetDropDownAnimals();
     const promises = animals.map(async (animal) => ({
         animal: animal,
@@ -26,3 +14,5 @@ export const FilterAnimalsWithAvailablePictures = async () => {
 
     return filteredData;
 };
+
+export default FilterAnimalsWithAvailablePictures;
