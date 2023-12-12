@@ -61,3 +61,13 @@ test("returns image url with only image url", async () => {
     expect(await getAnimalImageURL({url: SAVED_URL}))
         .toEqual(SAVED_URL);
 });
+
+test("returns image url with filename and image url", async () => {
+    expect(await getAnimalImageURL({fileName: "test.jpg", url: SAVED_URL}))
+        .toEqual(SAVED_URL);
+});
+
+test("returns image url with animal id and image url", async () => {
+    expect(await getAnimalImageURL({animalId: "1", url: SAVED_URL}))
+        .toEqual(SAVED_URL);
+});
