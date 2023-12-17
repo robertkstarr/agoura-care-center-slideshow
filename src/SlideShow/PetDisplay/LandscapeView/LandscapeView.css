@@ -11,6 +11,7 @@
 .LeftAndRightSides {
     display: flex;
     flex-direction: row;
+    height: 90vh;
 }
 
 .logo {
@@ -32,6 +33,7 @@
     justify-content: flex-end;
     display: flex;
     flex-direction: column;
+    justify-content: center;
 }
 
 .LandscapeView .RightSide {
