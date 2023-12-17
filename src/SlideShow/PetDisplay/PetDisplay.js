@@ -5,7 +5,7 @@ import {PortraitView} from "./PortraitView/PortraitView";
 import {capitalizeEveryWordOfString} from "./DisplayTools";
 import "./PetDisplay.css";
 
-const PetDisplay = () => {
+const PetDisplay = ({location}) => {
     const TIME_FOR_EACH_PET_IN_SECONDS = 10;
     const SECONDS_IN_A_DAY = 3600 * 24;
     const [allPets, setAllPets] = useState([]);
@@ -24,7 +24,7 @@ const PetDisplay = () => {
     }, [allPets]);
 
     useEffect(() => {
-        GetPetInfo().then((pets) => {
+        GetPetInfo(location).then((pets) => {
                 setAllPets(pets);
             }
         );

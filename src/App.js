@@ -6,11 +6,17 @@ import UploadPage from "./UploaderAndViewer/Uploader/UploadPage";
 import "bootstrap/dist/css/bootstrap.min.css";
 import ViewerPage from "./UploaderAndViewer/Viewer/ViewerPage";
 
+export const DOWNEY = "DOWNEY";
+export const AGOURA = "AGOURA";
+
 function App() {
+
     return (
         <div className="App">
             <Routes>
-                <Route path="/*" element={<PetDisplay/>}/>
+                <Route path="/*" element={<PetDisplay location={AGOURA}/>}/>
+                <Route path="/*" element={<PetDisplay location={AGOURA}/>}/>
+                <Route path="/Downey" element={<PetDisplay location={DOWNEY}/>}/>
                 <Route path="/upload" element={<UploadPage/>}/>
                 <Route path="/view" element={<ViewerPage/>}/>
             </Routes>

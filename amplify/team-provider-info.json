@@ -15,7 +15,7 @@
       "function": {
         "laCountyProxy": {
           "deploymentBucketName": "amplify-agouracarecenterslid-main-13536-deployment",
-          "s3Key": "amplify-builds/laCountyProxy-784839696550324e7179-build.zip"
+          "s3Key": "amplify-builds/laCountyProxy-42626b6f2b694a4c7945-build.zip"
         }
       },
       "api": {

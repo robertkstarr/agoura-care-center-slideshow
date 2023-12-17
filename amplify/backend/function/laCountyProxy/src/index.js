@@ -5,6 +5,13 @@ const url = "https://api.lacounty.gov/accsearch/AnimalSearchServlet?pageNumber=1
  * @type {import("@types/aws-lambda").APIGatewayProxyHandler}
  */
 exports.handler = async (event) => {
+    console.log(`EVENT: ${JSON.stringify(event)}`);
+
+    if (event.multiValueQueryStringParameters) {
+        console.log(`MULTIVALUESTRINGPARAMETERS: ${JSON.stringify(event.multiValueQueryStringParameters)}`);
+        console.log(`LOCATION: ${event.multiValueQueryStringParameters.location[0]}`);
+    }
+    
     const response = await axios.get(url).then((response) => {
         return response;
     });
