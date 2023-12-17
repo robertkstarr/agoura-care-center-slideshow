@@ -6,7 +6,7 @@ import React from "react";
 import "./LandscapeView.css";
 import Logo from "../../Header/Logo";
 
-export const LandscapeView = ({currentPet, pickNewPet}) => {
+export const LandscapeView = ({currentPet, pickNewPet, location}) => {
     return (
         <div className={"LandscapeView"}>
             <div className={"LeftAndRightSides"}>
@@ -15,7 +15,7 @@ export const LandscapeView = ({currentPet, pickNewPet}) => {
                 </div>
                 <div className={"RightSide"}>
                     <PetInfo pet={currentPet}/>
-                    <Footer/>
+                    <Footer location={location}/>
                 </div>
             </div>
             <Logo/>

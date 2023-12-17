@@ -28,7 +28,7 @@ const PetDisplay = ({location}) => {
                 setAllPets(pets);
             }
         );
-    }, []);
+    }, [location]);
 
     useEffect(() => {
         pickNewPet();
@@ -51,14 +51,14 @@ const PetDisplay = ({location}) => {
             clearInterval(interval);
             clearInterval(refreshInterval);
         };
-    }, [pickNewPet, timeSinceLastSwitch, SECONDS_IN_A_DAY]);
+    }, [pickNewPet, timeSinceLastSwitch, SECONDS_IN_A_DAY, location]);
 
     if (currentPet) {
         return (
             <div className={"PetDisplay"}>
                 <div className={"PetName"}>{capitalizeEveryWordOfString(currentPet.ANIMAL_NAME)}</div>
-                {!isPortrait && <LandscapeView currentPet={currentPet} pickNewPet={pickNewPet}/>}
-                {isPortrait && <PortraitView currentPet={currentPet} pickNewPet={pickNewPet}/>}
+                {!isPortrait && <LandscapeView currentPet={currentPet} pickNewPet={pickNewPet} location={location}/>}
+                {isPortrait && <PortraitView currentPet={currentPet} pickNewPet={pickNewPet} location={location}/>}
             </div>);
     } else {
         return (<div>Loading...</div>);

@@ -14,11 +14,11 @@ function App() {
     return (
         <div className="App">
             <Routes>
-                <Route path="/*" element={<PetDisplay location={AGOURA}/>}/>
-                <Route path="/*" element={<PetDisplay location={AGOURA}/>}/>
+                <Route path="/Agoura" element={<PetDisplay location={AGOURA}/>}/>
                 <Route path="/Downey" element={<PetDisplay location={DOWNEY}/>}/>
                 <Route path="/upload" element={<UploadPage/>}/>
                 <Route path="/view" element={<ViewerPage/>}/>
+                <Route path="/*" element={<PetDisplay location={AGOURA}/>}/>
             </Routes>
         </div>
     );

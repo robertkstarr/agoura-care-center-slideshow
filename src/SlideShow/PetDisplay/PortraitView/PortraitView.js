@@ -6,12 +6,12 @@ import React from "react";
 import "./PortraitView.css";
 import Logo from "../../Header/Logo";
 
-export const PortraitView = ({currentPet, pickNewPet}) => {
+export const PortraitView = ({currentPet, pickNewPet, location}) => {
     return (
         <div className={"PortraitView"}>
             <PetImage onClick={pickNewPet} imageURL={getAnimalImageURL(currentPet.ANIMAL_ID)}/>
             <PetInfo pet={currentPet}/>
-            <Footer/>
+            <Footer location={location}/>
             <Logo/>
         </div>
     );
