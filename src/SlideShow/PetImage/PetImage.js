@@ -1,7 +1,11 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 
 const PetImage = ({imageURL, onClick}) => {
     const [error, setError] = useState(false);
+
+    useEffect(() => {
+        setError(false);
+    }, [imageURL]);
 
     if (imageURL && imageURL.length > 0 && !error) {
         return (
@@ -11,7 +15,7 @@ const PetImage = ({imageURL, onClick}) => {
             }}/>
         );
     } else if (error) {
-        return (<div className="PetImage" data-testid={"No Image"}>No Image Available.</div>);
+        return (<div className="PetImage" data-testid={"No Image"} onClick={onClick}>No Image Available.</div>);
     } else {
         return (<div>Loading...</div>);
     }
