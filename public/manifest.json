@@ -1,6 +1,6 @@
 {
-  "short_name": "Adoptable Agoura Animal Care Shelter Pets",
-  "name": "Create React App Sample",
+  "short_name": "Adoptable Animal Care Shelter Pets",
+  "name": "Adoptable Animal Care Shelter Pets",
   "icons": [
     {
       "src": "pawprint.ico",
@@ -8,7 +8,6 @@
       "type": "image/x-icon"
     }
   ],
-  "start_url": ".",
   "display": "standalone",
   "theme_color": "#000000",
   "background_color": "#ffffff"
