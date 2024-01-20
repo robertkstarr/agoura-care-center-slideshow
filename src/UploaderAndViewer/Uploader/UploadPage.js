@@ -41,9 +41,6 @@ const UploadPage = () => {
 
     return (
         <div className={"UploadPage"}>
-
-            <button onClick={() => copyToPrivate()}>DELETE ME</button>
-
             <Login/>
             {signedIn && (<div className={"PetDropDownContainer"}><PetDropDown
                 shelterPets={shelterPets}
