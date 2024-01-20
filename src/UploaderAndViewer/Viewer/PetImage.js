@@ -11,7 +11,7 @@ const PetImage = ({image}) => {
     const [width, setWidth] = useState(null);
     const [height, setHeight] = useState(null);
 
-    const IMAGE_WIDTH_RATIO = .9;
+    const IMAGE_WIDTH_RATIO = Math.min(.9, 400 / window.innerWidth);
 
     useEffect(() => {
         const establishUrl = async () => {

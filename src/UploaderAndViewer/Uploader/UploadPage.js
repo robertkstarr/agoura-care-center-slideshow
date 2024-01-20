@@ -33,8 +33,6 @@ const UploadPage = () => {
             Object.entries(snapshot.val()).forEach((entry, index) => {
                 if (entry[0] !== "Public") {
                     setDatabaseValue(`Public/${entry[0]}`, entry[1]);
-                    console.log(`${entry[0]}: ${entry[1]}`);
-                    console.log(entry[1]);
                 }
             });
         });
