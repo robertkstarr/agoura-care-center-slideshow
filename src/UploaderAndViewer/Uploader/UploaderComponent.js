@@ -2,6 +2,7 @@ import React, {useEffect, useState} from "react";
 import {FileUploader} from "react-drag-drop-files";
 import "./UploaderComponent.css";
 import FileProgressBar from "./FileProgressBar";
+import {Button} from "@mui/material";
 
 const UploaderComponent = ({animalId}) => {
     const [files, setFiles] = useState([]);
@@ -31,8 +32,8 @@ const UploaderComponent = ({animalId}) => {
             <FileUploader handleChange={handleChange} name="file" types={fileTypes} label={"Upload your pictures"}
                           multiple={true}/>
             <div className={"buttons"}>
-                <button onClick={handleSubmit}>Submit Files</button>
-                <button onClick={() => setFiles([])}>Clear files</button>
+                <Button sx={{m: 1.5}} variant={"contained"} onClick={handleSubmit}>Submit Files</Button>
+                <Button sx={{m: 1.5}} variant={"contained"} onClick={() => setFiles([])}>Clear files</Button>
             </div>
             <div>
                 <h3>Files to upload:</h3>

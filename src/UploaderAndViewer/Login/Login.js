@@ -4,6 +4,7 @@ import {auth} from "../FirebaseConfigFiles/FirebaseConfig";
 import {signInWithGoogle} from "./SignIns";
 import "./Login.css";
 import Loading from "../../Loading";
+import {Button} from "@mui/material";
 
 const Login = () => {
     const [signedIn, setSignedIn] = useState(null);
@@ -26,19 +27,19 @@ const Login = () => {
         if (signedIn) {
             return (
                 <div>
-                    <button className={"button"} onClick={() => {
+                    <Button sx={{m: 1.5}} variant={"contained"} className={"button"} onClick={() => {
                         signOut(auth).then();
                     }}>Sign Out
-                    </button>
+                    </Button>
                 </div>
             );
         } else {
             return (
                 <div className={"LoginContainer"}>
                     <div className={"Login"}>
-                        <button className={"button"} onClick={signInWithGoogle}>
+                        <Button className={"button"} onClick={signInWithGoogle} variant={"contained"}>
                             Sign in with Google
-                        </button>
+                        </Button>
                         {/*TODO: Implement email based login as well*/}
                         {/*<div>Email: <input/></div>*/}
                         {/*<div>Password: <input/></div>*/}

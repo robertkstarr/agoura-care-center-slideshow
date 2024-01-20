@@ -27,6 +27,7 @@ const UploadPage = () => {
         );
     }, []);
 
+    // eslint-disable-next-line
     const copyToPrivate = () => {
         onValue(ref(database), (snapshot) => {
             Object.entries(snapshot.val()).forEach((entry, index) => {

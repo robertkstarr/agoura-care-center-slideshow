@@ -3,6 +3,7 @@ import {onValue, ref} from "firebase/database";
 import {database} from "../FirebaseConfigFiles/FirebaseConfig";
 import PetImage from "./PetImage";
 import "./PetImagesContainer.css";
+import {Box} from "@mui/material";
 
 const PetImagesContainer = ({selectedPet}) => {
     const [images, setImages] = useState(null);
@@ -28,7 +29,9 @@ const PetImagesContainer = ({selectedPet}) => {
     if (selectedPet && images) {
         return (
             <div>
-                <div>{selectedPet.ANIMAL_NAME}</div>
+                <Box sx={{fontSize: "h4.fontSize"}}>
+                    {selectedPet.ANIMAL_NAME}
+                </Box>
                 <div className={"PetImagesContainer"}>
                     {images.map((image, index) =>
                         <PetImage image={image} key={index}/>
