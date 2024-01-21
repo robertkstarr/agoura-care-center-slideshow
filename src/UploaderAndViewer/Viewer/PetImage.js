@@ -44,12 +44,7 @@ const PetImage = ({image, onClick}) => {
 
     return (
         <div onClick={() => {
-            const modalWidth = height != null ?
-                Math.min(window.innerWidth * .9,
-                    width * 3,
-                    width * window.innerHeight / height * .9) :
-                Math.min(window.innerWidth * .9, width * 3);
-            onClick(url, modalWidth);
+            onClick(url);
         }} className={"PetImage"}>
             <LazyLoadImage loading={"lazy"} src={url} alt={"animal"}
                            effect={"blur"} width={width} height={height}

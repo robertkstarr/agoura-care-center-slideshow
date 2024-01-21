@@ -9,7 +9,6 @@ const PetImagesContainer = ({selectedPet}) => {
     const [images, setImages] = useState(null);
     const [open, setOpen] = useState(false);
     const [currentImageURL, setCurrentImageURL] = useState("");
-    const [modalWidth, setModalWidth] = useState(200);
 
     const modalStyle = {
         display: "flex",
@@ -21,13 +20,13 @@ const PetImagesContainer = ({selectedPet}) => {
         bgcolor: "background.paper",
         border: "2px solid #000",
         boxShadow: 24,
-        // p: 4,
+        maxWidth: "95vw",
+        maxHeight: "95vh"
     };
 
-    const selectImage = (image, width) => {
+    const selectImage = (image) => {
         setCurrentImageURL(image);
         setOpen(true);
-        setModalWidth(width);
     };
 
     useEffect(() => {
@@ -50,24 +49,24 @@ const PetImagesContainer = ({selectedPet}) => {
 
     if (selectedPet && images) {
         return (
-            <div>
-                <div className={"PetImagesContainer"}>
-                    <Modal open={open}
-                           onClose={() => {
-                               setOpen(false);
-                           }}>
-                        <Box sx={modalStyle}>
-                            <img width={modalWidth} src={currentImageURL} alt={selectedPet.ANIMAL_NAME}/>
-                        </Box>
-                    </Modal>
+            <div className={"PetImagesContainer"}>
+                <Modal open={open}
+                       onClose={() => {
+                           setOpen(false);
+                       }}>
+                    <Box sx={modalStyle}>
+                        <div className={"imageModal"}>
+                            <img src={currentImageURL} alt={selectedPet.ANIMAL_NAME}/>
+                        </div>
+                    </Box>
+                </Modal>
 
-                    {images.map((image, index) =>
-                        <PetImage onClick={(image, width) => {
-                            selectImage(image, width);
-                        }} image={image} key={index}/>
-                    )
-                    }
-                </div>
+                {images.map((image, index) =>
+                    <PetImage onClick={(image, width) => {
+                        selectImage(image, width);
+                    }} image={image} key={index}/>
+                )
+                }
             </div>
         );
     } else if (selectedPet && images == null) {
