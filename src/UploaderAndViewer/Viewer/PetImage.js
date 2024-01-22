@@ -12,6 +12,7 @@ const PetImage = ({image, onClick}) => {
     const [height, setHeight] = useState(null);
 
     useEffect(() => {
+        setUrl("");
         const establishUrl = async () => {
             getAnimalImageURL(image, true).then(
                 (thumbnailUrl) =>
@@ -36,6 +37,9 @@ const PetImage = ({image, onClick}) => {
                 setHeight(imageHeight * screenHeight / imageHeight * IMAGE_WIDTH_RATIO);
                 setWidth(imageWidth * screenHeight / imageHeight * IMAGE_WIDTH_RATIO);
             }
+        } else {
+            setHeight(null);
+            setWidth(150);
         }
 
 
@@ -46,9 +50,9 @@ const PetImage = ({image, onClick}) => {
         <div onClick={() => {
             onClick(url);
         }} className={"PetImage"}>
-            <LazyLoadImage loading={"lazy"} src={url} alt={"animal"}
-                           effect={"blur"} width={width} height={height}
-                           placeholderSrc={thumbnail}/>
+            {url.length > 0 && <LazyLoadImage loading={"lazy"} src={url} alt={"animal"}
+                                              effect={"blur"} width={width} height={height}
+                                              placeholderSrc={thumbnail}/>}
         </div>
     );
 };
