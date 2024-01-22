@@ -8,6 +8,7 @@ import Login from "../Login/Login";
 import {auth, database} from "../FirebaseConfigFiles/FirebaseConfig";
 import {onValue, ref} from "firebase/database";
 import setDatabaseValue from "../FirebaseConfigFiles/setDatabaseValue";
+import Contact from "../SharedTools/Contact";
 
 const UploadPage = () => {
     const [selectedPet, setSelectedPet] = useState();
@@ -49,6 +50,7 @@ const UploadPage = () => {
                                     src={getAnimalImageURL(selectedPet.ANIMAL_ID)}/> : ""}
                 {selectedPet ? <UploaderComponent animalId={selectedPet.ANIMAL_ID}/> : "Please select a pet"}
             </div>)}
+            <Contact/>
         </div>
 
     );

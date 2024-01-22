@@ -6,6 +6,7 @@ import FilterAnimalsWithAvailablePictures from "./FilterAnimalsWithAvailablePict
 import Login from "../Login/Login";
 import {auth} from "../FirebaseConfigFiles/FirebaseConfig";
 import "../Uploader/UploadPage.css";
+import Contact from "../SharedTools/Contact";
 
 const ViewerPage = () => {
     const [selectedPet, setSelectedPet] = useState("");
@@ -33,6 +34,7 @@ const ViewerPage = () => {
                     <PetDropDown shelterPets={shelterPets} setSelectedPet={setSelectedPet}/>
                     <PetImagesContainer selectedPet={selectedPet}/>
                 </div>)}
+            <Contact/>
         </div>);
 };
 
