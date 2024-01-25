@@ -3,8 +3,7 @@ import {useEffect, useState} from "react";
 import {auth} from "../FirebaseConfigFiles/FirebaseConfig";
 import {signInWithGoogle} from "./SignIns";
 import "./Login.css";
-import Loading from "../../Loading";
-import {Button} from "@mui/material";
+import {Button, CircularProgress} from "@mui/material";
 
 const Login = () => {
     const [signedIn, setSignedIn] = useState(null);
@@ -22,7 +21,7 @@ const Login = () => {
     });
 
     if (signedIn === null) {
-        return <div className={"LoginContainer"}><Loading/></div>;
+        return <div className={"LoginContainer"}><CircularProgress/></div>;
     } else {
         if (signedIn) {
             return (

@@ -2,12 +2,12 @@ import React, {useEffect, useState} from "react";
 import "./PetImage.css";
 import {LazyLoadImage} from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
-import loadingGif from "../../Images/loadingDial.gif";
 import getAnimalImageURL from "./getAnimalImageURL";
+import {CircularProgress} from "@mui/material";
 
 const PetImage = ({image, onClick}) => {
     const [url, setUrl] = useState("");
-    const [thumbnail, setThumbnail] = useState(loadingGif);
+    const [thumbnail, setThumbnail] = useState(null);
     const [width, setWidth] = useState(150);
     const [height, setHeight] = useState(null);
 
@@ -50,9 +50,9 @@ const PetImage = ({image, onClick}) => {
         <div onClick={() => {
             onClick(url);
         }} className={"PetImage"}>
-            {url.length > 0 && <LazyLoadImage loading={"lazy"} src={url} alt={"animal"}
-                                              effect={"blur"} width={width} height={height}
-                                              placeholderSrc={thumbnail}/>}
+            {url.length > 0 || thumbnail != null ? <LazyLoadImage loading={"lazy"} src={url} alt={"animal"}
+                                                                  effect={"blur"} width={width} height={height}
+                                                                  placeholderSrc={thumbnail}/> : <CircularProgress/>}
         </div>
     );
 };

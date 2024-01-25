@@ -1,6 +1,5 @@
 import {storage} from "../FirebaseConfigFiles/FirebaseConfig";
 import {getDownloadURL, ref} from "firebase/storage";
-import loadingGif from "../../Images/loadingDial.gif";
 
 const FILE_EXTENSION = "_200x200.";
 const getAnimalImageURLFromFilenameAndId = async (filename, animalId, thumbnail = false) => {
@@ -11,7 +10,7 @@ const getAnimalImageURLFromFilenameAndId = async (filename, animalId, thumbnail 
 
 const getAnimalImageURL = (image, thumbnail = false) => {
     if (thumbnail && (image?.fileName === undefined || image?.animalId === undefined)) {
-        return Promise.resolve(loadingGif);
+        return Promise.resolve(null);
     } else if (image?.fileName !== undefined && image?.animalId !== undefined) {
         return getAnimalImageURLFromFilenameAndId(image.fileName, image.animalId, thumbnail);
     } else if (image?.url !== undefined) {
