@@ -33,12 +33,11 @@ const ViewerPage = () => {
             <Login/>
             {signedIn && (
                 <div className={"PetDropDownContainer"}>
-                    {selectedPet.ANIMAL_ID}
                     <div className={"DropDownMenus"}>
                         <LocationDropDown setLocation={setLocation}/>
                         <PetDropDown shelterPets={shelterPets} setSelectedPet={setSelectedPet} location={location}/>
                     </div>
-                    <PetImagesContainer key={location} selectedPet={selectedPet}/>
+                    <PetImagesContainer selectedPet={selectedPet}/>
                 </div>)}
             <Contact/>
         </div>);

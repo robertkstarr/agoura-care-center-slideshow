@@ -1,11 +1,16 @@
 import {Autocomplete, TextField} from "@mui/material";
 import "./PetDropDown.css";
+import {useEffect} from "react";
 
 const PetDropDown = ({shelterPets, setSelectedPet, location}) => {
 
     const createAnimalLabel = (animal) => {
         return `${animal.ANIMAL_NAME} - ${animal.BREED} (${animal.ANIMAL_ID})`;
     };
+
+    useEffect(() => {
+        setSelectedPet("");
+    }, [location, setSelectedPet]);
 
     return (
         <div className={"PetDropDown"}>
