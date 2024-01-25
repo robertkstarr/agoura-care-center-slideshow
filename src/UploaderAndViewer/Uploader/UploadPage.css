@@ -17,9 +17,9 @@ img {
     width: 100%;
     flex-direction: column;
     justify-content: center;
-    
+
     @media (min-width: 800px) {
-        margin: 2rem;
+        margin: 0 2rem;
         flex-direction: row;
         .LocationDropDown {
             width: 20%;
