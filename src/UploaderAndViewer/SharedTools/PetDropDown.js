@@ -2,7 +2,7 @@ import {Autocomplete, TextField} from "@mui/material";
 import "./PetDropDown.css";
 import Loading from "../../Loading";
 
-const PetDropDown = ({shelterPets, setSelectedPet}) => {
+const PetDropDown = ({shelterPets, setSelectedPet, location}) => {
 
     const createAnimalLabel = (animal) => {
         return `${animal.ANIMAL_NAME} - ${animal.BREED} (${animal.ANIMAL_ID})`;
@@ -24,7 +24,9 @@ const PetDropDown = ({shelterPets, setSelectedPet}) => {
                         } else {
                             setSelectedPet(newValue);
                         }
-                    }}/>
+                    }}
+                    key={location}
+                />
             </div>
         );
     }

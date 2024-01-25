@@ -9,14 +9,17 @@ import {auth, database} from "../FirebaseConfigFiles/FirebaseConfig";
 import {onValue, ref} from "firebase/database";
 import setDatabaseValue from "../FirebaseConfigFiles/setDatabaseValue";
 import Contact from "../SharedTools/Contact";
+import LocationDropDown from "../SharedTools/LocationDropDown";
 
 const UploadPage = () => {
     const [selectedPet, setSelectedPet] = useState();
     const [shelterPets, setShelterPets] = useState([]);
     const [signedIn, setSignedIn] = useState(false);
+    const [location, setLocation] = useState("ALL");
 
     useEffect(() => {
-        GetDropDownAnimals().then((animals) => setShelterPets(animals));
+        GetDropDownAnimals(location).then((animals) => setShelterPets(animals));
+        setSelectedPet(null);
         auth.onAuthStateChanged(
             () => {
                 if (auth.currentUser) {
@@ -26,7 +29,7 @@ const UploadPage = () => {
                 }
             }
         );
-    }, []);
+    }, [location]);
 
     // eslint-disable-next-line
     const copyToPrivate = () => {
@@ -42,10 +45,14 @@ const UploadPage = () => {
     return (
         <div className={"UploadPage"}>
             <Login/>
-            {signedIn && (<div className={"PetDropDownContainer"}><PetDropDown
-                shelterPets={shelterPets}
-                setSelectedPet={setSelectedPet}
-            />
+            {signedIn && (<div className={"PetDropDownContainer"}>
+                <div className={"DropDownMenus"}>
+                    <LocationDropDown setLocation={setLocation}/>
+                    <PetDropDown
+                        shelterPets={shelterPets}
+                        setSelectedPet={setSelectedPet}
+                        location={location}
+                    /></div>
                 {selectedPet ? <img alt={`${selectedPet.ANIMAL_NAME}`}
                                     src={getAnimalImageURL(selectedPet.ANIMAL_ID)}/> : ""}
                 {selectedPet ? <UploaderComponent animalId={selectedPet.ANIMAL_ID}/> : "Please select a pet"}

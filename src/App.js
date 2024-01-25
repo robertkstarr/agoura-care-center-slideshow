@@ -14,6 +14,8 @@ export const DOWNEY = "DOWNEY";
 export const LANCASTER = "LANCASTER";
 export const PALMDALE = "PALMDALE";
 
+export const LOCATIONS = [AGOURA, BALDWIN, CARSON, CASTAIC, DOWNEY, LANCASTER, PALMDALE];
+
 function App() {
 
     return (

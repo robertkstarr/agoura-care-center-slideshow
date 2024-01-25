@@ -11,6 +11,28 @@ img {
     margin: 1rem;
 }
 
+.DropDownMenus {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    
+    @media (min-width: 800px) {
+        margin: 2rem;
+        flex-direction: row;
+        .LocationDropDown {
+            width: 20%;
+            margin-left: 2rem;
+        }
+
+        .PetDropDown {
+            margin-left: 2rem;
+            width: 50%;
+        }
+    }
+}
+
 .PetDropDownContainer {
     width: 100%;
     align-items: center;

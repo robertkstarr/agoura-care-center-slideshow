@@ -1,0 +1,10 @@
+.LocationDropDown {
+    width: 90%;
+    max-width: 50rem;
+    background-color: white;
+    margin: 1rem;
+}
+
+label {
+    background-color: white;
+}
