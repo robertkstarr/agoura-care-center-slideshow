@@ -1,8 +1,8 @@
 import GetDropDownAnimals from "../SharedTools/GetDropDownAnimals";
 import IDAvailable from "./IDAvailable";
 
-const FilterAnimalsWithAvailablePictures = async () => {
-    const animals = await GetDropDownAnimals();
+const FilterAnimalsWithAvailablePictures = async (location) => {
+    const animals = await GetDropDownAnimals(location);
     const promises = animals.map(async (animal) => ({
         animal: animal,
         idAvailable: await IDAvailable(animal.ANIMAL_ID)
@@ -11,7 +11,6 @@ const FilterAnimalsWithAvailablePictures = async () => {
     const filteredData = fulfilledData
         .filter((results) => results.idAvailable)
         .map(data => data.animal);
-
     return filteredData;
 };
 

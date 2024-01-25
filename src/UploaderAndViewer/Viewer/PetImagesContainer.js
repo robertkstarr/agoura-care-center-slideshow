@@ -49,7 +49,7 @@ const PetImagesContainer = ({selectedPet}) => {
 
     if (selectedPet && images) {
         return (
-            <div className={"PetImagesContainer"}>
+            <div className={"PetImagesContainer"} key={selectedPet}>
                 <Modal open={open}
                        onClose={() => {
                            setOpen(false);

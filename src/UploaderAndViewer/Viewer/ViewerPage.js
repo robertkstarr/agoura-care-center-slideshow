@@ -7,14 +7,16 @@ import Login from "../Login/Login";
 import {auth} from "../FirebaseConfigFiles/FirebaseConfig";
 import "../Uploader/UploadPage.css";
 import Contact from "../SharedTools/Contact";
+import LocationDropDown from "../SharedTools/LocationDropDown";
 
 const ViewerPage = () => {
     const [selectedPet, setSelectedPet] = useState("");
     const [shelterPets, setShelterPets] = useState([]);
     const [signedIn, setSignedIn] = useState(false);
+    const [location, setLocation] = useState("ALL");
 
     useEffect(() => {
-        FilterAnimalsWithAvailablePictures().then((filteredAnimals) => setShelterPets(filteredAnimals));
+        FilterAnimalsWithAvailablePictures(location).then((filteredAnimals) => setShelterPets(filteredAnimals));
         auth.onAuthStateChanged(
             () => {
                 if (auth.currentUser) {
@@ -24,15 +26,19 @@ const ViewerPage = () => {
                 }
             }
         );
-    }, []);
+    }, [location, selectedPet]);
 
     return (
         <div className={"ViewerPage"}>
             <Login/>
             {signedIn && (
                 <div className={"PetDropDownContainer"}>
-                    <PetDropDown shelterPets={shelterPets} setSelectedPet={setSelectedPet}/>
-                    <PetImagesContainer selectedPet={selectedPet}/>
+                    {selectedPet.ANIMAL_ID}
+                    <div className={"DropDownMenus"}>
+                        <LocationDropDown setLocation={setLocation}/>
+                        <PetDropDown shelterPets={shelterPets} setSelectedPet={setSelectedPet} location={location}/>
+                    </div>
+                    <PetImagesContainer key={location} selectedPet={selectedPet}/>
                 </div>)}
             <Contact/>
         </div>);
