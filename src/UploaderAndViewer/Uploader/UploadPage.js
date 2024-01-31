@@ -56,9 +56,9 @@ const UploadPage = () => {
                         setSelectedPet={setSelectedPet}
                         location={location}
                     /></div>
-                {selectedPet ? <img alt={`${selectedPet.ANIMAL_NAME}`}
-                                    src={getAnimalImageURL(selectedPet.ANIMAL_ID)}/> : ""}
-                {selectedPet ? <UploaderComponent animalId={selectedPet.ANIMAL_ID}/> : "Please select a pet"}
+                {selectedPet != null ? <img alt={`${selectedPet.ANIMAL_NAME}`}
+                                            src={getAnimalImageURL(selectedPet.ANIMAL_ID)}/> : ""}
+                {selectedPet != null ? <UploaderComponent animalId={selectedPet.ANIMAL_ID}/> : "Please select a pet"}
             </div>)}
             <Contact/>
         </div>
