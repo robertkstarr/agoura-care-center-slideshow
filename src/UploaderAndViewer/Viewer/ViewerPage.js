@@ -7,7 +7,6 @@ import Login from "../Login/Login";
 import {auth} from "../FirebaseConfigFiles/FirebaseConfig";
 import "../Uploader/UploadPage.css";
 import Contact from "../SharedTools/Contact";
-import LocationDropDown from "../SharedTools/LocationDropDown";
 
 const ViewerPage = () => {
     const [selectedPet, setSelectedPet] = useState("");
@@ -34,7 +33,7 @@ const ViewerPage = () => {
             {signedIn && (
                 <div className={"PetDropDownContainer"}>
                     <div className={"DropDownMenus"}>
-                        <LocationDropDown setLocation={setLocation}/>
+                        {/*<LocationDropDown setLocation={setLocation}/>*/}
                         <PetDropDown shelterPets={shelterPets} setSelectedPet={setSelectedPet} location={location}/>
                     </div>
                     <PetImagesContainer selectedPet={selectedPet}/>
