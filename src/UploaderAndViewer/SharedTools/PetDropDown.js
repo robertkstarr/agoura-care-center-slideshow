@@ -9,7 +9,7 @@ const PetDropDown = ({shelterPets, setSelectedPet, location}) => {
     };
 
     useEffect(() => {
-        setSelectedPet("");
+        setSelectedPet(null);
     }, [location, setSelectedPet]);
 
     return (

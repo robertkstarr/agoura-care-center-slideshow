@@ -9,6 +9,7 @@ import {auth, database} from "../FirebaseConfigFiles/FirebaseConfig";
 import {onValue, ref} from "firebase/database";
 import setDatabaseValue from "../FirebaseConfigFiles/setDatabaseValue";
 import Contact from "../SharedTools/Contact";
+import LocationDropDown from "../SharedTools/LocationDropDown";
 
 const UploadPage = () => {
     const [selectedPet, setSelectedPet] = useState();
@@ -46,7 +47,7 @@ const UploadPage = () => {
             <Login/>
             {signedIn && (<div className={"PetDropDownContainer"}>
                 <div className={"DropDownMenus"}>
-                    {/*<LocationDropDown setLocation={setLocation}/>*/}
+                    <LocationDropDown setLocation={setLocation}/>
                     <PetDropDown
                         shelterPets={shelterPets}
                         setSelectedPet={setSelectedPet}
