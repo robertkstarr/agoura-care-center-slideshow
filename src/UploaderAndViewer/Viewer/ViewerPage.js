@@ -16,7 +16,6 @@ const ViewerPage = () => {
     const [location, setLocation] = useState("ALL");
 
     useEffect(() => {
-        FilterAnimalsWithAvailablePictures(location).then((filteredAnimals) => setShelterPets(filteredAnimals));
         auth.onAuthStateChanged(
             () => {
                 if (auth.currentUser) {
@@ -26,6 +25,11 @@ const ViewerPage = () => {
                 }
             }
         );
+    }, []);
+
+    useEffect(() => {
+        FilterAnimalsWithAvailablePictures(location).then((filteredAnimals) => setShelterPets(filteredAnimals));
+
     }, [location, selectedPet]);
 
     return (

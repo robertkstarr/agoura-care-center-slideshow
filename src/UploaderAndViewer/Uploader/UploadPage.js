@@ -18,8 +18,6 @@ const UploadPage = () => {
     const [location, setLocation] = useState("ALL");
 
     useEffect(() => {
-        GetDropDownAnimals(location).then((animals) => setShelterPets(animals));
-        setSelectedPet(null);
         auth.onAuthStateChanged(
             () => {
                 if (auth.currentUser) {
@@ -29,6 +27,11 @@ const UploadPage = () => {
                 }
             }
         );
+    }, []);
+
+    useEffect(() => {
+        GetDropDownAnimals(location).then((animals) => setShelterPets(animals));
+        setSelectedPet(null);
     }, [location]);
 
     // eslint-disable-next-line
