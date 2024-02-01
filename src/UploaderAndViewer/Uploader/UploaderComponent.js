@@ -36,7 +36,7 @@ const UploaderComponent = ({animalId}) => {
                 <Button sx={{m: 1.5}} variant={"contained"} onClick={() => setFiles([])}>Clear files</Button>
             </div>
             <div>
-                <h3>Files to upload:</h3>
+                {files.length > 0 && <h3>Files to upload:</h3>}
                 {files.map((file, index) => <FileProgressBar key={index} file={file} index={index}
                                                              submit={submit} animalId={animalId}/>)}
             </div>
