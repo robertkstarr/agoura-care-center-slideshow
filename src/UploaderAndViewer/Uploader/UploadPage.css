@@ -11,10 +11,6 @@
     margin: 1rem;
 }
 
-.pswp img {
-    object-fit: contain;
-}
-
 .DropDownMenus {
     display: flex;
     align-items: center;
