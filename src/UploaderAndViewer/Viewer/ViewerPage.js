@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react";
 import "./ViewerPage.css";
 import PetDropDown from "../SharedTools/PetDropDown";
-import PetImagesContainer from "./PetImagesContainer";
+import PetImagesContainer from "./PetImages/PetImagesContainer";
 import FilterAnimalsWithAvailablePictures from "./FilterAnimalsWithAvailablePictures";
 import Login from "../Login/Login";
 import {auth} from "../FirebaseConfigFiles/FirebaseConfig";

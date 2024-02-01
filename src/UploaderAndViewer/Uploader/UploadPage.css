@@ -7,8 +7,12 @@
     align-items: center;
 }
 
-img {
+.UploadPage img {
     margin: 1rem;
+}
+
+.pswp img {
+    object-fit: contain;
 }
 
 .DropDownMenus {
