@@ -1,5 +1,4 @@
 import React from "react";
-import {AGOURA, BALDWIN, CARSON, CASTAIC, DOWNEY, LANCASTER, PALMDALE} from "../../App";
 import AgouraFooter from "./LocationFooters/AgouraFooter";
 import DowneyFooter from "./LocationFooters/DowneyFooter";
 import BaldwinFooter from "./LocationFooters/BaldwinFooter";
@@ -8,6 +7,7 @@ import CastaicFooter from "./LocationFooters/CastaicFooter";
 import LancasterFooter from "./LocationFooters/LancasterFooter";
 import PalmdaleFooter from "./LocationFooters/PalmdaleFooter";
 import "./Footer.css";
+import {AGOURA, BALDWIN, CARSON, CASTAIC, DOWNEY, LANCASTER, PALMDALE} from "../../Resources/LOCATIONS";
 
 const Footer = ({location}) => {
     const locationFooter = () => {

@@ -1,6 +1,5 @@
 import getAnimalImageURL from "./getAnimalImageURL";
 import {getDownloadURL, ref} from "firebase/storage";
-import loadingGif from "../../Images/loadingDial.gif";
 
 jest.mock("firebase/storage");
 
@@ -30,16 +29,16 @@ test("animal image returns blank string with no input", async () => {
     expect(await getAnimalImageURL({})).toEqual("");
 });
 
-test("returns loading gif as thumbnail if no way to fetch thumbnail", async () => {
-    expect(await getAnimalImageURL({}, true)).toEqual(loadingGif);
+test("returns null if no way to fetch thumbnail", async () => {
+    expect(await getAnimalImageURL({}, true)).toEqual(null);
 });
 
-test("returns loading gif as thumbnail if no filename", async () => {
-    expect(await getAnimalImageURL({animalId: "1"}, true)).toEqual(loadingGif);
+test("returns null if no filename", async () => {
+    expect(await getAnimalImageURL({animalId: "1"}, true)).toEqual(null);
 });
 
-test("returns loading gif as thumbnail if no animalId", async () => {
-    expect(await getAnimalImageURL({fileName: "test.jpg"}, true)).toEqual(loadingGif);
+test("returns null if no animalId", async () => {
+    expect(await getAnimalImageURL({fileName: "test.jpg"}, true)).toEqual(null);
 });
 
 test("returns thumbnail with filename and animalId", async () => {

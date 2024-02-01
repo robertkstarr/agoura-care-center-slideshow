@@ -1,6 +1,7 @@
 import {Autocomplete, TextField} from "@mui/material";
 import "./LocationDropDown.css";
-import {LOCATIONS} from "../../App";
+
+import {LOCATIONS} from "../../Resources/LOCATIONS";
 
 const LocationDropDown = ({setLocation}) => {
     return (
