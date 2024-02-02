@@ -49,6 +49,7 @@
     max-width: 40vw;
     align-self: center;
     margin-top: 1rem;
+    object-fit: contain;
 }
 
 .PetInfo {

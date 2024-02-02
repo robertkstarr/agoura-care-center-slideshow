@@ -12,6 +12,7 @@
     height: 40vh;
     max-width: 90vw;
     align-self: center;
+    object-fit: contain;
 }
 
 .PortraitView .PetImage {
