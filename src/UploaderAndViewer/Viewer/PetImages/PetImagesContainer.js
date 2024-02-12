@@ -46,7 +46,7 @@ const PetImagesContainer = ({selectedPet}) => {
     } else {
         return (
             <div>
-                Please select a pet.
+                Please select a pet
             </div>
         );
     }
