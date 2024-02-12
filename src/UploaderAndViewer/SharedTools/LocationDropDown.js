@@ -1,12 +1,13 @@
 import {Autocomplete, TextField} from "@mui/material";
 import "./LocationDropDown.css";
 
-import {LOCATIONS} from "../../Resources/LOCATIONS";
+import {AGOURA, LOCATIONS} from "../../Resources/LOCATIONS";
 
 const LocationDropDown = ({setLocation}) => {
     return (
         <div className={"LocationDropDown"}>
             <Autocomplete
+                defaultValue={AGOURA}
                 renderInput={
                     (params) => <TextField {...params} label="Location"/>}
                 options={LOCATIONS}

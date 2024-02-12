@@ -11,12 +11,13 @@ import setDatabaseValue from "../FirebaseConfigFiles/setDatabaseValue";
 import Contact from "../SharedTools/Contact";
 import LocationDropDown from "../SharedTools/LocationDropDown";
 import {Link} from "react-router-dom";
+import {AGOURA} from "../../Resources/LOCATIONS";
 
 const UploadPage = () => {
     const [selectedPet, setSelectedPet] = useState();
     const [shelterPets, setShelterPets] = useState([]);
     const [signedIn, setSignedIn] = useState(false);
-    const [location, setLocation] = useState("ALL");
+    const [location, setLocation] = useState(AGOURA);
 
     useEffect(() => {
         auth.onAuthStateChanged(
