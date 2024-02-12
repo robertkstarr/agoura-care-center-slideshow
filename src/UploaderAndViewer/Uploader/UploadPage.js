@@ -50,7 +50,7 @@ const UploadPage = () => {
     return (
         <div className={"UploadPage"}>
             <h1>Upload Page</h1>
-            <div>Click <Link to={`../view`}>here</Link> to view available photos.</div>
+            <div>Click <Link to={`../view`}>here</Link> to view available photos</div>
             <Login/>
             {signedIn && (<div className={"PetDropDownContainer"}>
                 <div className={"DropDownMenus"}>

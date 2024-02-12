@@ -37,7 +37,7 @@ const ViewerPage = () => {
     return (
         <div className={"ViewerPage"}>
             <h1>Viewer Page</h1>
-            <div>Click <Link to={`../upload`}>here</Link> to upload new photos.</div>
+            <div>Click <Link to={`../upload`}>here</Link> to upload new photos</div>
             <Login/>
             {signedIn && (
                 <div className={"PetDropDownContainer"}>
