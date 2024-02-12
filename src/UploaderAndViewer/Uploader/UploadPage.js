@@ -10,6 +10,7 @@ import {onValue, ref} from "firebase/database";
 import setDatabaseValue from "../FirebaseConfigFiles/setDatabaseValue";
 import Contact from "../SharedTools/Contact";
 import LocationDropDown from "../SharedTools/LocationDropDown";
+import {Link} from "react-router-dom";
 
 const UploadPage = () => {
     const [selectedPet, setSelectedPet] = useState();
@@ -47,6 +48,8 @@ const UploadPage = () => {
 
     return (
         <div className={"UploadPage"}>
+            <h1>Upload Page</h1>
+            <div>Click <Link to={`../view`}>here</Link> to view available photos.</div>
             <Login/>
             {signedIn && (<div className={"PetDropDownContainer"}>
                 <div className={"DropDownMenus"}>

@@ -8,6 +8,7 @@ import {auth} from "../FirebaseConfigFiles/FirebaseConfig";
 import "../Uploader/UploadPage.css";
 import Contact from "../SharedTools/Contact";
 import LocationDropDown from "../SharedTools/LocationDropDown";
+import {Link} from "react-router-dom";
 
 const ViewerPage = () => {
     const [selectedPet, setSelectedPet] = useState("");
@@ -34,6 +35,8 @@ const ViewerPage = () => {
 
     return (
         <div className={"ViewerPage"}>
+            <h1>Viewer Page</h1>
+            <div>Click <Link to={`../upload`}>here</Link> to upload new photos.</div>
             <Login/>
             {signedIn && (
                 <div className={"PetDropDownContainer"}>
