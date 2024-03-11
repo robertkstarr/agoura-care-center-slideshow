@@ -55,7 +55,8 @@
   "devDependencies": {
     "@babel/preset-react": "^7.23.3",
     "gh-pages": "^5.0.0",
-    "react-test-renderer": "^18.2.0"
+    "react-test-renderer": "^18.2.0",
+    "ip": ">=1.1.9"
   },
   "jest": {
     "moduleNameMapper": {
