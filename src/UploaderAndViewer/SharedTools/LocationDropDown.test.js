@@ -28,20 +28,17 @@ test("Loads saved item correctly", async () => {
     expect(location).toHaveValue(AGOURA);
 });
 
-test("Updates saved item correctly", () => {
-    Storage.prototype.getItem = jest.fn(() => {
-        return AGOURA;
-    });
+test("Updates saved item correctly", async () => {
     render(<LocationDropDown setLocation={mockSetLocation}/>);
 
     jest.spyOn(Storage.prototype, "setItem");
+
     const location = screen.getByRole("combobox");
 
-    act(() => {
+    // eslint-disable-next-line testing-library/no-unnecessary-act
+    await act(() => {
         userEvent.type(location, CASTAIC + "{arrowdown}{enter}");
     });
 
-
     expect(localStorage.setItem).toHaveBeenCalledWith("location", CASTAIC);
-
 });
