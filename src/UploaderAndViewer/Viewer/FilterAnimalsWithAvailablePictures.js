@@ -3,6 +3,7 @@ import IDAvailable from "./IDAvailable";
 
 const FilterAnimalsWithAvailablePictures = async (location) => {
     const animals = await GetDropDownAnimals(location, "ALL");
+    
     const promises = animals.map(async (animal) => ({
         animal: animal,
         idAvailable: await IDAvailable(animal.ANIMAL_ID)

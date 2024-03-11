@@ -9,13 +9,12 @@ import "../Uploader/UploadPage.css";
 import Contact from "../SharedTools/Contact";
 import LocationDropDown from "../SharedTools/LocationDropDown";
 import {Link} from "react-router-dom";
-import {AGOURA} from "../../Resources/LOCATIONS";
 
 const ViewerPage = () => {
     const [selectedPet, setSelectedPet] = useState("");
     const [shelterPets, setShelterPets] = useState([]);
     const [signedIn, setSignedIn] = useState(false);
-    const [location, setLocation] = useState(AGOURA);
+    const [location, setLocation] = useState("");
 
     useEffect(() => {
         auth.onAuthStateChanged(
