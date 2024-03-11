@@ -1,6 +1,8 @@
 import LocationDropDown from "./LocationDropDown";
-import {fireEvent, render, screen} from "@testing-library/react";
+import {render, screen} from "@testing-library/react";
 import {AGOURA, CASTAIC} from "../../Resources/LOCATIONS";
+import userEvent from "@testing-library/user-event";
+import {act} from "react-dom/test-utils";
 
 const mockSetLocation = jest.fn();
 
@@ -26,17 +28,20 @@ test("Loads saved item correctly", async () => {
     expect(location).toHaveValue(AGOURA);
 });
 
-test("Updates saved item correctly", async () => {
+test("Updates saved item correctly", () => {
     Storage.prototype.getItem = jest.fn(() => {
         return AGOURA;
     });
     render(<LocationDropDown setLocation={mockSetLocation}/>);
 
-    const mockSetItem = jest.fn();
-    Storage.prototype.setItem = mockSetItem;
+    jest.spyOn(Storage.prototype, "setItem");
     const location = screen.getByRole("combobox");
-    location.focus();
-    fireEvent.change(location, {target: {value: CASTAIC}});
-    await expect(location).toHaveValue(CASTAIC);
-    await expect(mockSetItem).toHaveBeenCalledTimes(4);
+
+    act(() => {
+        userEvent.type(location, CASTAIC + "{arrowdown}{enter}");
+    });
+
+
+    expect(localStorage.setItem).toHaveBeenCalledWith("location", CASTAIC);
+
 });
