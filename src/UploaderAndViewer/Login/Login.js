@@ -1,3 +1,4 @@
+import React from 'react';
 import {signOut} from "firebase/auth";
 import {useEffect, useState} from "react";
 import {auth} from "../FirebaseConfigFiles/FirebaseConfig";

@@ -22,5 +22,23 @@
         "backendAPI": {}
       }
     }
+  },
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-agouracarecenterslid-dev-43f47-authRole",
+      "UnauthRoleArn": "arn:aws:iam::727763141802:role/amplify-agouracarecenterslid-dev-43f47-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::727763141802:role/amplify-agouracarecenterslid-dev-43f47-authRole",
+      "Region": "us-east-2",
+      "DeploymentBucketName": "amplify-agouracarecenterslid-dev-43f47-deployment",
+      "UnauthRoleName": "amplify-agouracarecenterslid-dev-43f47-unauthRole",
+      "StackName": "amplify-agouracarecenterslid-dev-43f47",
+      "StackId": "arn:aws:cloudformation:us-east-2:727763141802:stack/amplify-agouracarecenterslid-dev-43f47/88645e70-13cc-11ef-ab42-0206941bf2fd",
+      "AmplifyAppId": "d2m0pwq89z2cky"
+    },
+    "categories": {
+      "function": {
+        "laCountyProxy": {}
+      }
+    }
   }
 }
