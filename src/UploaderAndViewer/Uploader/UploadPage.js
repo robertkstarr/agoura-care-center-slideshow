@@ -29,10 +29,13 @@ const UploadPage = () => {
     }, []);
 
     useEffect(() => {
-        GetDropDownAnimals(location, 'ALL').then((animals) => {
-            setShelterPets(animals);
-        });
-
+        if (location != null && location.length > 0) {
+            GetDropDownAnimals(location, 'ALL').then((animals) => {
+                if (animals.length > 0) {
+                    setShelterPets(animals);
+                }
+            });
+        }
         setSelectedPet(null);
     }, [location]);
 
