@@ -1,7 +1,7 @@
 import React from 'react';
-import { Autocomplete, TextField } from '@mui/material';
 import './PetDropDown.css';
 import { useEffect } from 'react';
+import { Autocomplete, TextField } from '@mui/material';
 
 const PetDropDown = ({ shelterPets, setSelectedPet, location }) => {
     const createAnimalLabel = (animal) => {
@@ -15,9 +15,11 @@ const PetDropDown = ({ shelterPets, setSelectedPet, location }) => {
     return (
         <div className={'PetDropDown'}>
             <Autocomplete
-                renderInput={(params) => <TextField {...params} label="Selected Animal" />}
+                renderInput={(params) => <TextField {...params} label={`Selected Animal`} />}
                 options={shelterPets.sort((a, b) => a.ANIMAL_NAME.localeCompare(b.ANIMAL_NAME))}
                 getOptionLabel={(option) => createAnimalLabel(option)}
+                loading={shelterPets === null || shelterPets === 0}
+                loadingText={`Loading...`}
                 onChange={(event, newValue, reason) => {
                     if (reason === 'clear') {
                         setSelectedPet(null);
