@@ -49,7 +49,7 @@ const ViewerPage = () => {
                             location={location}
                         />
                     </div>
-                    <PetImagesContainer selectedPet={selectedPet} />
+                    {selectedPet && <PetImagesContainer selectedPet={selectedPet} />}
                 </div>
             )}
             <Contact />

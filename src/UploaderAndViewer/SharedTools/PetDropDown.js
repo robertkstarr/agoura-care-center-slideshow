@@ -17,7 +17,7 @@ const PetDropDown = ({ shelterPets, setSelectedPet, location }) => {
     };
 
     const AutocompleteDropdownMenu = () => {
-        if (petsAvailable) {
+        if (petsAvailable()) {
             return (
                 <div className={'PetDropDownMenu'}>
                     <Autocomplete

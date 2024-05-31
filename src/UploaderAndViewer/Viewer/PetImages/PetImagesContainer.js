@@ -42,7 +42,7 @@ const PetImagesContainer = ({ selectedPet }) => {
             </div>
         );
     } else if (selectedPet && images == null) {
-        return <div>No images currently available.</div>;
+        return <div>No user uploaded images currently available.</div>;
     } else {
         return <div>Please select a pet</div>;
     }

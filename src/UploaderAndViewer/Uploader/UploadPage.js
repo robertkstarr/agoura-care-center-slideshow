@@ -11,6 +11,7 @@ import setDatabaseValue from '../FirebaseConfigFiles/setDatabaseValue';
 import Contact from '../SharedTools/Contact';
 import LocationDropDown from '../SharedTools/LocationDropDown';
 import { Link } from 'react-router-dom';
+import PetImagesContainer from '../Viewer/PetImages/PetImagesContainer';
 
 const UploadPage = () => {
     const [selectedPet, setSelectedPet] = useState();
@@ -58,29 +59,32 @@ const UploadPage = () => {
             </div>
             <Login />
             {signedIn && (
-                <div className={'PetDropDownContainer'}>
-                    <div className={'DropDownMenus'}>
-                        <LocationDropDown setLocation={setLocation} />
-                        <PetDropDown
-                            shelterPets={shelterPets}
-                            setSelectedPet={setSelectedPet}
-                            location={location}
-                        />
+                <>
+                    <div className={'PetDropDownContainer'}>
+                        <div className={'DropDownMenus'}>
+                            <LocationDropDown setLocation={setLocation} />
+                            <PetDropDown
+                                shelterPets={shelterPets}
+                                setSelectedPet={setSelectedPet}
+                                location={location}
+                            />
+                        </div>
+                        {selectedPet != null ? (
+                            <img
+                                alt={`${selectedPet.ANIMAL_NAME}`}
+                                src={getAnimalImageURL(selectedPet.ANIMAL_ID)}
+                            />
+                        ) : (
+                            ''
+                        )}
+                        {selectedPet != null ? (
+                            <UploaderComponent animalId={selectedPet.ANIMAL_ID} />
+                        ) : (
+                            'Please select a pet'
+                        )}
                     </div>
-                    {selectedPet != null ? (
-                        <img
-                            alt={`${selectedPet.ANIMAL_NAME}`}
-                            src={getAnimalImageURL(selectedPet.ANIMAL_ID)}
-                        />
-                    ) : (
-                        ''
-                    )}
-                    {selectedPet != null ? (
-                        <UploaderComponent animalId={selectedPet.ANIMAL_ID} />
-                    ) : (
-                        'Please select a pet'
-                    )}
-                </div>
+                    <PetImagesContainer selectedPet={selectedPet} />
+                </>
             )}
             <Contact />
         </div>
