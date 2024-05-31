@@ -2,7 +2,7 @@ import LocationDropDown from './LocationDropDown';
 import { render, screen } from '@testing-library/react';
 import { AGOURA, CASTAIC } from '../../Resources/LOCATIONS';
 import userEvent from '@testing-library/user-event';
-import { act } from 'react-dom/test-utils';
+import { act } from 'react';
 
 const mockSetLocation = jest.fn();
 
