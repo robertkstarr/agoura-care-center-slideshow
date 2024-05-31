@@ -1,8 +1,8 @@
-import React from "react";
+import React from 'react';
 
 const BaldwinFooter = () => {
     return (
-        <div className={"BaldwinFooter"}>
+        <div className={'BaldwinFooter'}>
             <div>Baldwin Park Animal Care Center</div>
             <div>4275 Elton St.</div>
             <div>Baldwin Park, CA 91706</div>

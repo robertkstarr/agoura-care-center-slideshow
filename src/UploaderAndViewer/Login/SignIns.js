@@ -3,15 +3,14 @@ import {
     EmailAuthProvider,
     GoogleAuthProvider,
     setPersistence,
-    signInWithPopup
-} from "firebase/auth";
-import {auth} from "../FirebaseConfigFiles/FirebaseConfig";
+    signInWithPopup,
+} from 'firebase/auth';
+import { auth } from '../FirebaseConfigFiles/FirebaseConfig';
 
 function signIn(provider) {
-    setPersistence(auth, browserLocalPersistence).then(
-        () => {
-            signInWithPopup(auth, provider).then();
-        });
+    setPersistence(auth, browserLocalPersistence).then(() => {
+        signInWithPopup(auth, provider).then();
+    });
 }
 
 export const signInWithGoogle = () => {

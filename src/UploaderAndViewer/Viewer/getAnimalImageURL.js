@@ -1,10 +1,12 @@
-import {storage} from "../FirebaseConfigFiles/FirebaseConfig";
-import {getDownloadURL, ref} from "firebase/storage";
+import { storage } from '../FirebaseConfigFiles/FirebaseConfig';
+import { getDownloadURL, ref } from 'firebase/storage';
 
-const FILE_EXTENSION = "_200x200.";
+const FILE_EXTENSION = '_200x200.';
 const getAnimalImageURLFromFilenameAndId = async (filename, animalId, thumbnail = false) => {
-    const thumbnailFolder = thumbnail ? "Thumbnails/" : "";
-    const updatedFilename = thumbnail ? filename.split(".")[0] + FILE_EXTENSION + filename.split(".")[1] : filename;
+    const thumbnailFolder = thumbnail ? 'Thumbnails/' : '';
+    const updatedFilename = thumbnail
+        ? filename.split('.')[0] + FILE_EXTENSION + filename.split('.')[1]
+        : filename;
     return getDownloadURL(ref(storage, `${animalId}/${thumbnailFolder}${updatedFilename}`));
 };
 
@@ -16,7 +18,7 @@ const getAnimalImageURL = (image, thumbnail = false) => {
     } else if (image?.url !== undefined) {
         return Promise.resolve(image.url);
     } else {
-        return "";
+        return '';
     }
 };
 

@@ -1,27 +1,24 @@
-import React, {useEffect, useState} from "react";
-import "./PetImage.css";
-import {LazyLoadImage} from "react-lazy-load-image-component";
-import "react-lazy-load-image-component/src/effects/blur.css";
-import getAnimalImageURL from "../getAnimalImageURL";
-import {CircularProgress} from "@mui/material";
+import React, { useEffect, useState } from 'react';
+import './PetImage.css';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
+import getAnimalImageURL from '../getAnimalImageURL';
+import { CircularProgress } from '@mui/material';
 
-const PetImage = ({image, ref, onClick}) => {
-    const [url, setUrl] = useState("");
+const PetImage = ({ image, ref, onClick }) => {
+    const [url, setUrl] = useState('');
     const [thumbnail, setThumbnail] = useState(null);
     const [width, setWidth] = useState(150);
     const [height, setHeight] = useState(null);
 
     useEffect(() => {
-        setUrl("");
+        setUrl('');
         const establishUrl = async () => {
-            getAnimalImageURL(image, true).then(
-                (thumbnailUrl) =>
-                    setThumbnail(thumbnailUrl)
-            );
+            getAnimalImageURL(image, true).then((thumbnailUrl) => setThumbnail(thumbnailUrl));
             getAnimalImageURL(image).then((animalURL) => setUrl(animalURL));
         };
 
-        const IMAGE_WIDTH_RATIO = Math.min(.4, 400 / window.innerWidth);
+        const IMAGE_WIDTH_RATIO = Math.min(0.4, 400 / window.innerWidth);
 
         if (image?.imageHeight && image?.imageWidth) {
             const screenWidth = window.innerWidth;
@@ -30,27 +27,36 @@ const PetImage = ({image, ref, onClick}) => {
             const imageHeight = image.imageHeight;
             const imageWidth = image.imageWidth;
 
-            if (imageHeight * screenWidth / imageWidth <= screenHeight) {
-                setHeight(imageHeight * screenWidth / imageWidth * IMAGE_WIDTH_RATIO);
-                setWidth(imageWidth * screenWidth / imageWidth * IMAGE_WIDTH_RATIO);
+            if ((imageHeight * screenWidth) / imageWidth <= screenHeight) {
+                setHeight(((imageHeight * screenWidth) / imageWidth) * IMAGE_WIDTH_RATIO);
+                setWidth(((imageWidth * screenWidth) / imageWidth) * IMAGE_WIDTH_RATIO);
             } else {
-                setHeight(imageHeight * screenHeight / imageHeight * IMAGE_WIDTH_RATIO);
-                setWidth(imageWidth * screenHeight / imageHeight * IMAGE_WIDTH_RATIO);
+                setHeight(((imageHeight * screenHeight) / imageHeight) * IMAGE_WIDTH_RATIO);
+                setWidth(((imageWidth * screenHeight) / imageHeight) * IMAGE_WIDTH_RATIO);
             }
         } else {
             setHeight(null);
             setWidth(150);
         }
 
-
         establishUrl().catch(console.error);
     }, [image]);
 
     return (
-        <div ref={ref} onClick={onClick} className={"PetImage"}>
-            {url.length > 0 || thumbnail != null ? <LazyLoadImage loading={"lazy"} src={url} alt={"animal"}
-                                                                  effect={"blur"} width={width} height={height}
-                                                                  placeholderSrc={thumbnail}/> : <CircularProgress/>}
+        <div ref={ref} onClick={onClick} className={'PetImage'}>
+            {url.length > 0 || thumbnail != null ? (
+                <LazyLoadImage
+                    loading={'lazy'}
+                    src={url}
+                    alt={'animal'}
+                    effect={'blur'}
+                    width={width}
+                    height={height}
+                    placeholderSrc={thumbnail}
+                />
+            ) : (
+                <CircularProgress />
+            )}
         </div>
     );
 };

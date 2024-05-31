@@ -1,8 +1,8 @@
-import React from "react";
+import React from 'react';
 
 const CarsonFooter = () => {
     return (
-        <div className={"CarsonFooter"}>
+        <div className={'CarsonFooter'}>
             <div>Carson Animal Care Center</div>
             <div>216 W Victoria St.</div>
             <div>Gardena, CA 90248</div>
