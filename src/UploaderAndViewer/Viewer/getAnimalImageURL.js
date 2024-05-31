@@ -4,8 +4,11 @@ import { getDownloadURL, ref } from 'firebase/storage';
 const FILE_EXTENSION = '_200x200.';
 const getAnimalImageURLFromFilenameAndId = async (filename, animalId, thumbnail = false) => {
     const thumbnailFolder = thumbnail ? 'Thumbnails/' : '';
+    const originalExtension = filename.split('.').pop();
+    const originalFilename = filename.replace('.' + originalExtension, '');
+
     const updatedFilename = thumbnail
-        ? filename.split('.')[0] + FILE_EXTENSION + filename.split('.')[1]
+        ? originalFilename + FILE_EXTENSION + originalExtension
         : filename;
     return getDownloadURL(ref(storage, `${animalId}/${thumbnailFolder}${updatedFilename}`));
 };

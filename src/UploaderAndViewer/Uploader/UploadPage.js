@@ -83,7 +83,7 @@ const UploadPage = () => {
                             'Please select a pet'
                         )}
                     </div>
-                    <PetImagesContainer selectedPet={selectedPet} />
+                    {selectedPet && <PetImagesContainer selectedPet={selectedPet} />}
                 </>
             )}
             <Contact />
