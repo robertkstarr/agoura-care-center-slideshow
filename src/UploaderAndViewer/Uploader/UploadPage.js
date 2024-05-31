@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import PetDropDown from '../SharedTools/PetDropDown';
+import PetDropDownContainer from '../SharedTools/PetDropDown/PetDropDownContainer';
 import { getAnimalImageURL } from '../../SlideShow/GetPetInfo/GetAnimalImageURL/GetAnimalImageURL';
 import './UploadPage.css';
 import UploaderComponent from './UploaderComponent';
@@ -63,7 +63,7 @@ const UploadPage = () => {
                     <div className={'PetDropDownContainer'}>
                         <div className={'DropDownMenus'}>
                             <LocationDropDown setLocation={setLocation} />
-                            <PetDropDown
+                            <PetDropDownContainer
                                 shelterPets={shelterPets}
                                 setSelectedPet={setSelectedPet}
                                 location={location}

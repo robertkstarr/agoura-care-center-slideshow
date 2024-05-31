@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './ViewerPage.css';
-import PetDropDown from '../SharedTools/PetDropDown';
+import PetDropDownContainer from '../SharedTools/PetDropDown/PetDropDownContainer';
 import PetImagesContainer from './PetImages/PetImagesContainer';
 import FilterAnimalsWithAvailablePictures from './FilterAnimalsWithAvailablePictures';
 import Login from '../Login/Login';
@@ -43,7 +43,7 @@ const ViewerPage = () => {
                 <div className={'PetDropDownContainer'}>
                     <div className={'DropDownMenus'}>
                         <LocationDropDown setLocation={setLocation} />
-                        <PetDropDown
+                        <PetDropDownContainer
                             shelterPets={shelterPets}
                             setSelectedPet={setSelectedPet}
                             location={location}
