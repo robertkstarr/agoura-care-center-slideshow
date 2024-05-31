@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './PetDropDown.css';
 import { useEffect } from 'react';
-import { Autocomplete, TextField } from '@mui/material';
+import { Autocomplete, LinearProgress, TextField } from '@mui/material';
 
 const PetDropDown = ({ shelterPets, setSelectedPet, location }) => {
+    const [petsAvailable, setPetsAvailable] = useState(false);
+
     const createAnimalLabel = (animal) => {
         return `${animal.ANIMAL_NAME} - ${animal.BREED} (${animal.ANIMAL_ID})`;
     };
@@ -12,8 +14,14 @@ const PetDropDown = ({ shelterPets, setSelectedPet, location }) => {
         setSelectedPet(null);
     }, [location, setSelectedPet]);
 
-    return (
-        <div className={'PetDropDown'}>
+    useEffect(() => {
+        shelterPets != null && shelterPets.length > 0
+            ? setPetsAvailable(true)
+            : setPetsAvailable(false);
+    }, [shelterPets]);
+
+    const AutocompleteDropdownMenu = () => {
+        return (
             <Autocomplete
                 renderInput={(params) => <TextField {...params} label={`Selected Animal`} />}
                 options={shelterPets.sort((a, b) => a.ANIMAL_NAME.localeCompare(b.ANIMAL_NAME))}
@@ -29,6 +37,12 @@ const PetDropDown = ({ shelterPets, setSelectedPet, location }) => {
                 }}
                 key={location}
             />
+        );
+    };
+
+    return (
+        <div className={'PetDropDown'}>
+            {petsAvailable ? <AutocompleteDropdownMenu /> : <LinearProgress />}
         </div>
     );
 };
