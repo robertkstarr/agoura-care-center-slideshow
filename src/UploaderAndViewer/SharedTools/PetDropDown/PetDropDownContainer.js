@@ -13,24 +13,24 @@ const PetDropDownContainer = ({ shelterPets, setSelectedPet, location }) => {
         return <div className="noLocation">Please select a location.</div>;
     };
 
-    const RenderedComponent = () => {
-        if (!location) {
-            return <PleaseSelectLocation />;
-        } else if (shelterPets == null || shelterPets.length === 0) {
-            return <LinearProgress />;
-        } else {
-            return (
+    const allInformationAvailable = () => {
+        return location && shelterPets != null && shelterPets?.length > 0;
+    };
+
+    const NotAllInformationDropDown = () => {
+        return location ? <LinearProgress /> : <PleaseSelectLocation />;
+    };
+    return (
+        <div className={'PetDropDown'}>
+            {!allInformationAvailable() ? (
+                <NotAllInformationDropDown />
+            ) : (
                 <AutocompletePetDropdownMenu
                     shelterPets={shelterPets}
                     setSelectedPet={setSelectedPet}
+                    location={location}
                 />
-            );
-        }
-    };
-
-    return (
-        <div className={'PetDropDown'}>
-            <RenderedComponent />
+            )}
         </div>
     );
 };

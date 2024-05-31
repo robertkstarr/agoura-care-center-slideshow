@@ -30,6 +30,7 @@ const UploadPage = () => {
     }, []);
 
     useEffect(() => {
+        setShelterPets(null);
         if (location != null && location.length > 0) {
             GetDropDownAnimals(location, 'ALL').then((animals) => {
                 if (animals.length > 0) {
