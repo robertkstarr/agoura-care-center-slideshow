@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './PetDropDown.css';
 import { useEffect } from 'react';
 import { Autocomplete, LinearProgress, TextField } from '@mui/material';

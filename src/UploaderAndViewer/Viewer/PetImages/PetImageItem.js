@@ -10,12 +10,8 @@ const PetImageItem = ({ image, index }) => {
     }, [image]);
 
     return (
-        <Item id={index} original={imageURL} height={image.height} width={image.width}>
-            {({ ref, open }) => (
-                <div ref={ref}>
-                    <PetImage ref={ref} onClick={open} image={image} />
-                </div>
-            )}
+        <Item id={index} original={imageURL} height={image.height} width={image.width} key={index}>
+            {({ open }) => <PetImage onClick={open} image={image} />}
         </Item>
     );
 };
