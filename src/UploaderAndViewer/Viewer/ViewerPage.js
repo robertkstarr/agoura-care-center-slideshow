@@ -30,7 +30,7 @@ const ViewerPage = () => {
         FilterAnimalsWithAvailablePictures(location).then((filteredAnimals) =>
             setShelterPets(filteredAnimals)
         );
-    }, [location, selectedPet]);
+    }, [location]);
 
     return (
         <div className={'ViewerPage'}>

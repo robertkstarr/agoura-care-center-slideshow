@@ -36,7 +36,9 @@ const PetImagesContainer = ({ selectedPet }) => {
             <div className={'PetImagesContainer'} key={selectedPet}>
                 <Gallery withDownloadButton={true} id={'shelter_pets'}>
                     {images.map((image, index) => {
-                        return <PetImageItem image={image} index={index} />;
+                        return (
+                            <PetImageItem image={image} index={index} key={'pet-image-' + index} />
+                        );
                     })}
                 </Gallery>
             </div>
