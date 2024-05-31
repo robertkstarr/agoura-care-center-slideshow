@@ -1,18 +1,16 @@
-import {getDownloadURL, ref, uploadBytesResumable} from "firebase/storage";
-import {auth, storage} from "../FirebaseConfigFiles/FirebaseConfig";
-import setDatabaseValue from "../FirebaseConfigFiles/setDatabaseValue";
-import {Timestamp} from "firebase/firestore";
+import { getDownloadURL, ref, uploadBytesResumable } from 'firebase/storage';
+import { auth, storage } from '../FirebaseConfigFiles/FirebaseConfig';
+import setDatabaseValue from '../FirebaseConfigFiles/setDatabaseValue';
+import { Timestamp } from 'firebase/firestore';
 
 export const handleUpload = (file, setPercent, animalId) => {
     const storageRef = ref(storage, `/${animalId}/${file.name}`);
     const uploadTask = uploadBytesResumable(storageRef, file);
 
     uploadTask.on(
-        "state_changed",
+        'state_changed',
         (snapshot) => {
-            const percent = Math.round(
-                (snapshot.bytesTransferred / snapshot.totalBytes) * 100
-            );
+            const percent = Math.round((snapshot.bytesTransferred / snapshot.totalBytes) * 100);
 
             // update progress
             setPercent(percent);
@@ -25,9 +23,9 @@ export const handleUpload = (file, setPercent, animalId) => {
                 const uploadUserId = auth.currentUser.uid;
                 const uploadUserName = auth.currentUser.displayName;
                 const imageBitmap = await createImageBitmap(file);
-                const {width, height} = imageBitmap;
+                const { width, height } = imageBitmap;
 
-                setDatabaseValue(`Public/${animalId}/${file.name.split(".")[0]}`, {
+                setDatabaseValue(`Public/${animalId}/${file.name.split('.')[0]}`, {
                     url,
                     uploadTime,
                     userId: uploadUserId,
@@ -35,9 +33,9 @@ export const handleUpload = (file, setPercent, animalId) => {
                     fileName: file.name,
                     imageHeight: height,
                     imageWidth: width,
-                    animalId
+                    animalId,
                 });
             });
-        });
-
+        }
+    );
 };

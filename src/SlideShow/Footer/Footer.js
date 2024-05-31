@@ -1,39 +1,47 @@
-import React from "react";
-import AgouraFooter from "./LocationFooters/AgouraFooter";
-import DowneyFooter from "./LocationFooters/DowneyFooter";
-import BaldwinFooter from "./LocationFooters/BaldwinFooter";
-import CarsonFooter from "./LocationFooters/CarsonFooter";
-import CastaicFooter from "./LocationFooters/CastaicFooter";
-import LancasterFooter from "./LocationFooters/LancasterFooter";
-import PalmdaleFooter from "./LocationFooters/PalmdaleFooter";
-import "./Footer.css";
-import {AGOURA, BALDWIN, CARSON, CASTAIC, DOWNEY, LANCASTER, PALMDALE} from "../../Resources/LOCATIONS";
+import React from 'react';
+import AgouraFooter from './LocationFooters/AgouraFooter';
+import DowneyFooter from './LocationFooters/DowneyFooter';
+import BaldwinFooter from './LocationFooters/BaldwinFooter';
+import CarsonFooter from './LocationFooters/CarsonFooter';
+import CastaicFooter from './LocationFooters/CastaicFooter';
+import LancasterFooter from './LocationFooters/LancasterFooter';
+import PalmdaleFooter from './LocationFooters/PalmdaleFooter';
+import './Footer.css';
+import {
+    AGOURA,
+    BALDWIN,
+    CARSON,
+    CASTAIC,
+    DOWNEY,
+    LANCASTER,
+    PALMDALE,
+} from '../../Resources/LOCATIONS';
 
-const Footer = ({location}) => {
+const Footer = ({ location }) => {
     const locationFooter = () => {
         switch (location) {
             case AGOURA:
-                return <AgouraFooter/>;
+                return <AgouraFooter />;
             case BALDWIN:
-                return <BaldwinFooter/>;
+                return <BaldwinFooter />;
             case CARSON:
-                return <CarsonFooter/>;
+                return <CarsonFooter />;
             case CASTAIC:
-                return <CastaicFooter/>;
+                return <CastaicFooter />;
             case DOWNEY:
-                return <DowneyFooter/>;
+                return <DowneyFooter />;
             case LANCASTER:
-                return <LancasterFooter/>;
+                return <LancasterFooter />;
             case PALMDALE:
-                return <PalmdaleFooter/>;
+                return <PalmdaleFooter />;
             default:
-                return <AgouraFooter/>;
+                return <AgouraFooter />;
         }
     };
 
     return (
-        <div className={"footer"}>
-            <div className={"CurrentlyAvailable"}>Currently available for adoption at the</div>
+        <div className={'footer'}>
+            <div className={'CurrentlyAvailable'}>Currently available for adoption at the</div>
             {locationFooter()}
         </div>
     );

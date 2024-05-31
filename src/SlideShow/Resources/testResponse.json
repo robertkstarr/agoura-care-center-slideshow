@@ -1,39 +1,39 @@
 [
-  {
-    "currentPage": "1",
-    "endRecord": "500",
-    "animals": [
-      {
-        "ANIMAL_ID": "A5571737",
-        "ANIMAL_NAME": "KYLE",
-        "SEX": "Male",
-        "YEARS_OLD": "3",
-        "MONTHS_OLD": "0.00",
-        "BREED": "TERRIER",
-        "LOCATION": "Agoura ACC",
-        "KENNEL_STAT": "RTGH",
-        "RESCUE_ONLY": "NO",
-        "MEDICAL_STAT": "NO KNOWN",
-        "WEIGHT": "19.70",
-        "OUTCOME_TYPE": null
-      },
-      {
-        "ANIMAL_ID": "A5567836",
-        "ANIMAL_NAME": "CHARLESTON",
-        "SEX": "Male",
-        "YEARS_OLD": "7",
-        "MONTHS_OLD": "0.00",
-        "BREED": "TERRIER",
-        "LOCATION": "Agoura ACC",
-        "KENNEL_STAT": "RTGH",
-        "RESCUE_ONLY": "NO",
-        "MEDICAL_STAT": "MINOR MEDICAL",
-        "WEIGHT": "10.40",
-        "OUTCOME_TYPE": null
-      }
-    ],
-    "startRecord": "1",
-    "totalPages": "1",
-    "totalRecords": "51"
-  }
+    {
+        "currentPage": "1",
+        "endRecord": "500",
+        "animals": [
+            {
+                "ANIMAL_ID": "A5571737",
+                "ANIMAL_NAME": "KYLE",
+                "SEX": "Male",
+                "YEARS_OLD": "3",
+                "MONTHS_OLD": "0.00",
+                "BREED": "TERRIER",
+                "LOCATION": "Agoura ACC",
+                "KENNEL_STAT": "RTGH",
+                "RESCUE_ONLY": "NO",
+                "MEDICAL_STAT": "NO KNOWN",
+                "WEIGHT": "19.70",
+                "OUTCOME_TYPE": null
+            },
+            {
+                "ANIMAL_ID": "A5567836",
+                "ANIMAL_NAME": "CHARLESTON",
+                "SEX": "Male",
+                "YEARS_OLD": "7",
+                "MONTHS_OLD": "0.00",
+                "BREED": "TERRIER",
+                "LOCATION": "Agoura ACC",
+                "KENNEL_STAT": "RTGH",
+                "RESCUE_ONLY": "NO",
+                "MEDICAL_STAT": "MINOR MEDICAL",
+                "WEIGHT": "10.40",
+                "OUTCOME_TYPE": null
+            }
+        ],
+        "startRecord": "1",
+        "totalPages": "1",
+        "totalRecords": "51"
+    }
 ]
