@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import getAnimalImageURL from '../getAnimalImageURL';
 import { Item } from 'react-photoswipe-gallery';
+import getAnimalImageURL from '../getAnimalImageURL';
 import PetImage from './PetImage';
 
 const PetImageItem = ({ image, index }) => {
@@ -17,7 +17,7 @@ const PetImageItem = ({ image, index }) => {
             width={image.width}
             key={'Item' + index}
         >
-            {({ open }) => <PetImage onClick={open} image={image} key={index} />}
+            {({ open, ref }) => <PetImage onClick={open} image={image} key={index} ref={ref} />}
         </Item>
     );
 };

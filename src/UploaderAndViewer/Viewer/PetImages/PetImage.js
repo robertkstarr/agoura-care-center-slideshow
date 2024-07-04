@@ -1,16 +1,15 @@
+import { CircularProgress } from '@mui/material';
 import React, { useEffect, useState } from 'react';
-import './PetImage.css';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 import getAnimalImageURL from '../getAnimalImageURL';
-import { CircularProgress } from '@mui/material';
+import './PetImage.css';
 
-const PetImage = ({ image, ref, onClick }) => {
+const PetImage = React.forwardRef(({ image, onClick }, ref) => {
     const [url, setUrl] = useState('');
     const [thumbnail, setThumbnail] = useState(null);
     const [width, setWidth] = useState(150);
     const [height, setHeight] = useState(null);
-
     useEffect(() => {
         setUrl('');
         const establishUrl = async () => {
@@ -59,6 +58,6 @@ const PetImage = ({ image, ref, onClick }) => {
             )}
         </div>
     );
-};
+});
 
 export default PetImage;
