@@ -1,9 +1,9 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import { GetPetInfo } from '../GetPetInfo/GetPetInfo';
-import LandscapeView from './LandscapeView/LandscapeView';
-import { PortraitView } from './PortraitView/PortraitView';
 import { capitalizeEveryWordOfString } from './DisplayTools';
+import LandscapeView from './LandscapeView/LandscapeView';
 import './PetDisplay.css';
+import { PortraitView } from './PortraitView/PortraitView';
 
 const PetDisplay = ({ location }) => {
     const TIME_FOR_EACH_PET_IN_SECONDS = 10;
