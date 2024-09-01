@@ -4,7 +4,6 @@ import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 import getAnimalImageURL from '../getAnimalImageURL';
 import './PetImage.css';
-
 const PetImage = React.forwardRef(({ image, onClick }, ref) => {
     const [url, setUrl] = useState('');
     const [thumbnail, setThumbnail] = useState(null);
@@ -41,9 +40,15 @@ const PetImage = React.forwardRef(({ image, onClick }, ref) => {
         establishUrl().catch(console.error);
     }, [image]);
 
-    return (
-        <div ref={ref} onClick={onClick} className={'PetImage'}>
-            {url.length > 0 || thumbnail != null ? (
+    const DisplayImage = () => {
+        if (url.includes('.mp4')) {
+            return (
+                <video height={height} controls>
+                    <source src={url} type="video/mp4" />
+                </video>
+            );
+        } else {
+            return (
                 <LazyLoadImage
                     loading={'lazy'}
                     src={url}
@@ -53,10 +58,20 @@ const PetImage = React.forwardRef(({ image, onClick }, ref) => {
                     height={height}
                     placeholderSrc={thumbnail}
                 />
+            );
+        }
+    };
+
+    return (
+        <>
+            {url.length > 0 || thumbnail != null ? (
+                <div ref={ref} onClick={onClick} className={'PetImage'}>
+                    <DisplayImage />
+                </div>
             ) : (
                 <CircularProgress />
             )}
-        </div>
+        </>
     );
 });
 

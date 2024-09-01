@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from 'react';
-import './ViewerPage.css';
-import PetDropDownContainer from '../SharedTools/PetDropDown/PetDropDownContainer';
-import PetImagesContainer from './PetImages/PetImagesContainer';
-import FilterAnimalsWithAvailablePictures from './FilterAnimalsWithAvailablePictures';
-import Login from '../Login/Login';
+import { Link } from 'react-router-dom';
 import { auth } from '../FirebaseConfigFiles/FirebaseConfig';
-import '../Uploader/UploadPage.css';
+import Login from '../Login/Login';
 import Contact from '../SharedTools/Contact';
 import LocationDropDown from '../SharedTools/LocationDropDown';
-import { Link } from 'react-router-dom';
+import PetDropDownContainer from '../SharedTools/PetDropDown/PetDropDownContainer';
+import '../Uploader/UploadPage.css';
+import FilterAnimalsWithAvailablePictures from './FilterAnimalsWithAvailablePictures';
+import PetImagesContainer from './PetImages/PetImagesContainer';
+import './ViewerPage.css';
 
 const ViewerPage = () => {
     const [selectedPet, setSelectedPet] = useState('');

@@ -1,11 +1,11 @@
 import 'photoswipe/dist/photoswipe.css';
 
-import React, { useEffect, useState } from 'react';
 import { onValue, ref } from 'firebase/database';
-import { database } from '../../FirebaseConfigFiles/FirebaseConfig';
-import './PetImagesContainer.css';
+import React, { useEffect, useState } from 'react';
 import { Gallery } from 'react-photoswipe-gallery';
+import { database } from '../../FirebaseConfigFiles/FirebaseConfig';
 import PetImageItem from './PetImageItem';
+import './PetImagesContainer.css';
 
 const PetImagesContainer = ({ selectedPet }) => {
     const [images, setImages] = useState(null);
