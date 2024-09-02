@@ -48,7 +48,7 @@ const PetImagesContainer = ({ selectedPet }) => {
     if (selectedPet && (images || videos)) {
         return (
             <div className={'PetImagesContainer'} key={selectedPet}>
-                {videos && (
+                {videos.length > 0 && (
                     <>
                         <h2>Videos</h2>
                         <div className="videos">
@@ -65,7 +65,7 @@ const PetImagesContainer = ({ selectedPet }) => {
                         </div>
                     </>
                 )}
-                {images && (
+                {images.length > 0 && (
                     <>
                         <h2>Images</h2>
                         <div className={'images'}>
@@ -86,7 +86,7 @@ const PetImagesContainer = ({ selectedPet }) => {
             </div>
         );
     } else if (selectedPet && images == null) {
-        return <div>No user uploaded images currently available.</div>;
+        return <div>No user uploaded images or videos currently available.</div>;
     } else {
         return <div>Please select a pet</div>;
     }
