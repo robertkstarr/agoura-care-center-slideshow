@@ -7,7 +7,8 @@
     align-items: center;
 }
 
-.images {
+.images,
+.videos {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
