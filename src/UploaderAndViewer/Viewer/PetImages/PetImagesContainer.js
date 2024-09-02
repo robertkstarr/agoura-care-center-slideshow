@@ -48,7 +48,7 @@ const PetImagesContainer = ({ selectedPet }) => {
     if (selectedPet && (images || videos)) {
         return (
             <div className={'PetImagesContainer'} key={selectedPet}>
-                {videos.length > 0 && (
+                {videos?.length > 0 && (
                     <>
                         <h2>Videos</h2>
                         <div className="videos">
@@ -65,7 +65,7 @@ const PetImagesContainer = ({ selectedPet }) => {
                         </div>
                     </>
                 )}
-                {images.length > 0 && (
+                {images?.length > 0 && (
                     <>
                         <h2>Images</h2>
                         <div className={'images'}>
