@@ -1,5 +1,5 @@
-import { storage } from '../FirebaseConfigFiles/FirebaseConfig';
 import { getDownloadURL, ref } from 'firebase/storage';
+import { storage } from '../FirebaseConfigFiles/FirebaseConfig';
 
 const FILE_EXTENSION = '_200x200.';
 const getAnimalImageURLFromFilenameAndId = async (filename, animalId, thumbnail = false) => {
@@ -16,7 +16,11 @@ const getAnimalImageURLFromFilenameAndId = async (filename, animalId, thumbnail 
 const getAnimalImageURL = (image, thumbnail = false) => {
     if (thumbnail && (image?.fileName === undefined || image?.animalId === undefined)) {
         return Promise.resolve(null);
-    } else if (image?.fileName !== undefined && image?.animalId !== undefined) {
+    } else if (
+        image?.fileName !== undefined &&
+        image?.animalId !== undefined &&
+        !image?.fileName.includes('mp4')
+    ) {
         return getAnimalImageURLFromFilenameAndId(image.fileName, image.animalId, thumbnail);
     } else if (image?.url !== undefined) {
         return Promise.resolve(image.url);
