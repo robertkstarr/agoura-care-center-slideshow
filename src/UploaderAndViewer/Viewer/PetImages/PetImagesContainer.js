@@ -50,7 +50,7 @@ const PetImagesContainer = ({ selectedPet }) => {
             <div className={'PetImagesContainer'} key={selectedPet}>
                 {videos && videos?.length > 0 && (
                     <>
-                        <h2>Updated Videos</h2>
+                        <h2>Videos</h2>
                         <div className="videos">
                             {videos.map((image, index) => {
                                 return (
