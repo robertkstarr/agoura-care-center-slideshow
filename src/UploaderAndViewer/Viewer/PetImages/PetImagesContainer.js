@@ -48,9 +48,9 @@ const PetImagesContainer = ({ selectedPet }) => {
     if (selectedPet && (images || videos)) {
         return (
             <div className={'PetImagesContainer'} key={selectedPet}>
-                {videos?.length > 0 && (
+                {videos && videos?.length > 0 && (
                     <>
-                        <h2>Videos</h2>
+                        <h2>Updated Videos</h2>
                         <div className="videos">
                             {videos.map((image, index) => {
                                 return (
@@ -65,7 +65,7 @@ const PetImagesContainer = ({ selectedPet }) => {
                         </div>
                     </>
                 )}
-                {images?.length > 0 && (
+                {images && images?.length > 0 && (
                     <>
                         <h2>Images</h2>
                         <div className={'images'}>
