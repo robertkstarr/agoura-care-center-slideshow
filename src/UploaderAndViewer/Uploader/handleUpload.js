@@ -8,7 +8,7 @@ export const handleUpload = (file, setPercent, animalId) => {
     const uploadTask = uploadBytesResumable(storageRef, file);
 
     const getWidthAndHeight = async () => {
-        if (file.type == 'video/mp4') {
+        if (file.type === 'video/mp4') {
             // TODO: Fix this
             return { width: 60, height: 60 };
         } else {
