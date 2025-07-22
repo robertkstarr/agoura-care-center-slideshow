@@ -68,3 +68,13 @@
     color: #5592d5;
     font-size: 2.5vh;
 }
+
+.technical {
+    a {
+        color: rgb(13, 157, 246);
+    }
+    font-size: small;
+    font-weight: bolder;
+    padding: 2rem;
+    color: white;
+}

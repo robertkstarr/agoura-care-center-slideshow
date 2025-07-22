@@ -1,10 +1,10 @@
-import PetImage from '../../PetImage/PetImage';
-import { getAnimalImageURL } from '../../GetPetInfo/GetAnimalImageURL/GetAnimalImageURL';
-import PetInfo from '../PetInfo';
+import Obfuscate from 'react-obfuscate';
 import Footer from '../../Footer/Footer';
-import React from 'react';
-import './LandscapeView.css';
+import { getAnimalImageURL } from '../../GetPetInfo/GetAnimalImageURL/GetAnimalImageURL';
 import Logo from '../../Header/Logo';
+import PetImage from '../../PetImage/PetImage';
+import PetInfo from '../PetInfo';
+import './LandscapeView.css';
 
 export const LandscapeView = ({ currentPet, pickNewPet, location }) => {
     return (
@@ -21,7 +21,12 @@ export const LandscapeView = ({ currentPet, pickNewPet, location }) => {
                     <Footer location={location} />
                 </div>
             </div>
+
             <Logo />
+            <div className="technical">
+                If you notice any issues with this display, please email:{' '}
+                <Obfuscate email="robert@robertkstarr.com" />
+            </div>
         </div>
     );
 };

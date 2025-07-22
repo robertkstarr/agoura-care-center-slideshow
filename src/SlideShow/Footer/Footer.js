@@ -1,12 +1,3 @@
-import React from 'react';
-import AgouraFooter from './LocationFooters/AgouraFooter';
-import DowneyFooter from './LocationFooters/DowneyFooter';
-import BaldwinFooter from './LocationFooters/BaldwinFooter';
-import CarsonFooter from './LocationFooters/CarsonFooter';
-import CastaicFooter from './LocationFooters/CastaicFooter';
-import LancasterFooter from './LocationFooters/LancasterFooter';
-import PalmdaleFooter from './LocationFooters/PalmdaleFooter';
-import './Footer.css';
 import {
     AGOURA,
     BALDWIN,
@@ -16,6 +7,14 @@ import {
     LANCASTER,
     PALMDALE,
 } from '../../Resources/LOCATIONS';
+import './Footer.css';
+import AgouraFooter from './LocationFooters/AgouraFooter';
+import BaldwinFooter from './LocationFooters/BaldwinFooter';
+import CarsonFooter from './LocationFooters/CarsonFooter';
+import CastaicFooter from './LocationFooters/CastaicFooter';
+import DowneyFooter from './LocationFooters/DowneyFooter';
+import LancasterFooter from './LocationFooters/LancasterFooter';
+import PalmdaleFooter from './LocationFooters/PalmdaleFooter';
 
 const Footer = ({ location }) => {
     const locationFooter = () => {
