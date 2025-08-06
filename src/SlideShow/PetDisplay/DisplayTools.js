@@ -8,7 +8,7 @@ export const capitalizeEveryWordOfString = (unprocessedString) => {
 };
 
 export const shouldDisplayAge = (pet) => {
-    return parseInt(pet.YEARS_OLD) > 0 && parseInt(pet.MONTHS_OLD) > 0;
+    return parseInt(pet.yearsOld) > 0 && parseInt(pet.monthsOld) > 0;
 };
 const yearsDisplay = (years) => {
     if (years === '0') {
@@ -33,8 +33,8 @@ const monthsDisplay = (months) => {
     return monthsInteger + ' months';
 };
 export const ageDisplay = (pet) => {
-    const years = pet.YEARS_OLD;
-    const months = pet.MONTHS_OLD;
+    const years = pet.yearsOld;
+    const months = pet.monthsOld;
     return yearsDisplay(years) + monthsDisplay(months);
 };
 

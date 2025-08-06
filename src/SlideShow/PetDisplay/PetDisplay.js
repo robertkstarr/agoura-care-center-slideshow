@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { GetPetInfo } from '../GetPetInfo/GetPetInfo';
 import { capitalizeEveryWordOfString } from './DisplayTools';
 import LandscapeView from './LandscapeView/LandscapeView';
@@ -56,7 +56,7 @@ const PetDisplay = ({ location }) => {
         return (
             <div className={'PetDisplay'}>
                 <div className={'PetName'}>
-                    {capitalizeEveryWordOfString(currentPet.ANIMAL_NAME)}
+                    {capitalizeEveryWordOfString(currentPet.animalName)}
                 </div>
                 {!isPortrait && (
                     <LandscapeView
