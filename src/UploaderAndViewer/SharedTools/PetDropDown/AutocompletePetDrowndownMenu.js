@@ -1,9 +1,8 @@
 import { Autocomplete, TextField } from '@mui/material';
-import React from 'react';
 
 const AutocompletePetDropdownMenu = ({ shelterPets, setSelectedPet, location }) => {
     const createAnimalLabel = (animal) => {
-        return `${animal.ANIMAL_NAME} - ${animal.BREED} (${animal.ANIMAL_ID})`;
+        return `${animal.ANIMAL_NAME} - ${animal.BREED} (${animal.animalId})`;
     };
 
     return (

@@ -5,8 +5,8 @@ import IDAvailable from './IDAvailable';
 jest.mock('../SharedTools/GetDropDownAnimals');
 jest.mock('./IDAvailable');
 
-const animal1 = { ANIMAL_ID: '1' };
-const animal2 = { ANIMAL_ID: '2' };
+const animal1 = { animalId: '1' };
+const animal2 = { animalId: '2' };
 const animals = [animal1, animal2];
 
 beforeEach(() => {

@@ -3,7 +3,7 @@ import PetInfo from './PetInfo';
 
 describe('shows info when there', () => {
     const defaultPet = {
-        ANIMAL_ID: 'animalID',
+        animalId: 'animalID',
         SEX: 'Female',
         BREED: 'Pet Breed',
         YEARS_OLD: '10',
@@ -44,7 +44,7 @@ describe('shows info when there', () => {
 
 describe('does not show info if not there', () => {
     const emptyPet = {
-        ANIMAL_ID: 'animalID',
+        animalId: 'animalID',
         SEX: 'N/A',
         BREED: 'Pet Breed',
         YEARS_OLD: '0',

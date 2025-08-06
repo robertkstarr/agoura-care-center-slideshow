@@ -1,7 +1,7 @@
 import 'photoswipe/dist/photoswipe.css';
 
 import { onValue, ref } from 'firebase/database';
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Gallery } from 'react-photoswipe-gallery';
 import { database } from '../../FirebaseConfigFiles/FirebaseConfig';
 import PetImage from './PetImage';
@@ -16,7 +16,7 @@ const PetImagesContainer = ({ selectedPet }) => {
         setImages(null);
 
         if (selectedPet) {
-            onValue(ref(database, `Public/${selectedPet.ANIMAL_ID}`), (snapshot) => {
+            onValue(ref(database, `Public/${selectedPet.animalId}`), (snapshot) => {
                 const value = snapshot.val();
                 if (value != null && Object.keys(value).length > 0) {
                     setImages(

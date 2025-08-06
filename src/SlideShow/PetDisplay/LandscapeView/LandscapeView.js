@@ -13,7 +13,7 @@ export const LandscapeView = ({ currentPet, pickNewPet, location }) => {
                 <div className={'LeftSide'}>
                     <PetImage
                         onClick={pickNewPet}
-                        imageURL={getAnimalImageURL(currentPet.ANIMAL_ID)}
+                        imageURL={getAnimalImageURL(currentPet.animalId)}
                     />
                 </div>
                 <div className={'RightSide'}>

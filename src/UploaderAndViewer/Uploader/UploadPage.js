@@ -1,17 +1,17 @@
-import React, { useEffect, useState } from 'react';
-import PetDropDownContainer from '../SharedTools/PetDropDown/PetDropDownContainer';
+import { onValue, ref } from 'firebase/database';
+import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { getAnimalImageURL } from '../../SlideShow/GetPetInfo/GetAnimalImageURL/GetAnimalImageURL';
+import { auth, database } from '../FirebaseConfigFiles/FirebaseConfig';
+import setDatabaseValue from '../FirebaseConfigFiles/setDatabaseValue';
+import Login from '../Login/Login';
+import Contact from '../SharedTools/Contact';
+import GetDropDownAnimals from '../SharedTools/GetDropDownAnimals';
+import LocationDropDown from '../SharedTools/LocationDropDown';
+import PetDropDownContainer from '../SharedTools/PetDropDown/PetDropDownContainer';
+import PetImagesContainer from '../Viewer/PetImages/PetImagesContainer';
 import './UploadPage.css';
 import UploaderComponent from './UploaderComponent';
-import GetDropDownAnimals from '../SharedTools/GetDropDownAnimals';
-import Login from '../Login/Login';
-import { auth, database } from '../FirebaseConfigFiles/FirebaseConfig';
-import { onValue, ref } from 'firebase/database';
-import setDatabaseValue from '../FirebaseConfigFiles/setDatabaseValue';
-import Contact from '../SharedTools/Contact';
-import LocationDropDown from '../SharedTools/LocationDropDown';
-import { Link } from 'react-router-dom';
-import PetImagesContainer from '../Viewer/PetImages/PetImagesContainer';
 
 const UploadPage = () => {
     const [selectedPet, setSelectedPet] = useState();
@@ -73,13 +73,13 @@ const UploadPage = () => {
                         {selectedPet != null ? (
                             <img
                                 alt={`${selectedPet.ANIMAL_NAME}`}
-                                src={getAnimalImageURL(selectedPet.ANIMAL_ID)}
+                                src={getAnimalImageURL(selectedPet.animalId)}
                             />
                         ) : (
                             ''
                         )}
                         {selectedPet != null ? (
-                            <UploaderComponent animalId={selectedPet.ANIMAL_ID} />
+                            <UploaderComponent animalId={selectedPet.animalId} />
                         ) : (
                             'Please select a pet'
                         )}

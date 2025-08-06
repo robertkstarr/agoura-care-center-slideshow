@@ -6,7 +6,7 @@ const FilterAnimalsWithAvailablePictures = async (location) => {
 
     const promises = animals.map(async (animal) => ({
         animal: animal,
-        idAvailable: await IDAvailable(animal.ANIMAL_ID),
+        idAvailable: await IDAvailable(animal.animalId),
     }));
     const fulfilledData = await Promise.all(promises);
     const filteredData = fulfilledData

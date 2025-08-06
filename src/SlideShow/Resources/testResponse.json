@@ -4,7 +4,7 @@
         "endRecord": "500",
         "animals": [
             {
-                "ANIMAL_ID": "A5571737",
+                "animalId": "A5571737",
                 "ANIMAL_NAME": "KYLE",
                 "SEX": "Male",
                 "YEARS_OLD": "3",
@@ -18,7 +18,7 @@
                 "OUTCOME_TYPE": null
             },
             {
-                "ANIMAL_ID": "A5567836",
+                "animalId": "A5567836",
                 "ANIMAL_NAME": "CHARLESTON",
                 "SEX": "Male",
                 "YEARS_OLD": "7",
