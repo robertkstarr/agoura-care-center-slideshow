@@ -21,7 +21,7 @@ const yearsDisplay = (years) => {
 };
 
 const monthsDisplay = (months) => {
-    const monthsInteger = months.split('.')[0];
+    const monthsInteger = Number(months);
     if (monthsInteger === '0') {
         return '';
     }
@@ -33,6 +33,7 @@ const monthsDisplay = (months) => {
     return monthsInteger + ' months';
 };
 export const ageDisplay = (pet) => {
+    console.log(pet);
     const years = pet.yearsOld;
     const months = pet.monthsOld;
     return yearsDisplay(years) + monthsDisplay(months);
