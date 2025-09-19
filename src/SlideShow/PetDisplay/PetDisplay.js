@@ -1,9 +1,9 @@
+import { onValue, ref } from 'firebase/database';
 import { useCallback, useEffect, useState } from 'react';
+import { database } from '../../UploaderAndViewer/FirebaseConfigFiles/FirebaseConfig';
 import { capitalizeEveryWordOfString } from './DisplayTools';
 import LandscapeView from './LandscapeView/LandscapeView';
 import './PetDisplay.css';
-import { onValue, ref } from 'firebase/database';
-import { database } from '../../UploaderAndViewer/FirebaseConfigFiles/FirebaseConfig';
 import { PortraitView } from './PortraitView/PortraitView';
 
 const PetDisplay = ({ location }) => {
@@ -43,15 +43,10 @@ const PetDisplay = ({ location }) => {
             }
         }, 1000);
 
-        const refreshInterval = setInterval(() => {
-            window.location.reload();
-        }, SECONDS_IN_A_DAY * 1000);
-
         return () => {
             clearInterval(interval);
-            clearInterval(refreshInterval);
         };
-    }, [pickNewPet, timeSinceLastSwitch, SECONDS_IN_A_DAY, location]);
+    }, [pickNewPet, timeSinceLastSwitch, location]);
 
     if (currentPet) {
         return (
