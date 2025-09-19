@@ -8,7 +8,6 @@ import { PortraitView } from './PortraitView/PortraitView';
 
 const PetDisplay = ({ location }) => {
     const TIME_FOR_EACH_PET_IN_SECONDS = 10;
-    const SECONDS_IN_A_DAY = 3600 * 24;
     const [allPets, setAllPets] = useState([]);
     const [currentPet, setCurrentPet] = useState(null);
     const [timeSinceLastSwitch, setTimeSinceLastSwitch] = useState(0);
