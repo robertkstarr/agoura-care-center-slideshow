@@ -1,8 +1,9 @@
 import { useCallback, useEffect, useState } from 'react';
-import { GetPetInfo } from '../GetPetInfo/GetPetInfo';
 import { capitalizeEveryWordOfString } from './DisplayTools';
 import LandscapeView from './LandscapeView/LandscapeView';
 import './PetDisplay.css';
+import { onValue, ref } from 'firebase/database';
+import { database } from '../../UploaderAndViewer/FirebaseConfigFiles/FirebaseConfig';
 import { PortraitView } from './PortraitView/PortraitView';
 
 const PetDisplay = ({ location }) => {
@@ -17,15 +18,15 @@ const PetDisplay = ({ location }) => {
         setTimeSinceLastSwitch(0);
 
         if (allPets.length > 0) {
-            const petListLength = allPets[0].animals.length;
-            const newPet = allPets[0].animals[Math.floor(Math.random() * petListLength)];
+            const petListLength = allPets.length;
+            const newPet = allPets[Math.floor(Math.random() * petListLength)];
             setCurrentPet(newPet);
         }
     }, [allPets]);
 
     useEffect(() => {
-        GetPetInfo(location).then((pets) => {
-            setAllPets(pets);
+        onValue(ref(database, `Public/CurrentAnimals/${location}`), (snapshot) => {
+            setAllPets(Object.values(snapshot.val()));
         });
     }, [location]);
 
