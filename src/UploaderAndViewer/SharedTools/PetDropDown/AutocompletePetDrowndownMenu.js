@@ -2,13 +2,13 @@ import { Autocomplete, TextField } from '@mui/material';
 
 const AutocompletePetDropdownMenu = ({ shelterPets, setSelectedPet, location }) => {
     const createAnimalLabel = (animal) => {
-        return `${animal.ANIMAL_NAME} - ${animal.BREED} (${animal.animalId})`;
+        return `${animal['animalName']} - ${animal['breed']} (${animal.animalId})`;
     };
 
     return (
         <Autocomplete
             renderInput={(params) => <TextField {...params} label={`Selected Animal`} />}
-            options={shelterPets.sort((a, b) => a.ANIMAL_NAME.localeCompare(b.ANIMAL_NAME))}
+            options={shelterPets.sort((a, b) => a['animalName'].localeCompare(b['animalName']))}
             getOptionLabel={(option) => createAnimalLabel(option)}
             loading={shelterPets === null || shelterPets === 0}
             loadingText={`Loading...`}

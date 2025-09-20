@@ -1,13 +1,17 @@
-import { GetPetInfo } from '../../SlideShow/GetPetInfo/GetPetInfo';
+import { onValue, ref } from 'firebase/database';
+import { database } from '../FirebaseConfigFiles/FirebaseConfig';
 
-const GetDropDownAnimals = async (location = 'ALL', status = 'RTGH') => {
-    return GetPetInfo(location, status).then((unmodifiedAnimalInfo) => {
-        const cleanedAnimals = [];
-        unmodifiedAnimalInfo[0]['animals'].forEach((animal) => {
-            cleanedAnimals.push(animal);
+const GetDropDownAnimals = async (location = 'Agoura', status = 'RTGH') => {
+    const animalRef = ref(database, `Public/CurrentAnimals/${location}`);
+    const cleanedAnimals = [];
+
+    onValue(animalRef, (snapshot) => {
+        Object.keys(snapshot.val()).forEach((animal) => {
+            cleanedAnimals.push(snapshot.val()[animal]);
         });
-        return cleanedAnimals;
     });
+
+    return cleanedAnimals;
 };
 
 export default GetDropDownAnimals;

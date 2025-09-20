@@ -51,7 +51,7 @@ const PetImage = React.forwardRef(({ image, onClick }, ref) => {
             return (
                 <LazyLoadImage
                     loading={'lazy'}
-                    src={url}
+                    src={url.length > 0 ? url : null}
                     alt={'animal'}
                     effect={'blur'}
                     width={width}
