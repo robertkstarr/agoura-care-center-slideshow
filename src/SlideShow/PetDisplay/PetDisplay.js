@@ -25,7 +25,11 @@ const PetDisplay = ({ location }) => {
 
     useEffect(() => {
         onValue(ref(database, `Public/CurrentAnimals/${location}`), (snapshot) => {
-            setAllPets(Object.values(snapshot.val()));
+            setAllPets(
+                Object.values(snapshot.val()).filter((pet) => {
+                    return pet['kennelStat'] === 'RTGH';
+                })
+            );
         });
     }, [location]);
 
