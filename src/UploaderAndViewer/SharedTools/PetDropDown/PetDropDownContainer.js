@@ -1,14 +1,12 @@
-import React from 'react';
-import './PetDropDownContainer.css';
+import { LinearProgress } from '@mui/material';
 import { useEffect } from 'react';
 import AutocompletePetDropdownMenu from './AutocompletePetDrowndownMenu';
-import { LinearProgress } from '@mui/material';
+import './PetDropDownContainer.css';
 
 const PetDropDownContainer = ({ shelterPets, setSelectedPet, location }) => {
     useEffect(() => {
         setSelectedPet(null);
     }, [location, setSelectedPet]);
-
     const PleaseSelectLocation = () => {
         return <div className="noLocation">Please select a location.</div>;
     };
