@@ -1,5 +1,5 @@
 import { Button } from '@mui/material';
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { FileUploader } from 'react-drag-drop-files';
 import FileProgressBar from './FileProgressBar';
 import './UploaderComponent.css';
@@ -7,7 +7,7 @@ import './UploaderComponent.css';
 const UploaderComponent = ({ animalId }) => {
     const [files, setFiles] = useState([]);
     const [submit, setSubmit] = useState(false);
-    const fileTypes = ['mp4', 'JPG', 'PNG', 'GIF', 'JPEG'];
+    const fileTypes = ['mp4', 'JPG', 'PNG', 'GIF', 'JPEG', 'mov'];
 
     const handleChange = (newFiles) => {
         const values = Object.keys(newFiles);
