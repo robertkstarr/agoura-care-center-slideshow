@@ -73,7 +73,10 @@ const UploadPage = () => {
                         {selectedPet != null ? (
                             <img
                                 alt={`${selectedPet.ANIMAL_NAME}`}
-                                src={getAnimalImageURL(selectedPet.animalId)}
+                                src={getAnimalImageURL(
+                                    selectedPet.animalId,
+                                    selectedPet.imageCount
+                                )}
                             />
                         ) : (
                             ''
