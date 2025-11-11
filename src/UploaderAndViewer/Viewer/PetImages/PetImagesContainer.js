@@ -21,7 +21,11 @@ const PetImagesContainer = ({ selectedPet }) => {
                 if (value != null && Object.keys(value).length > 0) {
                     setImages(
                         Object.keys(value)
-                            .filter((x) => !value[x]?.fileName.includes('mp4'))
+                            .filter(
+                                (x) =>
+                                    !value[x]?.fileName.includes('mp4') &&
+                                    !value[x].fileName.includes('mov')
+                            )
                             .sort(
                                 (a, b) => (value[b]?.uploadTime || 0) - (value[a]?.uploadTime || 0)
                             )
@@ -32,7 +36,11 @@ const PetImagesContainer = ({ selectedPet }) => {
 
                     setVideos(
                         Object.keys(value)
-                            .filter((x) => value[x]?.fileName.includes('mp4'))
+                            .filter(
+                                (x) =>
+                                    value[x]?.fileName.includes('mp4') ||
+                                    value[x]?.fileName.includes('mov')
+                            )
                             .sort(
                                 (a, b) => (value[b]?.uploadTime || 0) - (value[a]?.uploadTime || 0)
                             )

@@ -41,7 +41,7 @@ const PetImage = React.forwardRef(({ image, onClick }, ref) => {
     }, [image]);
 
     const DisplayImage = () => {
-        if (url.includes('.mp4')) {
+        if (url.includes('.mp4') || url.includes('.mov')) {
             return (
                 <video height={height * 1.5} controls preload="metadata">
                     <source src={url} type="video/mp4" />

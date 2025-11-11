@@ -19,7 +19,8 @@ const getAnimalImageURL = (image, thumbnail = false) => {
     } else if (
         image?.fileName !== undefined &&
         image?.animalId !== undefined &&
-        !image?.fileName.includes('mp4')
+        !image?.fileName.includes('mp4') &&
+        !image?.fileName.includes('mov')
     ) {
         return getAnimalImageURLFromFilenameAndId(image.fileName, image.animalId, thumbnail);
     } else if (image?.url !== undefined) {
